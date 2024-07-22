@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argus-Home-Page</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/font-size/font-size.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/padding/padding.css">
+     <style>
+
+        .navbar-light .navbar-nav .nav-link {
+            color: white;
+          }
+          .navbar-light .navbar-brand {
+            color: white;
+          }
+          .navbar-light .nav-link.active {
+            color: white !important;
+          }
+          .navbar-light .nav-link.dropdown-toggle::after {
+            color: white;
+          }
+          .navbar-nav .nav-item {
+            margin-right: 100px; /* Adjust this value for more or less spacing */
+          }
+          .font-roboto {
+              font-family: 'Roboto', sans-serif;
+            }
+            .font-montserrat {
+              font-family: 'Montserrat', sans-serif;
+            }
+            .font-pacifico {
+              font-family: 'Pacifico', cursive;
+            }
+            .navbar-brand img {
+              height: 180px; /* Adjust this value for logo size */
+              margin-right: 10px; /* Space between logo and brand name */
+            }
+        
+
+        #section1 {
+            background-image: url('/static/background.png'); /* Update with your image path */
+            background-size: cover;
+            
+            color: white; /* Optional: Change text color for better contrast */
+            height: 900px; /* Adjust height as needed */
+        }
+
+        .section-symbol-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-symbol-text .symbol {
+            font-size: 3rem; 
+            margin: 0.5rem 0; /* Adjust spacing as needed */
+        }
+
+        
+        .section-symbol-text .text-main {
+            font-size: 22.9px; 
+            font-family: 'Glacial Indifference', sans-serif;
+            margin: 0.5rem 0; 
+        }
+
+        .section-symbol-text .text {
+            font-size: 13.3px; /* Smaller text size */
+            font-family: 'Century Gothic', sans-serif; /* Font family for other text */
+            margin: 0.5rem 0; /* Adjust spacing as needed */
+            line-height: 1.5; /* Adjust line height for better readability */
+            word-wrap: break-word;
+            text-align: center; 
+        }
+
+        /* .section-content {
+            padding: 2rem 1rem;
+        } */
+        
+        .section-content {
+            display: flex;
+            flex-direction: column; /* Stack columns vertically */
+            height: 100%; /* Full height of the parent column */
+            justify-content: center; /* Center content vertically */
+        }
+
+        .col-md-2, .col-md-10 {
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
+            height: 100%; /* Full height of the parent section */
+        }
+        .col-md-10 {
+            background-color:#17364a; /* Set background color to blue */
+            
+            
+        }
+
+
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 60%; 
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .image-container .caption {
+            font-size: 14px; /* Adjust font size for captions */
+            font-family: 'Century Gothic', sans-serif; /* Font family for captions */
+            margin-top: 0.5rem; /* Spacing between image and caption */
+        }
+        .col-md-2 .col-text {
+            font-size: 41.8px; /* Font size for the text */
+            font-family: 'Glacial Indifference', sans-serif; /* Font family for the text */
+            color: black; /* Optional: Text color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%; /* Full height of the column */
+        }
+        .scrollable-video-container {
+            margin-top:40px;
+            position: relative;
+            height: 80vh; /* Adjust the height as needed */
+            overflow-y: auto; /* Enable vertical scrolling */
+            background: transparent; /* Ensure no background color */
+        }
+        
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            z-index: -1; 
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            border:none; /* Ensure card takes full height */
+        }
+        .card-img-top {
+            max-width: 100%;
+            height: auto;
+            border:none;
+        }
+        .card-body{
+            text-align:center;
+        }
+        .card-text{
+            font-size: 13.3px; 
+            font-family: 'Century Gothic', sans-serif; 
+            margin: 0.5rem 0;
+            line-height: 1.5; 
+            word-wrap: break-word;
+            text-align: center; 
+        }
+
+
+
+
+        .row {
+            margin-bottom: 20px;
+            border:none;
+        }
+        .box {
+            padding: 20px;
+            border: none;
+            text-align: center;
+        }
+        .heading {
+            font-family: 'Glacial Indifference', sans-serif;
+            font-size: 29.3px;
+            margin-bottom: 10px;
+        }
+        .subheading {
+            font-size: 13.9px;
+            margin-top:20px;
+            font-style:italic;
+        }
+        
+
+
+
+        .section6 {
+            margin-top: 20;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .card-section6 {
+            display: flex;
+            gap: 180px;
+        }
+        
+        .card6 {
+            position: relative;
+            width: 400px;
+            height: 550px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .card6:nth-child(1) {
+            background-image: url('/static/Building-1.jpeg'); /* Replace with your local image path */
+        }
+        
+        .card6:nth-child(2) {
+            background-image: url('/static/Building-2.jpeg'); /* Replace with your local image path */
+        }
+        
+        .card6:nth-child(3) {
+            background-image: url('/static/Building-3.jpeg'); /* Replace with your local image path */
+        }
+        
+        .sub-card {
+            padding: 15px;
+            margin-top: 15px;
+            border: 1px solid #ddd;
+            background-color: #ffffff;
+        }
+
+        
+        .random-image {
+            background-size: cover;
+            position: absolute;
+            max-width: 100px;
+            max-height: 100px;
+        }
+     
+
+        
+
+    </style>
+</head>
+<body>
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    <div class="container-fluid">
+        <div id="section1" class="section">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+                <div class="container-fluid">
+                    <a class="navbar-brand font-roboto" href="#">
+                        <img src="/static/logo.png" alt="Logo"> <!-- Replace the src with your logo URL -->
+                      </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav  ms-auto">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                      </li>
+                      
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Industries
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="/manufacturing">Manufacturing Industry</a>
+                          <a class="dropdown-item" href="/construction">Construction Industry</a>
+                         
+                          <a class="dropdown-item" href="/retail">Retail Industry</a>
+                          <a class="dropdown-item" href="/logistics">Logistics  Industry</a>
+                          <a class="dropdown-item" href="/Industry">Warehouse Industry</a>
+                        </div>
+                      </li>  
+
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Use Case
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="/predictive">Predictive</a>
+                        <a class="dropdown-item" href="/automated">Automated</a>
+                        <a class="dropdown-item" href="/security">Security & Survelliance</a>
+                        <a class="dropdown-item" href="/enhanced">Enhanced Customer experience</a>
+                          
+                        </div>
+                      </li>  
+                      
+                      
+                      <li class="nav-item">
+                        <a class="nav-link active" href="/blog">Blogs</a>
+                      </li><li class="nav-item">
+                        <a class="nav-link active" href="/contact">Contact us</a>
+                      </li>
+                     
+                    </ul>
+                  </div>
+                </div>
+                </nav>
+
+                <div id="main">
+                    <div id="page1">
+                      <h1 style="text-align:center;color:white;margin-top:220px;font-size:45px;font-family:'Glacial Indifference'">ARGUS</h1>
+                      <h2 style="text-align:center;color:white;font-family:'Glacial Indifference';font-size: 23px;">A watchful guardian for your business</h2>
+                    </div>
+                  </div> 
+
+
+        </div>
+
+        
+
+
+        <div id="section2" class="section">
+            <div class="section-symbol-text">
+                <div class="symbol">|</div>
+                <div class="text-main">REDEFINING THE INDUSTRIES WITH AI POWERED INNOVATION </div>
+                <div class="text">Your path to safer and efficient tomorrow</div>
+                <div class="text"> Argus, Ekak Innovations' flagship service, pioneers AI solutions across<br> industries. Through computer vision, machine learning, and AI, Argus<br> enhances quality, detects machine issues, and boosts team productivity <br>across all industries.</div>
+                <div class="symbol">|</div>
+            </div>
+
+
+            <div class="container section-content">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="col-text">
+                            WHAT DO WE DO
+                        </div>
+                        
+                        
+                    </div>
+    
+                    <div class="col-md-10">
+                        <div class="row">
+                           
+                            <div class="col-md-4 image-container">
+                                <img src="/static/predictive.png" > <!-- Replace with your image -->
+                                <div class="caption" style="font-family: 'Glacial Indifference', sans-serif;font-size:14;color:white" >Predictive Process<br> Optimization</div>
+                            </div>
+    
+                            
+                            <div class="col-md-4 image-container">
+                                <img src="/static/REduced_downtimw.png" > <!-- Replace with your image -->
+                                <div class="caption"  style="font-family: 'Glacial Indifference', sans-serif;font-size:14;color:white">Reduced Downtime <br>with Real-Time Monitoring</div>
+                            </div>
+    
+                        
+                            <div class="col-md-4 image-container">
+                                <img src="/static/enhanced.png" > <!-- Replace with your image -->
+                                <div class="caption"  style="font-family: 'Glacial Indifference', sans-serif;font-size:14;color:white">Enhanced Safety<br>Automation</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+       
+        <div id="section3" class="section">
+            <div class="scrollable-video-container">
+                    <video class="video-background" autoplay muted loop>
+                        <source src="/static/Argus Overall Demo video (2) (1).mp4" type="video/mp4"> <!-- Replace with your video file -->
+                    </video>
+            </div>
+        </div>
+
+
+
+
+
+          <!--  Fourth section -->
+
+
+        <div id="section4" class="section" style="margin-top:50px">
+            
+            <h1 style="font-size: 22.9px; text-align:center;
+            font-family: 'Glacial Indifference', sans-serif;
+            margin: 0.5rem 0; ">MAKE YOUR INDUSTRIES EFFICIENT WITH <i>Argus</i></h1>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card-deck">
+                            <div class="card">
+                                <img class="card-img-top" src="/static/Real_Time_Monitoring.png" style="height:400px;width:400px"> <!-- Replace with your image -->
+                                <div class="card-body">
+                                    <h5 class="card-title">Real Time Monitoring</h5>
+                                    <p class="card-text">
+                                        Fast decisions with data, algorithms, and analytics.<br> Real-time insights on processes, workers, and machines. </p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top" src="/static/Facial.png" style="height:400px;width:400px"> <!-- Replace with your image -->
+                                <div class="card-body">
+                                    <h5 class="card-title">Facial Recognition</h5>
+                                    <p class="card-text">Our AI-powered facial recognition improves identification,<br> authentication, and anti-spoofing for access control, security, and<br> attendance tracking..</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-deck">
+                            <div class="card">
+                                <img class="card-img-top" src="/static/maintenance.png" style="height:400px;width:400px"> <!-- Replace with your image -->
+                                <div class="card-body">
+                                    <h5 class="card-title">Predictive Maintenance</h5>
+                                    <p class="card-text">Predictive Maintenance reduces downtime by proactively addressing<br> issues. Fixing machinery defects promptly.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top" src="/static/realtime.png" style="height:400px;width:400px"> <!-- Replace with your image -->
+                                <div class="card-body">
+                                    <h5 class="card-title">Automated Safety Check</h5>
+                                    <p class="card-text">Our advanced algorithms monitor safety protocols in real-time,<br> issuing alerts to prevent hazards and ensure compliance<br> with standards..</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+        </div>
+
+
+            <!--vinn diagram-->
+
+
+
+            <div class="vinn_section" id="section" style="margin-top:50px;margin-bottom:20px;background-size: cover;">
+              <div class="d-flex justify-content-center" style="background-size: cover;">
+                <video src="/static/Argus Vinn Diagram.mp4" autoplay loop muted></video>
+              </div> 
+            </div>
+           
+
+
+
+
+
+
+
+            <!--Location section of Industries-->
+
+
+            <div id="section8" class="section" style="height:910px;background-image: url('/static/location.jpg');background-size: cover;">
+                <h1 style="text-align:left;color:white;font-family:'Glacial Indifference';font-size: 38px;background-size: cover;margin-left:70px;">INDUSTRIES WE FOCUS ON</h1>
+                <div class="container-fluid image-container" style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
+                    <div class="row">
+                        <div class="col-6 col-md-3 position-relative">
+                            <a href="/Industry/">
+                                <img src="/static/location-1.png" class="random-image img-fluid position-absolute" style="top: 650px; left: 50%;">
+                                
+                            </a>
+                            <p class="text-center small position-absolute" style="color:white;top: 740px; left: 55%; transform: translateX(-55%);">Warehouse Industry</p>
+                        </div>
+                        <div class="col-6 col-md-3 position-relative">
+                            <a href="/logistics/">
+                                <img src="/static/location-2.png" class="random-image img-fluid position-absolute" style="top: 400px; left: 50%;">
+                            </a>
+                            <p class="text-center small position-absolute" style="color:white;top: 490px; left: 55%; transform: translateX(-55%);">Logistics Industry</p>
+                        </div>
+                        <div class="col-6 col-md-3 position-relative">
+                            <a href="/construction/">
+                                <img src="/static/location-3.png" class="random-image img-fluid position-absolute" style="top: 550px; left: 50%;">
+                            </a>
+                            <p class="text-center small position-absolute" style="color:white;top: 640px; left: 55%; transform: translateX(-55%);">Construction Industry</p>
+                        </div>
+                        <div class="col-6 col-md-3 position-relative">
+                            <a href="/manufacturing/">
+                                <img src="/static/location-4.png" class="random-image img-fluid position-absolute" style="top: 250px; left: 50%;">
+                            </a>
+                            <p class="text-center small position-absolute" style="color:white;top: 340px; left: 55%; transform: translateX(-55%);">Manufacturing Industry</p>
+                        </div>
+                        <div class="col-6 col-md-3 position-relative">
+                            <a href="/retail/">
+                                <img src="/static/location-1.png" class="random-image img-fluid position-absolute" style="top: 350px; left: 50%;">
+                            </a>
+                            <p class="text-center small position-absolute" style="color:white;top: 440px; left: 55%; transform: translateX(-55%);">Retail Industry</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+
+        <!-- Fifth Page -->
+        <div class="container-fluid" style="margin-top:40px">
+            <!-- First Row -->
+            <div class="row">
+                <div class="col-md-12 box">
+                    <div class="heading">WHAT THEY SAY</div>
+                    <div class="subheading">“From our early days, we've been providing reliable service to our clientele.<br>
+                        We've had the honour of being the firm of choice of the following corporations.”</div>
+                </div>
+
+            </div>
+    
+            <!-- Second Row -->
+            <div class="row" style="margin-top: 40px;">
+                <div class="col-md-4 box" style="text-align: center;">
+                   <img src="/static/truboard.png" style="height: auto;
+                    display: block;
+                    margin: 0 auto;max-width: 60%;">
+                </div>
+                <div class="col-md-4 box">
+                   <img src="/static/ounce.png"  style="height: auto;
+                   display: block;
+                   margin: 0 auto;max-width: 60%;" >
+                </div>
+                <div class="col-md-4 box">
+                    <img src="/static/gesl.png"  style="height: auto;
+                    display: block;
+                    margin: 0 auto;max-width: 60%;" >
+                   
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Sixth Page-->
+
+        <div id="section7" class="section" style="padding: 50px 0;">
+            <div class="container-fluid">
+                <h1 style="font-size: 22.9px; text-align:left;font-family: 'Glacial Indifference', sans-serif;margin: 0.5rem 0;margin-top:80px;border-bottom: 2px solid black; display: inline-block;">Explore More</h1>
+                <div class="row" style="margin-top:60px">
+                    <!-- Card 1 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100" style="background-image: url('/static/building31.png');">
+                          
+                            <div class="card-body" style="margin-top:255px;">
+                              
+                                <div class="sub-card">
+                                    <h6>Sub Card 1</h6>
+                                    <p>Sub card content for card 1.</p>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100" style="background-image: url('/static/building31.png');">
+                          
+                            <div class="card-body" style="margin-top:255px;">
+                              
+                                <div class="sub-card">
+                                    <h6>Sub Card 1</h6>
+                                    <p>Sub card content for card 1.</p>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100" style="background-image: url('/static/building31.png');">
+                          
+                            <div class="card-body" style="margin-top:255px;">
+                              
+                                <div class="sub-card">
+                                    <h6>Sub Card 1</h6>
+                                    <p>Sub card content for card 1.</p>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+             
+  
+
+
+            <!--Seventh Page-->
+
+
+
+
+
+
+            <!-- Footer 2 - Bootstrap Brain Component -->
+
+              
+
+
+
+
+           {% include "base_footer.html" %}
+    
+              
+
+
+
+      
+    </div>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+  </html>

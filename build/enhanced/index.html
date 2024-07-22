@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer EXperience</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/font-size/font-size.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/padding/padding.css">
+
+    <style>
+        .navbar-light .navbar-nav .nav-link {
+            color: white;
+          }
+          .navbar-light .navbar-brand {
+            color: white;
+          }
+          .navbar-light .nav-link.active {
+            color: white !important;
+          }
+          .navbar-light .nav-link.dropdown-toggle::after {
+            color: white;
+          }
+          .navbar-nav .nav-item {
+            margin-right: 100px; /* Adjust this value for more or less spacing */
+          }
+          .font-roboto {
+              font-family: 'Roboto', sans-serif;
+            }
+            .font-montserrat {
+              font-family: 'Montserrat', sans-serif;
+            }
+            .font-pacifico {
+              font-family: 'Pacifico', cursive;
+            }
+            .navbar-brand img {
+              height: 180px; /* Adjust this value for logo size */
+              margin-right: 10px; /* Space between logo and brand name */
+            }
+
+
+            .section-symbol-text {
+            display: flex;
+            background-color: #17364a;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .symbol {
+            font-size: 2rem;
+            margin: 0.1rem 0;
+        }
+        .text-main {
+            font-size: 21.5px;
+            font-family: 'Glacial Indifference', sans-serif;
+            margin: 0.1rem 0;
+            font-style: italic;
+        }
+        .heading-main {
+            font-family: 'Century Gothic';
+            font-size: 48px;
+            margin-top: 150px;
+            text-align: left;
+            margin-left: 85px;
+        }
+        .subheading {
+            font-size: 15.5px;
+            font-family: 'Glacial Indifference', sans-serif;
+            text-align: left;
+            margin-left: 85px;
+        }        
+
+
+
+        .btn-custom {
+            background-color: rgba(0, 0, 0, 0.575);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn-custom:hover {
+            background-color: darkgray;
+            color: rgba(0, 0, 0, 0.603);
+        }
+
+        .sub-card {
+            padding: 15px;
+            margin-top: 15px;
+            border: 1px solid #ddd;
+            background-color: #ffffff;
+        }
+
+
+
+        
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div id="section1" class="section" style="padding: 50px 0;">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="container-fluid">
+                    <a class="navbar-brand font-roboto" href="#">
+                        <img src="/static/logo.png" alt="Logo"> <!-- Replace the src with your logo URL -->
+                    </a>
+                </div>
+                <div class="row">
+                    <h1 style="font-family: 'Century Gothic'; font-size:50px;margin-top:80px;text-align: left;margin-left:45px;">
+                      Enhanced Retail Customer<br> Experience</h1>
+                </div>
+            </div>
+
+            <div class="col-sm-6 bg-cover" style="background-image: url('/static/background.png'); color: white; height: 730px; background-size: cover;
+            background-position: center;">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Industries
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/manufacturing">Manufacturing Industry</a>
+                                            <a class="dropdown-item" href="/construction">Construction Industry</a>
+                                            <a class="dropdown-item" href="/retail">Retail Industry</a>
+                                            <a class="dropdown-item" href="/logistics">Logistics Industry</a>
+                                            <a class="dropdown-item" href="/Industry">Warehouse Industry</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Use Case
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/predictive">Predictive</a>
+                                            <a class="dropdown-item" href="/automated">Automated</a>
+                                            <a class="dropdown-item" href="/security">Security & Surveillance</a>
+                                            <a class="dropdown-item" href="/enhanced">Enhanced Customer Experience</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">Blogs</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="/contact">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+        <!--section 2-->
+
+        <div id="section2" class="section mt-3">
+          <div class="row">
+              <div class="col-12 section-symbol-text">
+                    <div class="symbol">|</div>
+                    <div class="text-main">Enhance Retail Interaction with Unique Computer Vision Technology.</div>
+                    <div class="symbol">|</div>
+              </div>
+          </div>
+          <div class="row">
+                <div class="col-sm-6">
+                    <h1 class="heading-main">Taking employee<br> attendance </h1>
+                    <h3 class="subheading">and identifying unauthorized individuals.</h3>
+                </div>
+                <div class="col-sm-6 mt-5 text-center">
+                    <img src="/static/Facial.png" class="img-fluid" alt="Facial Recognition">
+                </div>
+          </div>
+        </div>
+
+
+
+        <!--Section 3 started-->
+        <div id="section3" class="section mt-3">
+          <div class="row">
+            <div class="col-sm-6 mt-5 text-center">
+              <img src="/static/Facial.png" class="img-fluid" alt="Facial Recognition">
+            </div>
+            <div class="col-sm-6">
+              <h1 class="heading1-main" style=" font-family: 'Century Gothic';font-size: 48px;margin-top: 150px;text-align: right;margin-right: 85px;">Tracking daily customer flow to </h1>
+              <h3 class="subheading1" style="font-size: 15.5px;font-family: 'Glacial Indifference', sans-serif;text-align: right;margin-right: 85px;">identify peak shopping periods.</h3>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <!--Section 4 -->
+        <div id="section4" class="section">
+          <div class="row">
+            <div class="col-sm-6">
+                <h1 class="heading-main">Monitoring employees<br> in real-time  </h1>
+                <h3 class="subheading"> to determine whether they are attending the customers..</h3>
+            </div>
+            <div class="col-sm-6 mt-5 text-center">
+                <img src="/static/Facial.png" class="img-fluid" alt="Facial Recognition">
+            </div>
+          </div>
+        </div> 
+
+
+
+        <!--Section 5-->
+
+        <div id="section5" class="section mt-3">
+          <div class="row">
+            <div class="col-sm-6 mt-5 text-center">
+              <img src="/static/Facial.png" class="img-fluid" alt="Facial Recognition">
+            </div>
+            <div class="col-sm-6">
+              <h1 class="heading1-main" style=" font-family: 'Century Gothic';font-size: 48px;margin-top: 150px;text-align: right;margin-right: 85px;">Identify suspicious<br> behaviour </h1>
+              <h3 class="subheading1" style="font-size: 15.5px;font-family: 'Glacial Indifference', sans-serif;text-align: right;margin-right: 85px;">, such as shoplifting.</h3>
+            </div>
+          </div>
+        </div>
+
+         <!--Section 6-->
+
+        <div id="section6" class="section" style="margin-bottom: 30px;">
+          <div class="row" style="margin-top:60px">
+            <h1 style="font-size: 40px; text-align:center;
+            font-family: 'Glacial Indifference', sans-serif;background-size: cover;letter-spacing: 4px;
+           ">JOIN US AND MAKE YOUR WORK MORE EFFICIENT WITH <br> ARGUS</h1>
+          </div>
+          <div class="row">
+            <div class="row justify-content-center mt-5">
+              <div class="col-auto">
+                  <button class="btn btn-custom">Contact us</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+         <!--Section 7-->
+         <div id="section7" class="section" style="padding: 50px 0;">
+          <div class="container-fluid">
+              <h1 style="font-size: 22.9px; text-align:left;font-family: 'Glacial Indifference', sans-serif;margin: 0.5rem 0;margin-top:80px;border-bottom: 2px solid black; display: inline-block;">Explore More</h1>
+              <div class="row" style="margin-top:60px">
+                  <!-- Card 1 -->
+                  <div class="col-md-4 mb-4">
+                      <div class="card h-100" style="background-image: url('/static/blog1.jpg');">
+                          
+                          <div class="card-body" style="margin-top:255px;">
+                            
+                              <div class="sub-card">
+                                  <h6>Sub Card 1</h6>
+                                  <p>Sub card content for card 1.</p>
+                              </div>
+                          </div>
+                         
+                      </div>
+                  </div>
+                  <!-- Card 2 -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100" style="background-image: url('/static/blog2.jpg');">
+                          
+                      <div class="card-body" style="margin-top:255px;">
+                        
+                          <div class="sub-card">
+                              <h6>Sub Card 1</h6>
+                              <p>Sub card content for card 1.</p>
+                          </div>
+                      </div>
+                     
+                  </div>
+                  </div>
+                  <!-- Card 3 -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100" style="background-image: url('/static/blog3.jpg');">
+                          
+                      <div class="card-body" style="margin-top:255px;">
+                        
+                          <div class="sub-card">
+                              <h6>Sub Card 1</h6>
+                              <p>Sub card content for card 1.</p>
+                          </div>
+                      </div>
+                     
+                  </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+           
+
+         <!-- Section 8 "|Footer "-->
+
+         <footer class="footer-39201" style="margin-top:40px;background-color:black;margin-bottom:40px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md mb-4 mb-md-0">
+          <h3 style="color:white;margin-top:40px">Argus</h3>
+          <ul class="list-unstyled nav-links" >
+            <li><a href="#"></a></li>
+            <li style="color:white;margin-top:30px;font-size:20px;margin-top:30px;">Get in Touch
+            <li style="font-size:12p;margin-top:30px;color:white">113/216-A Swaroop Nagar, Kanpur- 208002,
+                Uttar Pradesh, India</li>
+            <li style="font-size:12p;color:white">Landline- 0512-4028469
+
+            </li>
+            <li style="font-size:12p;color:white">Email-contact@ekak.in</li>
+            
+          </ul>
+        </div>
+        <div class="col-md mb-4 mb-md-0">
+          <p style="font-size:200px;width:2px;color:white"> |</p>
+          
+          
+        </div>
+        <div class="col-md mb-4 mb-md-0" style="margin-top:40px;">
+          <h3 style="color:aliceblue">Site-map</h3>
+          <ul class="list-unstyled nav-links" style="font-size:12p;margin-top:30px;">
+            <li style="color:white"><a href="#">About</a></li>
+            <li style="color:white"><a href="#">Industries</a></li>
+            <li style="color:white"><a href="#">Use Case</a></li>
+            <li style="color:white"><a href="#">Blogs</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0" style="margin-top:40px;">
+          <h3 style="color:aliceblue">DON'T MISS OUT!</h3>
+          <p class="mb-4" style="color:white;margin-top:30px">Sign up to get latest updates promotions and many more.</p>
+          <form action="#" class="subscribe">
+              <input type="text" class="form-control" placeholder="Enter your e-mail">
+              <input type="submit" class="btn btn-submit" value="Send">
+            </form>
+        </div>
+      </div>
+
+      <div class="row align-items-center">
+        
+        <div class="col-md-6 text-md-righ " >
+          <ul class="social list-unstyled">
+            <li><a href="#"><span class="icon-facebook"></span></a></li>
+            <li><a href="#"><span class="icon-twitter"></span></a></li>
+            <li><a href="#"><span class="icon-pinterest"></span></a></li>
+            <li><a href="#"><span class="icon-instagram"></span></a></li>
+            <li><a href="#"><span class="icon-behance"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+    </div>
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

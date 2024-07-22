@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail-Industry</title>
+    <!--links for footer sections in which icons exists-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+   
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+  
+  .navbar-light .navbar-nav .nav-link {
+            color: white;
+          }
+          .navbar-light .navbar-brand {
+            color: white;
+          }
+          .navbar-light .nav-link.active {
+            color: white !important;
+          }
+          .navbar-light .nav-link.dropdown-toggle::after {
+            color: white;
+          }
+          .navbar-nav .nav-item {
+            margin-right: 100px; /* Adjust this value for more or less spacing */
+          }
+          .font-roboto {
+              font-family: 'Roboto', sans-serif;
+            }
+            .font-montserrat {
+              font-family: 'Montserrat', sans-serif;
+            }
+            .font-pacifico {
+              font-family: 'Pacifico', cursive;
+            }
+            .navbar-brand img {
+              height: 180px; /* Adjust this value for logo size */
+              margin-right: 10px; /* Space between logo and brand name */
+            }
+        
+            
+            #section1 {
+            position: relative;
+            height: 900px; /* Adjust height as needed */
+            overflow: hidden;
+            color: white; /* Optional: Change text color for better contrast */
+            z-index: 0; /* Ensure section 1 is behind other sections */
+            background-size: cover;
+        }
+        #section1 .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1; /* Place the video behind other content */
+        }
+        #section1 .content {
+            position: relative;
+            z-index: 1; /* Ensure content is above the video */
+        }
+        
+
+        .scroll-section {
+            margin-top: 10vh; /* Pushes the section below the first viewport height */
+            padding: 50px;
+            background-color: #f8f9fa;
+        }
+       
+        #section5 {
+            background-image: url('/static/warehouse1.png'); /* Update with your image path */
+            background-size: cover;
+            
+            
+            height: 800px; /* Adjust height as needed */
+        }
+      
+
+
+        .sub-card {
+            padding: 15px;
+            margin-top: 15px;
+            border: 1px solid #ddd;
+            background-color: #ffffff;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="section1" class="section">
+            <video class="video-bg" autoplay loop muted>
+                <source src="/static/ARGUS Retail page  - Hero video.mp4" type="video/mp4">
+                
+            </video>
+       
+            
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+   
+             <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+                <div class="container-fluid">
+                    <a class="navbar-brand font-roboto" href="#">
+                        <img src="/static/logo.png" alt="Logo"> <!-- Replace the src with your logo URL -->
+                      </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav  ms-auto">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                      </li>
+                      
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Industries
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="/manufacturing">Manufacturing Industry</a>
+                          <a class="dropdown-item" href="/construction">Construction Industry</a>
+                         
+                          <a class="dropdown-item" href="/retail">Retail Industry</a>
+                          <a class="dropdown-item" href="/logistics">Logistics  Industry</a>
+                          <a class="dropdown-item" href="/Industry">Warehouse Industry</a>
+                        </div>
+                      </li>  
+
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Use Case
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="/predictive">Predictive</a>
+                        <a class="dropdown-item" href="/automated">Automated</a>
+                        <a class="dropdown-item" href="/security">Security & Survelliance</a>
+                        <a class="dropdown-item" href="/enhanced">Enhanced Customer experience</a>
+                          
+                        </div>
+                      </li>  
+                      
+                      
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Blogs</a>
+                      </li><li class="nav-item">
+                        <a class="nav-link active" href="/contact">Contact us</a>
+                      </li>
+                     
+                    </ul>
+                  </div>
+                </div>
+                </nav>
+        
+<!-- 
+                <div id="main">
+                    <div id="page1">
+                      <h1 style="text-align:center;color:white;margin-top:140px;font-size:380%;font-family:Georgia, 'Times New Roman', Times, serif">Evolving the Warehouse Landscape</h1>
+                     
+                    </div>
+                  </div>  -->
+
+
+        </div>
+        <!--section2 -->
+
+
+        <div id="section2" class="section" style="margin-top:80px;border:none">
+            
+           <header  style="height:300px;border:none;background-color: transparent;font-size:55px;border:none; margin-left:30px;font-family: 'Century Gothic', sans-serif;margin-top:55px;word-spacing: 4px;letter-spacing: 3px;">Revolutionary Sophistication, Redefining<br> the retail landscape with its unparalleled<br> visual allure.</header>
+          <footer style="font-size:24px;  border:none;margin-left:30px;font-family: 'Century Gothic', sans-serif;margin-top:10px "> 
+
+    
+The retail landscape is swiftly evolving, presenting fresh hurdle for businesses. To thrive amidst increasing<br> competition, retailer must embrace innovative retail solutions. AI-powered video analytics in retail is an<br> area experiencing substantial growth. Leveraging computer vision for the retail sector allows for real-time<br> analysis of consumer behaviour, enabling the transformation of the customer journey and overall<br> experience.
+
+        </div> 
+                                               <!--SEction 3-->
+
+        
+        <div class="section3" id="section" >
+            <div class="scroll-section" style="background-color: #17364a;height:600px;margin-bottom:20px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="text-center" style="color:aliceblue">WITH ARGUS YOU CAN HAVE</h2>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:40px;">
+                        <div class="col-12">
+                            <div id="imageCarousel" class="carousel slide" data-ride="carousel" style="margin-left:20px;">
+                                <div class="carousel-inner" style="margin-left:150px;">
+                                    <div class="carousel-item active">
+                                        <div class="row">
+                                            <div class="col-6">
+                                              <div class="card" style="width:300px;height:400px;
+                                              text-align: center;background-color:#62819667;
+                                              box-shadow: 0 0px 10px rgba(0,0,0,.2);">
+                                                <video class="card-img-top mx-auto d-block" style="height:50%;width:50%;" autoplay loop muted>
+                                                  <source src="/static/manufacturing1.mp4" type="video/mp4">
+                                                
+                                              </video>
+                                                <h6 class="card-title" style="color:white;font-size:16px;">Real-time Experience<br> Analysis</h6>
+                                                <p class="card-text" style="color:white;font-size:13px;">Continuous analysis improves customer<br> experience and service quality by providing<br> immediate awareness of unattended customers <br>in real-time..</p>
+                                                <!-- <div class="card-body">
+                                                    <h5 class="card-title">Card Title 1</h5>
+                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                   
+                                                </div> -->
+                                              </div>
+                                            </div>
+                                            <div class="col-6">
+                                              <div class="card" style="width:300px;height:400px;
+                                              text-align: center;background-color:#62819667;
+                                              box-shadow: 0 0px 10px rgba(0,0,0,.2);">
+                                                <video class="card-img-top mx-auto d-block" style="height:50%;width:50%;" autoplay loop muted>
+                                                  <source src="/static/manufacturing-2.mp4" type="video/mp4">
+                                                
+                                              </video>
+                                                <h6 class="card-title" style="color:white;font-size:16px;">Optimization via<br> Object Recognition
+                                                </h6>
+                                                <p class="card-text" style="color:white;font-size:13px;">Utilizing object recognition, optimizes inventory,<br> minimizing shortages or excess stock for<br> efficient retail management. </p>
+                                                <!-- <div class="card-body">
+                                                    <h5 class="card-title">Card Title 1</h5>
+                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                   
+                                                </div> -->
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                            <div class="col-6">
+                                              <div class="card" style="width:300px;height:400px;
+                                              text-align: center;background-color:#62819667;
+                                              box-shadow: 0 0px 10px rgba(0,0,0,.2);">
+                                                <video class="card-img-top mx-auto d-block" style="height:50%;width:50%;" autoplay loop muted>
+                                                  <source src="/static/manufacturing1.mp4" type="video/mp4">
+                                                
+                                                </video>
+                                                <h6 class="card-title" style="color:white;font-size:16px;">Understanding Peak<br> Foot Traffic<br>
+                                                  Regulatory Adherence
+                                                <p class="card-text" style="color:white;font-size:13px;">Identify the busiest times for shopping by<br> observing the daily influx of customers...</p>
+                                                <!-- <div class="card-body">
+                                                    <h5 class="card-title">Card Title 1</h5>
+                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                   
+                                                </div> -->
+                                              </div>
+                                            </div>
+                                            <div class="col-6">
+                                              <div class="card" style="width:300px;height:400px;
+                                              text-align: center;background-color:#62819667;
+                                              box-shadow: 0 0px 10px rgba(0,0,0,.2);">
+                                                <video class="card-img-top mx-auto d-block" style="height:50%;width:50%;" autoplay loop muted>
+                                                  <source src="/static/manufacturing1.mp4" type="video/mp4">
+                                                
+                                              </video>
+                                                <h6 class="card-title" style="color:white;font-size:16px;">Facial Recognition for<br> Tracking & Security </h6>
+                                                <p class="card-text" style="color:white;font-size:13px;">Implement facial recognition and access<br> control to track employee attendance along<br> with Identify uncommon or suspicious<br> activity.</p>
+                                                <!-- <div class="card-body">
+                                                    <h5 class="card-title">Card Title 1</h5>
+                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                   
+                                                </div> -->
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Add more carousel items as needed -->
+                                </div>
+                                <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+           
+
+        </div>
+
+                                            <!--section-4-->
+
+       
+
+
+        <div class="section4" id="section" style="height:500px;margin-top:80px;">
+          <div class="row row-cols-1 row-cols-md-2 g-4 " >
+              <div class="col">
+                <div class="card h-40" style="border:none">
+                  <video class="card-img-top mx-auto d-block" style="height:40%;width:40%;" autoplay loop muted>
+                    <source src="/static/icon-video.mp4" type="video/mp4">
+                  
+                </video>
+                  <div class="card-body text-center">
+                    <h5 class="card-text" style="font-size:27px; font-family: 'Glacial Indifference', sans-serif;">Keeping Tabs on Items &<br> Individuals</h5>
+                    <p class="card-text" style="font-size:14.9px; font-family: 'Century Gothic', sans-serif;">Identify the busiest times for shopping by observing<br> the daily influx of customers, helping to understand<br> when foot traffic peaks during the day.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-40" style="border:none">
+                  <video class="card-img-top mx-auto d-block" style="height:40%;width:40%;" autoplay loop muted>
+                    <source src="/static/iconvideo2.mp4" type="video/mp4">
+                  
+                  </video>
+                  <div class="card-body text-center">
+                    <h5 class="card-text" style="font-size:27px; font-family: 'Glacial Indifference', sans-serif;">
+                        Enhanced Customer Experience</h5>
+                    <p class="card-text" style="font-size:14.9px; font-family: 'Century Gothic', sans-serif;">Tracking customer shopping behaviour,<br> managing queues, and optimizing store layout..</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-40" style="border:none">
+                  <video class="card-img-top mx-auto d-block" style="height:40%;width:40%;" autoplay loop muted>
+                    <source src="/static/iconvideo-3.mp4" type="video/mp4">
+                  
+                  </video>
+                  <div class="card-body text-center">
+                    <h5 class="card-text" style="font-size:27px; font-family: 'Glacial Indifference', sans-serif;">Stock Control &<br> Oversight<br>
+                   </h5>
+                    <p class="card-text" style="font-size:14.9px; font-family: 'Century Gothic', sans-serif;">Recognize inventory levels visually, monitor shelf<br> conditions, and help restock to avoid shortages..</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-40" style="border:none">
+                  <video class="card-img-top mx-auto d-block" style="height:40%;width:40%;" autoplay loop muted>
+                    <source src="/static/icon-video.mp4" type="video/mp4">
+                  
+                  </video>
+                  <div class="card-body text-center">
+                    <h5 class="card-text" style="font-size:27px; font-family: 'Glacial Indifference', sans-serif;">Security & Loss<br> Prevention and Alert</h5>
+                    <p class="card-text" style="font-size:14.9px; font-family: 'Century Gothic', sans-serif">Quick alert on shoplifting and theft. Detect<br> suspicious behaviour. In addition to timely<br> notifying the authorities of the same.
+                        .</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+
+                                            <!--section-5-->
+
+
+        <div class="row" id="section" style="height:800px;margin-top:800px;margin-bottom: 40px;background-size: cover;">
+          
+           <div class="page1" style="background-image: url('/static/tranforming.png');background-size: cover;">
+            <h1 style="text-align:center;color:white;margin-top:270px;font-size:380%;font-family:'Century Gothic', sans-serif;">Transforming the retail environment with<br> unmatched aesthetic refinement</h1>
+           </div>
+        </div>
+
+
+                                            <!--section6 -->
+
+        
+
+
+                                            <div id="section7" class="section" style="padding: 50px 0;">
+                                              <div class="container-fluid">
+                                                  <h1 style="font-size: 22.9px; text-align:left;font-family: 'Glacial Indifference', sans-serif;margin: 0.5rem 0;margin-top:80px;border-bottom: 2px solid black; display: inline-block;">Explore More</h1>
+                                                  <div class="row" style="margin-top:60px">
+                                                      <!-- Card 1 -->
+                                                      <div class="col-md-4 mb-4">
+                                                        <div class="card h-100" style="background-image: url('/static/building31.png');">
+                          
+                                                          <div class="card-body" style="margin-top:255px;">
+                                                            
+                                                              <div class="sub-card">
+                                                                  <h6>Sub Card 1</h6>
+                                                                  <p>Sub card content for card 1.</p>
+                                                              </div>
+                                                          </div>
+                                                         
+                                                      </div>
+                                                      </div>
+                                                      <!-- Card 2 -->
+                                                      <div class="col-md-4 mb-4">
+                                                        <div class="card h-100" style="background-image: url('/static/building31.png');">
+                          
+                                                          <div class="card-body" style="margin-top:255px;">
+                                                            
+                                                              <div class="sub-card">
+                                                                  <h6>Sub Card 1</h6>
+                                                                  <p>Sub card content for card 1.</p>
+                                                              </div>
+                                                          </div>
+                                                         
+                                                      </div>
+                                                      </div>
+                                                      <!-- Card 3 -->
+                                                      <div class="col-md-4 mb-4">
+                                                        <div class="card h-100" style="background-image: url('/static/building31.png');">
+                          
+                                                          <div class="card-body" style="margin-top:255px;">
+                                                            
+                                                              <div class="sub-card">
+                                                                  <h6>Sub Card 1</h6>
+                                                                  <p>Sub card content for card 1.</p>
+                                                              </div>
+                                                          </div>
+                                                         
+                                                      </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                               
+                                    
+
+
+
+
+        <!--Footer section-->
+
+        <footer class="footer-39201" style="margin-top:40px;background-color:black;margin-bottom:40px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md mb-4 mb-md-0">
+          <h3 style="color:white;margin-top:40px">Argus</h3>
+          <ul class="list-unstyled nav-links" >
+            <li><a href="#"></a></li>
+            <li style="color:white;margin-top:30px;font-size:20px;margin-top:30px;">Get in Touch
+            <li style="font-size:12p;margin-top:30px;color:white">113/216-A Swaroop Nagar, Kanpur- 208002,
+                Uttar Pradesh, India</li>
+            <li style="font-size:12p;color:white">Landline- 0512-4028469
+
+            </li>
+            <li style="font-size:12p;color:white">Email-contact@ekak.in</li>
+            
+          </ul>
+        </div>
+        <div class="col-md mb-4 mb-md-0">
+          <p style="font-size:200px;width:2px;color:white"> |</p>
+          
+          
+        </div>
+        <div class="col-md mb-4 mb-md-0" style="margin-top:40px;">
+          <h3 style="color:aliceblue">Site-map</h3>
+          <ul class="list-unstyled nav-links" style="font-size:12p;margin-top:30px;">
+            <li style="color:white"><a href="#">About</a></li>
+            <li style="color:white"><a href="#">Industries</a></li>
+            <li style="color:white"><a href="#">Use Case</a></li>
+            <li style="color:white"><a href="#">Blogs</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0" style="margin-top:40px;">
+          <h3 style="color:aliceblue">DON'T MISS OUT!</h3>
+          <p class="mb-4" style="color:white;margin-top:30px">Sign up to get latest updates promotions and many more.</p>
+          <form action="#" class="subscribe">
+              <input type="text" class="form-control" placeholder="Enter your e-mail">
+              <input type="submit" class="btn btn-submit" value="Send">
+            </form>
+        </div>
+      </div>
+
+      <div class="row align-items-center">
+        
+        <div class="col-md-6 text-md-righ " >
+          <ul class="social list-unstyled">
+            <li><a href="#"><span class="icon-facebook"></span></a></li>
+            <li><a href="#"><span class="icon-twitter"></span></a></li>
+            <li><a href="#"><span class="icon-pinterest"></span></a></li>
+            <li><a href="#"><span class="icon-instagram"></span></a></li>
+            <li><a href="#"><span class="icon-behance"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+        
+
+        
+     
+     
+  
+      
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+</body>
+</html>
