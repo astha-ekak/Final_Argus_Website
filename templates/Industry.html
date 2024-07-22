@@ -66,12 +66,36 @@
         }
         
 
-        .scroll-section {
-            margin-top: 10vh; /* Pushes the section below the first viewport height */
+        /* .scroll-section {
+            margin-top: 10vh; 
             padding: 50px;
             background-color: #f8f9fa;
         }
-       
+        */
+
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            border:none; /* Ensure card takes full height */
+        }
+        
+        .card-body{
+            text-align:center;
+        }
+        .card-text{
+            font-size: 13.3px; 
+            font-family: 'Century Gothic', sans-serif; 
+            margin: 0.5rem 0;
+            line-height: 1.5; 
+            word-wrap: break-word;
+            text-align: center; 
+        }
+
+
         #section5 {
             background-image: url('/static/warehouse1.png'); /* Update with your image path */
             background-size: cover;
@@ -119,7 +143,7 @@
         </div> 
                                                <!--SEction 3-->
 
-        
+<!--         
         <div class="section3" id="section" >
             <div class="scroll-section" style="background-color: #17364a;height:600px;margin-bottom:20px;">
                 <div class="container">
@@ -144,11 +168,7 @@
                                               </video>
                                                 <h6 class="card-title" style="color:white;font-size:16px;">Inventory Management</h6>
                                                 <p class="card-text" style="color:white;font-size:13px;">Flawlessly orchestrate inventory for optimal stock levels,precise item identification and overall tracking and monitoring the inventory.</p>
-                                                <!-- <div class="card-body">
-                                                    <h5 class="card-title">Card Title 1</h5>
-                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                   
-                                                </div> -->
+                                                
                                               </div>
                                             </div>
                                             <div class="col-6">
@@ -162,11 +182,7 @@
                                                 <h6 class="card-title" style="color:white;font-size:16px;">Protective Oversight
                                                 </h6>
                                                 <p class="card-text" style="color:white;font-size:13px;">Instantly identify accidents for prompt assistance to<br> timely notifying the assest requirement. </p>
-                                                <!-- <div class="card-body">
-                                                    <h5 class="card-title">Card Title 1</h5>
-                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                   
-                                                </div> -->
+                                                
                                               </div>
                                             </div>
                                         </div>
@@ -184,11 +200,7 @@
                                                 <h6 class="card-title" style="color:white;font-size:16px;">Well-being &<br>
                                                   Regulatory Adherence
                                                 <p class="card-text" style="color:white;font-size:13px;">Ensure a Hard Helmet and Safety gear<br> Compliance, Alert on Safety Hazards, and Instant<br> Theft/Vandalism Notification..</p>
-                                                <!-- <div class="card-body">
-                                                    <h5 class="card-title">Card Title 1</h5>
-                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                   
-                                                </div> -->
+                                               
                                               </div>
                                             </div>
                                             <div class="col-6">
@@ -201,16 +213,12 @@
                                               </video>
                                                 <h6 class="card-title" style="color:white;font-size:16px;">Monitoring & Tracking</h6>
                                                 <p class="card-text" style="color:white;font-size:13px;">Exquisitely manage inventory movements and asset utilization with precision monitoring.</p>
-                                                <!-- <div class="card-body">
-                                                    <h5 class="card-title">Card Title 1</h5>
-                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                   
-                                                </div> -->
+                                                
                                               </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Add more carousel items as needed -->
+                                    
                                 </div>
                                 <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -228,7 +236,90 @@
         
            
 
-        </div>
+        </div> -->
+
+
+        <div id="section4" class="section" style="background-color: #17364a;height:600px;margin-bottom:20px;">
+            
+          <h1 style="font-size: 22.9px; text-align:center;margin-top:30px;
+          font-family: 'Glacial Indifference', sans-serif;color:white;
+          margin: 0.5rem 0; ">WITH ARGUS YOU CAN HAVE</h1>
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner" >
+                  <div class="carousel-item active">
+                      <div class="card-deck" style="margin-top: 40px;">
+                          <div class="card" style="background-color: #36576d;">
+                            <video class="card-img-top mx-auto d-block" style="height:200px;width:200px;max-width: 100%;
+                            height: auto;
+                            border:none;" autoplay loop muted>
+                              <source src="/static/manufacturing1.mp4" type="video/mp4">
+                            
+                          </video>
+                            
+                              <div class="card-body">
+                                <h6 class="card-title" style="color:black;font-size:16px;">Inventory Management</h6>
+                                <p class="card-text" style="color:black;font-size:13px;">Flawlessly orchestrate inventory for optimal stock levels,<br>precise item identification and overall tracking and monitoring the inventory.</p>
+                              </div>
+                          </div>
+                          <div class="card" style="background-color:#36576d;">
+                            <video class="card-img-top mx-auto d-block" style="height:200px;width:200px;max-width: 100%;
+                            height: auto;
+                            border:none;" autoplay loop muted>
+                              <source src="/static/manufacturing-2.mp4" type="video/mp4">
+                            
+                          </video>
+                           
+                              <div class="card-body">
+                                <h6 class="card-title" style="color:black;font-size:16px;">Protective Oversight
+                                </h6>
+                                <p class="card-text" style="color:black;font-size:13px;">Instantly identify accidents for prompt assistance to<br> timely notifying the assest requirement. </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <div class="card-deck" style="margin-top: 40px;">
+                          <div class="card" style="background-color: #36576d;">
+                            <video class="card-img-top mx-auto d-block" style="height:200px;width:200px;max-width: 100%;
+                            height: auto;
+                            border:none;"  autoplay loop muted>
+                              <source src="/static/manufacturing1.mp4" type="video/mp4">
+                            
+                            </video>
+                           
+                              <div class="card-body">
+                                <h6 class="card-title" style="color:black;font-size:16px;">Well-being & Regulatory Adherence
+                                <p class="card-text" style="color:black;font-size:13px;">Ensure a Hard Helmet and Safety gear Compliance, Alert on<br> Safety Hazards, and InstantTheft/Vandalism Notification..</p>
+                              </div>
+                          </div>
+
+                          <div class="card" style="background-color: #36576d;">
+                            <video class="card-img-top mx-auto d-block" style="height:200px;width:200px;max-width: 100%;
+                            height: auto;
+                            border:none;"  autoplay loop muted>
+                              <source src="/static/manufacturing1.mp4" type="video/mp4">
+                            
+                          </video>
+                            
+                              <div class="card-body">
+                                <h6 class="card-title" style="color:black;font-size:16px;">Monitoring & Tracking</h6>
+                                <p class="card-text" style="color:black;font-size:13px;">Exquisitely manage inventory movements and asset<br> utilization with precision monitoring.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+              </a>
+          </div>
+
+      </div>
 
                                             <!--section-4-->
 
