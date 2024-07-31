@@ -24,7 +24,7 @@
           .navbar-light .navbar-brand {
             color: white;
           }
-          .navbar-light .nav-link.active {
+          .navbar-light {
             color: white !important;
             
           }
@@ -32,7 +32,7 @@
             color: white;
           }
           .navbar-nav .nav-item {
-            margin-right: 100px; /* Adjust this value for more or less spacing */
+            margin-right: 100px; 
           }
           .font-roboto {
               font-family: 'Roboto', sans-serif;
@@ -44,8 +44,8 @@
               font-family: 'Pacifico', cursive;
             }
             .navbar-brand img {
-              height: 180px; /* Adjust this value for logo size */
-              margin-right: 10px; /* Space between logo and brand name */
+              height: 180px; 
+              margin-right: 10px;
             }
 
         </style>
@@ -53,84 +53,84 @@
 <body>
     <div class="container-fluid">
         <div id="section1" class="section">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
             <a class="navbar-brand font-roboto" href="#">
-                <img src="/static/logo.png" alt="Logo"> <!-- Replace the src with your logo URL -->
-              </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+              <img src="/static/logo.png" alt="Logo"> 
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown" >
-              <ul class="navbar-nav  ms-auto">
-                <li class="nav-item">
-                   <a class="nav-link active" aria-current="page" href="/" style="color:black">Home</a>
-                </li>
-              
+      
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="/home" style="color:black;">Home</a>
+                    </li>
+                
+                    <li class="nav-item dropdown">
+                      <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black;">
+                        Industries
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/manufacturing" style="color:black;">Manufacturing Industry</a>
+                        <a class="dropdown-item" href="/construction" style="color:black;">Construction Industry</a>
+                       
+                        <a class="dropdown-item" href="/retail" style="color:black;">Retail Industry</a>
+                        <a class="dropdown-item" href="/logistics" style="color:black;">Logistics  Industry</a>
+                        <a class="dropdown-item" href="/Industry" style="color:black;">Warehouse Industry</a>
+                      </div>
+                    </li>  
 
-              <li class="nav-item dropdown">
-                <a class="nav-link active dropdown-toggle" style="color:black" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Industries
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color:black">
-                  <a class="dropdown-item" href="/manufacturing">Manufacturing Industry</a>
-                  <a class="dropdown-item" href="/construction">Construction Industry</a>
-                 
-                  <a class="dropdown-item" href="/retail">Retail Industry</a>
-                  <a class="dropdown-item" href="/logistics">Logistics  Industry</a>
-                  <a class="dropdown-item" href="/Industry">Warehouse Industry</a>
-                </div>
-              </li>  
 
+                    <li class="nav-item dropdown">
+                      <a class="nav-link active dropdown-toggle" href="#" style="color:black;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Use Case
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/predictive" style="color:black;">Predictive</a>
+                      <a class="dropdown-item" href="/automated" style="color:black;">Automated</a>
+                      <a class="dropdown-item" href="/security" style="color:black;">Security & Survelliance</a>
+                      <a class="dropdown-item" href="/enhanced" style="color:black;">Enhanced Customer experience</a>
+                        
+                      </div>
+                    </li>  
 
-              <li class="nav-item dropdown">
-                <a class="nav-link active dropdown-toggle" style="color:black" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Use Case
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color:black">
-                  <a class="dropdown-item" href="/predictive">Predictive</a>
-                <a class="dropdown-item" href="/automated">Automated</a>
-                <a class="dropdown-item" href="/security">Security & Survelliance</a>
-                <a class="dropdown-item" href="/enhanced">Enhanced Customer experience</a>
-                  
-                </div>
-              </li>  
-              
-              
-              <li class="nav-item">
-                <a class="nav-link active" style="color:black" href="/blog">Blogs</a>
-              </li><li class="nav-item">
-                <a class="nav-link active" style="color:black" href="/contact">Contact us</a>
-              </li>
-             
-            </ul>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="/blog" style="color:black;">Blogs</a>
+                    </li><li class="nav-item">
+                      <a class="nav-link active" href="/contact" style="color:black;">Contact us</a>
+                    </li>
+                
+                
+              </ul>
+            </div>
+          </nav>
+          <div class="main text-center">
+            <h1>WHAT'S NEW, NEXT YEAR?</h1>
+            <hr>
+            <div class="my-4">
+              <img src="/static/blog1.jpg" class="img-fluid" style="background-size: cover;">
+            </div>
           </div>
         </div>
-        </nav>
-        <div class="main text-center">
-    <h1>WHAT'S NEW, NEXT YEAR?</h1>
-    <hr>
-    <div class="my-4">
-      <img src="/static/blog1.jpg" class="img-fluid" style="background-size: cover;">
+
+
+        <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat dui at suscipit fermentum. Sed hendrerit convallis tellus, nec tincidunt nulla interdum ut. Integer euismod arcu ac eros sagittis, sit amet vestibulum libero tristique. Mauris cursus venenatis orci, vitae ultricies ligula volutpat ut. Cras in justo at magna feugiat tincidunt. Phasellus viverra risus vel est interdum, ut gravida metus convallis. Vivamus et eros in libero ultricies tincidunt.</p>
+            <p>Curabitur euismod mi ac libero gravida, eget tincidunt dui lacinia. Suspendisse potenti. Sed tempor tortor eu tincidunt scelerisque. In hac habitasse platea dictumst. Donec vel leo sit amet lorem laoreet tincidunt. Cras efficitur luctus felis, sit amet accumsan orci pulvinar ac. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="/static/blog3.jpg" class="img-fluid" >
+          </div>
+        </div>
+        </div>
+
+
+
+
     </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat dui at suscipit fermentum. Sed hendrerit convallis tellus, nec tincidunt nulla interdum ut. Integer euismod arcu ac eros sagittis, sit amet vestibulum libero tristique. Mauris cursus venenatis orci, vitae ultricies ligula volutpat ut. Cras in justo at magna feugiat tincidunt. Phasellus viverra risus vel est interdum, ut gravida metus convallis. Vivamus et eros in libero ultricies tincidunt.</p>
-        <p>Curabitur euismod mi ac libero gravida, eget tincidunt dui lacinia. Suspendisse potenti. Sed tempor tortor eu tincidunt scelerisque. In hac habitasse platea dictumst. Donec vel leo sit amet lorem laoreet tincidunt. Cras efficitur luctus felis, sit amet accumsan orci pulvinar ac. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-      </div>
-      <div class="col-md-6">
-        <img src="/static/blog3.jpg" class="img-fluid" >
-      </div>
-    </div>
-  </div>
-
-
-
-
-
 
     <!--Footer section-->
 
@@ -142,7 +142,7 @@
 
 
 
-</div>
+    
 
 
 <script src="js/jquery-3.3.1.min.js"></script>

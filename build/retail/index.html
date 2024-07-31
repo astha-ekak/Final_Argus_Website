@@ -25,7 +25,7 @@
             color: white;
           }
           .navbar-nav .nav-item {
-            margin-right: 100px; /* Adjust this value for more or less spacing */
+            margin-right: 100px; 
           }
           .font-roboto {
               font-family: 'Roboto', sans-serif;
@@ -37,17 +37,17 @@
               font-family: 'Pacifico', cursive;
             }
             .navbar-brand img {
-              height: 180px; /* Adjust this value for logo size */
-              margin-right: 10px; /* Space between logo and brand name */
+              height: 180px; 
+              margin-right: 10px; 
             }
         
             
             #section1 {
             position: relative;
-            height: 900px; /* Adjust height as needed */
+            height: 900px; 
             overflow: hidden;
-            color: white; /* Optional: Change text color for better contrast */
-            z-index: 0; /* Ensure section 1 is behind other sections */
+            color: white; 
+            z-index: 0; 
             background-size: cover;
         }
         #section1 .video-bg {
@@ -58,26 +58,26 @@
             min-height: 100%;
             width: auto;
             height: auto;
-            z-index: -1; /* Place the video behind other content */
+            z-index: -1; 
         }
         #section1 .content {
             position: relative;
-            z-index: 1; /* Ensure content is above the video */
+            z-index: 1; 
         }
         
 
         .scroll-section {
-            margin-top: 10vh; /* Pushes the section below the first viewport height */
+            margin-top: 10vh;
             padding: 50px;
             background-color: #f8f9fa;
         }
        
         #section5 {
-            background-image: url('/static/warehouse1.png'); /* Update with your image path */
+            background-image: url('/static/warehouse1.png');
             background-size: cover;
             
             
-            height: 800px; /* Adjust height as needed */
+            height: 800px; 
         }
       
 
@@ -101,84 +101,59 @@
                 
             </video>
        
-            
-    
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+  <a class="navbar-brand font-roboto" href="#">
+    <img src="/static/logo.png" alt="Logo"> 
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="/home" style="color:white;">Home</a>
+          </li>
+      
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" style="color:white;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Industries
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/manufacturing">Manufacturing Industry</a>
+              <a class="dropdown-item" href="/construction">Construction Industry</a>
+             
+              <a class="dropdown-item" href="/retail">Retail Industry</a>
+              <a class="dropdown-item" href="/logistics">Logistics  Industry</a>
+              <a class="dropdown-item" href="/Industry">Warehouse Industry</a>
+            </div>
+          </li>  
 
 
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" style="color:white;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Use Case
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/predictive">Predictive</a>
+            <a class="dropdown-item" href="/automated">Automated</a>
+            <a class="dropdown-item" href="/security">Security & Survelliance</a>
+            <a class="dropdown-item" href="/enhanced">Enhanced Customer experience</a>
+              
+            </div>
+          </li>  
 
+          <li class="nav-item">
+            <a class="nav-link active" href="/blog" style="color:white;">Blogs</a>
+          </li><li class="nav-item">
+            <a class="nav-link active" href="/contact" style="color:white;">Contact us</a>
+          </li>
+      
+      
+    </ul>
+  </div>
+</nav>
 
-
-
-    
-
-
-
-
-
-
-   
-             <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-                <div class="container-fluid">
-                    <a class="navbar-brand font-roboto" href="#">
-                        <img src="/static/logo.png" alt="Logo"> <!-- Replace the src with your logo URL -->
-                      </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav  ms-auto">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                      </li>
-                      
-
-                      <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Industries
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="/manufacturing">Manufacturing Industry</a>
-                          <a class="dropdown-item" href="/construction">Construction Industry</a>
-                         
-                          <a class="dropdown-item" href="/retail">Retail Industry</a>
-                          <a class="dropdown-item" href="/logistics">Logistics  Industry</a>
-                          <a class="dropdown-item" href="/Industry">Warehouse Industry</a>
-                        </div>
-                      </li>  
-
-
-                      <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Use Case
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="/predictive">Predictive</a>
-                        <a class="dropdown-item" href="/automated">Automated</a>
-                        <a class="dropdown-item" href="/security">Security & Survelliance</a>
-                        <a class="dropdown-item" href="/enhanced">Enhanced Customer experience</a>
-                          
-                        </div>
-                      </li>  
-                      
-                      
-                      <li class="nav-item">
-                        <a class="nav-link active" href="/blog">Blogs</a>
-                      </li><li class="nav-item">
-                        <a class="nav-link active" href="/contact">Contact us</a>
-                      </li>
-                     
-                    </ul>
-                  </div>
-                </div>
-                </nav>
-        
-<!-- 
-                <div id="main">
-                    <div id="page1">
-                      <h1 style="text-align:center;color:white;margin-top:140px;font-size:380%;font-family:Georgia, 'Times New Roman', Times, serif">Evolving the Warehouse Landscape</h1>
-                     
-                    </div>
-                  </div>  -->
 
 
         </div>
@@ -194,190 +169,71 @@
 The retail landscape is swiftly evolving, presenting fresh hurdle for businesses. To thrive amidst increasing<br> competition, retailer must embrace innovative retail solutions. AI-powered video analytics in retail is an<br> area experiencing substantial growth. Leveraging computer vision for the retail sector allows for real-time<br> analysis of consumer behaviour, enabling the transformation of the customer journey and overall<br> experience.
 
         </div> 
-        <!-- <div id="section2" class="section" style="margin-bottom: 30px;height:600px">
-          <div class="row" style="margin-top:120px">
-            <h1 style="font-size: 50px; text-align:left;
-            font-family:'Century Gothic';background-size: cover;letter-spacing: 3px;margin-left:30px
-           "> Revolutionary Sophistication, Redefining<br> the retail landscape with its unparalleled<br> visual allure.</h1>
-          </div>
-          <div class="row">
-            <div class="row">
-              <h3 style="font-size:19px;word-spacing: 2px; letter-spacing: 1px; border:none;margin-left:30px;font-family: 'Century Gothic';margin-top:50px; ">The retail landscape is swiftly evolving, presenting fresh hurdle for businesses. To thrive amidst increasing<br> competition, retailer must embrace innovative retail solutions. AI-powered video analytics in retail is an<br> area experiencing substantial growth. Leveraging computer vision for the retail sector allows for real-time<br> analysis of consumer behaviour, enabling the transformation of the customer journey and overall<br> experience.</h3>
-            </div>
-          </div>
-        </div> -->
+    
                                                <!--SEction 3-->
 
         
-        <!-- <div class="section3" id="section" >
-            <div class="scroll-section" style="background-color: #17364a;height:600px;margin-bottom:20px;">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="text-center" style="color:aliceblue">WITH ARGUS YOU CAN HAVE</h2>
-                        </div>
-                    </div>
-                    <div class="row" style="margin-top:40px;">
-                        <div class="col-12">
-                            <div id="imageCarousel" class="carousel slide" data-ride="carousel" style="margin-left:20px;">
-                                <div class="carousel-inner" style="margin-left:150px;">
-                                    <div class="carousel-item active">
-                                        <div class="row">
-                                            <div class="col-6">
-                                              <div class="card" style="width:300px;height:400px;
-                                              text-align: center;background-color:#62819667;
-                                              box-shadow: 0 0px 10px rgba(0,0,0,.2);">
-                                                <video class="card-img-top mx-auto d-block" style="height:50%;width:50%;" autoplay loop muted>
-                                                  <source src="/static/manufacturing1.mp4" type="video/mp4">
-                                                
-                                              </video>
-                                                <h6 class="card-title" style="color:white;font-size:16px;">Real-time Experience<br> Analysis</h6>
-                                                <p class="card-text" style="color:white;font-size:13px;">Continuous analysis improves customer<br> experience and service quality by providing<br> immediate awareness of unattended customers <br>in real-time..</p>
-                                                
-                                              </div>
+       
+            
+                                               <div class="container-fluid">
+                                                <div class="section3">
+                                                    <div class="scroll-section" style="background-color: #17364a; padding: 50px 0;">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <h2 class="text-center" style="color: aliceblue;">WITH ARGUS YOU CAN HAVE</h2>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+                                                                    <div class="carousel-inner">
+                                                                        <div class="carousel-item active">
+                                                                            <div class="row">
+                                                                                <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center mb-4">
+                                                                                    <video width="300" height="300" autoplay loop muted style="border-radius: 50%;">
+                                                                                        <source src="/static/retail1carousel.mp4" type="video/mp4">
+                                                                                       
+                                                                                    </video>
+                                                                                </div>
+                                                                                <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center mb-4">
+                                                                                    <video width="300" height="300" autoplay loop muted style="border-radius: 50%;">
+                                                                                        <source src="/static/retail2carousel.mp4" type="video/mp4">
+                                                                                    
+                                                                                    </video>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="carousel-item">
+                                                                            <div class="row">
+                                                                                <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center mb-4">
+                                                                                    <video width="300" height="300" autoplay loop muted style="border-radius: 50%;">
+                                                                                        <source src="/static/retail3carousel.mp4" type="video/mp4">
+                                                                                        
+                                                                                    </video>
+                                                                                </div>
+                                                                                <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center mb-4">
+                                                                                    <video width="300" height="300" autoplay loop muted style="border-radius: 50%;">
+                                                                                        <source src="/static/retail4carousel.mp4" type="video/mp4">
+                                                                                        
+                                                                                    </video>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                        <span class="sr-only">Previous</span>
+                                                                    </a>
+                                                                    <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+                                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                        <span class="sr-only">Next</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-6">
-                                              <div class="card" style="width:300px;height:400px;
-                                              text-align: center;background-color:#62819667;
-                                              box-shadow: 0 0px 10px rgba(0,0,0,.2);">
-                                                <video class="card-img-top mx-auto d-block" style="height:50%;width:50%;" autoplay loop muted>
-                                                  <source src="/static/manufacturing-2.mp4" type="video/mp4">
-                                                
-                                              </video>
-                                                <h6 class="card-title" style="color:white;font-size:16px;">Optimization via<br> Object Recognition
-                                                </h6>
-                                                <p class="card-text" style="color:white;font-size:13px;">Utilizing object recognition, optimizes inventory,<br> minimizing shortages or excess stock for<br> efficient retail management. </p>
-                                                
-                                              </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-6">
-                                              <div class="card" style="width:300px;height:400px;
-                                              text-align: center;background-color:#62819667;
-                                              box-shadow: 0 0px 10px rgba(0,0,0,.2);">
-                                                <video class="card-img-top mx-auto d-block" style="height:50%;width:50%;" autoplay loop muted>
-                                                  <source src="/static/manufacturing1.mp4" type="video/mp4">
-                                                
-                                                </video>
-                                                <h6 class="card-title" style="color:white;font-size:16px;">Understanding Peak<br> Foot Traffic<br>
-                                                  Regulatory Adherence
-                                                <p class="card-text" style="color:white;font-size:13px;">Identify the busiest times for shopping by<br> observing the daily influx of customers...</p>
-                                                
-                                              </div>
-                                            </div>
-                                            <div class="col-6">
-                                              <div class="card" style="width:300px;height:400px;
-                                              text-align: center;background-color:#62819667;
-                                              box-shadow: 0 0px 10px rgba(0,0,0,.2);">
-                                                <video class="card-img-top mx-auto d-block" style="height:50%;width:50%;" autoplay loop muted>
-                                                  <source src="/static/manufacturing1.mp4" type="video/mp4">
-                                                
-                                              </video>
-                                                <h6 class="card-title" style="color:white;font-size:16px;">Facial Recognition for<br> Tracking & Security </h6>
-                                                <p class="card-text" style="color:white;font-size:13px;">Implement facial recognition and access<br> control to track employee attendance along<br> with Identify uncommon or suspicious<br> activity.</p>
-                                                
-                                              </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-           
-
-
-        </div> -->
-
-
-
-        <div class="section3" id="section">
-          <div class="scroll-section" style="background-color: #17364a; height: 820px; margin-bottom: 20px;">
-              <div class="container" style="height: 700px;">
-                  <div class="row">
-                      <div class="col-12">
-                          <h2 class="text-center" style="color: aliceblue;">WITH ARGUS YOU CAN HAVE</h2>
-                      </div>
-                  </div>
-                  <div class="row" style="margin-top: 50px;">
-                      <div class="col-12">
-                          <div id="imageCarousel" class="carousel slide" data-ride="carousel">
-                              <div class="carousel-inner">
-                                  <div class="carousel-item active">
-                                      <div class="row">
-                                          <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center mb-4">
-                                              <div class="card" style="width: 300px; height: 300px; border-radius: 50%; text-align: center; background-color: #62819667; box-shadow: 0 0px 10px rgba(0,0,0,.2);">
-                                                  <img class="card-img-top mx-auto d-block" style="height: 40%; width: 40%; margin-top: 20px;" src="/static/Logistics Industry142.gif" alt="GIF">
-                                                  <div class="card-body">
-                                                      <h6 class="card-title" style="color: white; font-size: 16px;">Real-time Experience Analysis</h6>
-                                                      <p class="card-text" style="color: white; font-size: 13px;">Continuous analysis improves customer experience and service quality.</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center mb-4">
-                                              <div class="card" style="width: 300px; height: 300px; border-radius: 50%; text-align: center; background-color: #62819667; box-shadow: 0 0px 10px rgba(0,0,0,.2);">
-                                                  <img class="card-img-top mx-auto d-block" style="height: 40%; width: 40%; margin-top: 20px;" src="/static/145266.gif" alt="GIF">
-                                                  <div class="card-body">
-                                                      <h6 class="card-title" style="color: white; font-size: 16px;">Optimization via Object Recognition</h6>
-                                                      <p class="card-text" style="color: white; font-size: 13px;">Utilizing object recognition, optimizes inventory, minimizing<br> shortages or excess stock for efficient retail management. .</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="carousel-item">
-                                      <div class="row">
-                                          <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center mb-4">
-                                              <div class="card" style="width: 300px; height: 300px; border-radius: 50%; text-align: center; background-color: #62819667; box-shadow: 0 0px 10px rgba(0,0,0,.2);">
-                                                  <img class="card-img-top mx-auto d-block" style="height: 40%; width: 40%; margin-top: 20px;" src="/static/Logistics Industry4512.gif" alt="GIF">
-                                                  <div class="card-body">
-                                                      <h6 class="card-title" style="color: white; font-size: 16px;">Understanding Peak Foot Traffic</h6>
-                                                      <p class="card-text" style="color: white; font-size: 13px;">Identify the busiest times for shopping by<br> observing the daily influx of customers.</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center mb-4">
-                                              <div class="card" style="width: 300px; height: 300px; border-radius: 50%; text-align: center; background-color: #62819667; box-shadow: 0 0px 10px rgba(0,0,0,.2);">
-                                                  <img class="card-img-top mx-auto d-block" style="height: 40%; width: 40%; margin-top: 20px;" src="/static/Logistics Industry12345.gif" alt="GIF">
-                                                  <div class="card-body">
-                                                      <h6 class="card-title" style="color: white; font-size: 16px;">Facial Recognition for Tracking & Security </h6>
-                                                      <p class="card-text" style="color: white; font-size: 13px;">Implement facial recognition and access control to track employee attendance<br> along with Identify uncommon or suspicious activity..</p>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
-                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                  <span class="sr-only">Previous</span>
-                              </a>
-                              <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
-                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                  <span class="sr-only">Next</span>
-                              </a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      
       
 
                                             <!--section-4-->
@@ -385,117 +241,150 @@ The retail landscape is swiftly evolving, presenting fresh hurdle for businesses
        
 
 
-        <div class="section4" id="section" style="height:500px;margin-top:80px;">
-          <div class="row row-cols-1 row-cols-md-2 g-4 " >
-              <div class="col">
-                <div class="card h-40" style="border:none">
-                  <img class="card-img-top mx-auto d-block" style="height: 40%; width: 40%; margin-top: 20px;" src="/static/Logistics Industry 78856.gif" alt="GIF">
-                  <div class="card-body text-center">
-                    <h5 class="card-text" style="font-size:27px; font-family: 'Glacial Indifference', sans-serif;">Keeping Tabs on Items &<br> Individuals</h5>
-                    <p class="card-text" style="font-size:14.9px; font-family: 'Century Gothic', sans-serif;">Identify the busiest times for shopping by observing<br> the daily influx of customers, helping to understand<br> when foot traffic peaks during the day.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-40" style="border:none">
-                  <img class="card-img-top mx-auto d-block" style="height: 40%; width: 40%; margin-top: 20px;" src="/static/Logistics Industry 45645.gif" alt="GIF">
-                  <div class="card-body text-center">
-                    <h5 class="card-text" style="font-size:27px; font-family: 'Glacial Indifference', sans-serif;">
-                        Enhanced Customer Experience</h5>
-                    <p class="card-text" style="font-size:14.9px; font-family: 'Century Gothic', sans-serif;">Tracking customer shopping behaviour,<br> managing queues, and optimizing store layout..</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-40" style="border:none">
-                  <img class="card-img-top mx-auto d-block" style="height: 40%; width: 40%; margin-top: 20px;" src="/static/Logistics Industry 4512.gif" alt="GIF">
-                  <div class="card-body text-center">
-                    <h5 class="card-text" style="font-size:27px; font-family: 'Glacial Indifference', sans-serif;">Stock Control &<br> Oversight<br>
-                   </h5>
-                    <p class="card-text" style="font-size:14.9px; font-family: 'Century Gothic', sans-serif;">Recognize inventory levels visually, monitor shelf<br> conditions, and help restock to avoid shortages..</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-40" style="border:none">
-                  <img class="card-img-top mx-auto d-block" style="height: 40%; width: 40%; margin-top: 20px;" src="/static/Logistics Industry 456.gif" alt="GIF">
-                  <div class="card-body text-center">
-                    <h5 class="card-text" style="font-size:27px; font-family: 'Glacial Indifference', sans-serif;">Security & Loss<br> Prevention and Alert</h5>
-                    <p class="card-text" style="font-size:14.9px; font-family: 'Century Gothic', sans-serif">Quick alert on shoplifting and theft. Detect<br> suspicious behaviour. In addition to timely<br> notifying the authorities of the same.
-                        .</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-      </div>
+                                            <div class="section4" id="section" style="height: auto; margin-top: 80px;">
+                                              <div class="row row-cols-1 row-cols-md-2 g-4">
+                                                  <div class="col">
+                                                      <div class="card h-100" style="border:none;">
+                                                          <img class="card-img-top mx-auto d-block" style="height: auto; width: 40%; margin-top: 20px;" src="/static/Logistics Industry 78856.gif" alt="GIF">
+                                                          <div class="card-body text-center">
+                                                              <h5 class="card-title" style="font-size:1.5rem; font-family: 'Glacial Indifference', sans-serif;">Keeping Tabs on Items &<br> Individuals</h5>
+                                                              <p class="card-text" style="font-size:0.9375rem; font-family: 'Century Gothic', sans-serif;">Identify the busiest times for shopping by observing the daily influx of customers, helping to understand when foot traffic peaks during the day.</p>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col">
+                                                      <div class="card h-100" style="border:none;">
+                                                          <img class="card-img-top mx-auto d-block" style="height: auto; width: 40%; margin-top: 20px;" src="/static/Logistics Industry 45645.gif" alt="GIF">
+                                                          <div class="card-body text-center">
+                                                              <h5 class="card-title" style="font-size:1.5rem; font-family: 'Glacial Indifference', sans-serif;">Enhanced Customer Experience</h5>
+                                                              <p class="card-text" style="font-size:0.9375rem; font-family: 'Century Gothic', sans-serif;">Tracking customer shopping behaviour, managing queues, and optimizing store layout.</p>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col">
+                                                      <div class="card h-100" style="border:none;">
+                                                          <img class="card-img-top mx-auto d-block" style="height: auto; width: 40%; margin-top: 20px;" src="/static/Logistics Industry 4512.gif" alt="GIF">
+                                                          <div class="card-body text-center">
+                                                              <h5 class="card-title" style="font-size:1.5rem; font-family: 'Glacial Indifference', sans-serif;">Stock Control &<br> Oversight</h5>
+                                                              <p class="card-text" style="font-size:0.9375rem; font-family: 'Century Gothic', sans-serif;">Recognize inventory levels visually, monitor shelf conditions, and help restock to avoid shortages.</p>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col">
+                                                      <div class="card h-100" style="border:none;">
+                                                          <img class="card-img-top mx-auto d-block" style="height: auto; width: 40%; margin-top: 20px;" src="/static/Logistics Industry 456.gif" alt="GIF">
+                                                          <div class="card-body text-center">
+                                                              <h5 class="card-title" style="font-size:1.5rem; font-family: 'Glacial Indifference', sans-serif;">Security & Loss<br> Prevention and Alert</h5>
+                                                              <p class="card-text" style="font-size:0.9375rem; font-family: 'Century Gothic', sans-serif;">Quick alert on shoplifting and theft. Detect suspicious behaviour and notify the authorities promptly.</p>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          
 
                                             <!--section-5-->
 
 
-        <div class="row" id="section" style="height:800px;margin-top:800px;margin-bottom: 40px;background-size: cover;">
-          
-           <div class="page1" style="background-image: url('/static/tranforming.png');background-size: cover;">
-            <h1 style="text-align:center;color:white;margin-top:270px;font-size:380%;font-family:'Century Gothic', sans-serif;">Transforming the retail environment with<br> unmatched aesthetic refinement</h1>
+   
+
+
+        <div class="row" id="section" style="height: 800px; margin-bottom: 40px;">
+          <div class="page1 d-flex align-items-center justify-content-center text-center"
+               style="background-image: url('/static/tranforming.png'); background-size: cover; background-position: center; height: 100%; width: 100%;">
+              <h1 class="text-white responsive-text"
+                  style="font-family: 'Century Gothic', sans-serif;">
+                  Transforming the retail environment with<br> unmatched aesthetic refinement
+              </h1>
            </div>
-        </div>
+       </div>
+      
+      <style>
+       
+          .responsive-text {
+              font-size: 3.8rem;
+          }
+      
+          
+          @media (max-width: 1200px) {
+              .responsive-text {
+                  font-size: 3rem;
+              }
+          }
+      
+          @media (max-width: 992px) {
+              .responsive-text {
+                  font-size: 2.5rem;
+              }
+          }
+      
+          @media (max-width: 768px) {
+              .responsive-text {
+                  font-size: 2rem;
+              }
+          }
+      
+          @media (max-width: 576px) {
+              .responsive-text {
+                  font-size: 1.5rem;
+              }
+          }
+      </style>
 
 
                                             <!--section6 -->
 
         
 
-
                                             <div id="section7" class="section" style="padding: 50px 0;">
-                                              <div class="container-fluid">
-                                                  <h1 style="font-size: 22.9px; text-align:left;font-family: 'Glacial Indifference', sans-serif;margin: 0.5rem 0;margin-top:80px;border-bottom: 2px solid black; display: inline-block;">Explore More</h1>
-                                                  <div class="row" style="margin-top:60px">
-                                                      <!-- Card 1 -->
-                                                      <div class="col-md-4 mb-4">
-                                                        <div class="card h-100" style="background-image: url('/static/building31.png');">
-                          
-                                                          <div class="card-body" style="margin-top:255px;">
-                                                            
-                                                              <div class="sub-card">
-                                                                  <h6>Sub Card 1</h6>
-                                                                  <p>Sub card content for card 1.</p>
-                                                              </div>
-                                                          </div>
-                                                         
-                                                      </div>
-                                                      </div>
-                                                      <!-- Card 2 -->
-                                                      <div class="col-md-4 mb-4">
-                                                        <div class="card h-100" style="background-image: url('/static/building31.png');">
-                          
-                                                          <div class="card-body" style="margin-top:255px;">
-                                                            
-                                                              <div class="sub-card">
-                                                                  <h6>Sub Card 1</h6>
-                                                                  <p>Sub card content for card 1.</p>
-                                                              </div>
-                                                          </div>
-                                                         
-                                                      </div>
-                                                      </div>
-                                                      <!-- Card 3 -->
-                                                      <div class="col-md-4 mb-4">
-                                                        <div class="card h-100" style="background-image: url('/static/building31.png');">
-                          
-                                                          <div class="card-body" style="margin-top:255px;">
-                                                            
-                                                              <div class="sub-card">
-                                                                  <h6>Sub Card 1</h6>
-                                                                  <p>Sub card content for card 1.</p>
-                                                              </div>
-                                                          </div>
-                                                         
-                                                      </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                               
-                                    
+                                                <div class="container-fluid">
+                                                    <h1 style="font-size: 22.9px; text-align:left;font-family: 'Glacial Indifference', sans-serif;margin: 0.5rem 0;margin-top:80px;border-bottom: 2px solid black; display: inline-block;">Explore More</h1>
+                                                    <div class="row" style="margin-top:60px">
+                                                      
+                                                        <div class="col-md-4 mb-4">
+                                                          <div class="card h-100" style="background-image: url('/static/building31.png');">
+                            
+                                                            <div class="card-body" style="margin-top:255px;">
+                                                              
+                                                                <div class="sub-card">
+                                                                    <h6>Sub Card 1</h6>
+                                                                    <p>Sub card content for card 1.</p>
+                                                                </div>
+                                                            </div>
+                                                           
+                                                        </div>
+                                                        </div>
+                                                       
+                                                        <div class="col-md-4 mb-4">
+                                                          <div class="card h-100" style="background-image: url('/static/building31.png');">
+                            
+                                                            <div class="card-body" style="margin-top:255px;">
+                                                              
+                                                                <div class="sub-card">
+                                                                    <h6>Sub Card 1</h6>
+                                                                    <p>Sub card content for card 1.</p>
+                                                                </div>
+                                                            </div>
+                                                           
+                                                        </div>
+                                                        </div>
+                                                       
+                                                        <div class="col-md-4 mb-4">
+                                                          <div class="card h-100" style="background-image: url('/static/building31.png');">
+                            
+                                                            <div class="card-body" style="margin-top:255px;">
+                                                              
+                                                                <div class="sub-card">
+                                                                    <h6>Sub Card 1</h6>
+                                                                    <p>Sub card content for card 1.</p>
+                                                                </div>
+                                                            </div>
+                                                           
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
 
 

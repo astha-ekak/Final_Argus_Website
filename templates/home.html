@@ -18,42 +18,43 @@
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/padding/padding.css">
      <style>
 
-        .navbar-light .navbar-nav .nav-link {
-            color: white;
-          }
-          .navbar-light .navbar-brand {
-            color: white;
-          }
-          .navbar-light .nav-link.active {
-            color: white !important;
-          }
-          .navbar-light .nav-link.dropdown-toggle::after {
-            color: white;
-          }
-          .navbar-nav .nav-item {
-            margin-right: 100px; /* Adjust this value for more or less spacing */
-          }
-          .font-roboto {
-              font-family: 'Roboto', sans-serif;
-            }
-            .font-montserrat {
-              font-family: 'Montserrat', sans-serif;
-            }
-            .font-pacifico {
-              font-family: 'Pacifico', cursive;
-            }
-            .navbar-brand img {
-              height: 180px; /* Adjust this value for logo size */
-              margin-right: 10px; /* Space between logo and brand name */
-            }
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+  }
+  .navbar-light .navbar-brand {
+    color: white;
+  }
+  .navbar-light .nav-link.active {
+    color: white !important;
+  }
+  .navbar-light .nav-link.dropdown-toggle::after {
+    color: white;
+  }
+  .navbar-nav .nav-item {
+    margin-right: 100px; 
+  }
+  .font-roboto {
+    font-family: 'Roboto', sans-serif;
+  }
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+  .font-pacifico {
+    font-family: 'Pacifico', cursive;
+  }
+  .navbar-brand img {
+    height: 180px; 
+    margin-right: 10px; 
+  }
         
 
+
         #section1 {
-            background-image: url('/static/background.png'); /* Update with your image path */
+            background-image: url('/static/background.png');
             background-size: cover;
             
-            color: white; /* Optional: Change text color for better contrast */
-            height: 900px; /* Adjust height as needed */
+            color: white; 
+            height: 900px;
         }
 
         .section-symbol-text {
@@ -65,7 +66,7 @@
 
         .section-symbol-text .symbol {
             font-size: 3rem; 
-            margin: 0.5rem 0; /* Adjust spacing as needed */
+            margin: 0.5rem 0; /
         }
 
         
@@ -76,32 +77,29 @@
         }
 
         .section-symbol-text .text {
-            font-size: 13.3px; /* Smaller text size */
-            font-family: 'Century Gothic', sans-serif; /* Font family for other text */
-            margin: 0.5rem 0; /* Adjust spacing as needed */
-            line-height: 1.5; /* Adjust line height for better readability */
+            font-size: 13.3px; 
+            font-family: 'Century Gothic', sans-serif;
+            margin: 0.5rem 0;
+            line-height: 1.5; 
             word-wrap: break-word;
             text-align: center; 
         }
 
-        /* .section-content {
-            padding: 2rem 1rem;
-        } */
         
         .section-content {
             display: flex;
-            flex-direction: column; /* Stack columns vertically */
-            height: 100%; /* Full height of the parent column */
-            justify-content: center; /* Center content vertically */
+            flex-direction: column; 
+            height: 100%; 
+            justify-content: center; 
         }
 
         .col-md-2, .col-md-10 {
             display: flex;
-            flex-direction: column; /* Stack content vertically */
-            height: 100%; /* Full height of the parent section */
+            flex-direction: column; 
+            height: 100%; 
         }
         .col-md-10 {
-            background-color:#17364a; /* Set background color to blue */
+            background-color:#17364a; 
             
             
         }
@@ -119,25 +117,24 @@
         }
 
         .image-container .caption {
-            font-size: 14px; /* Adjust font size for captions */
-            font-family: 'Century Gothic', sans-serif; /* Font family for captions */
-            margin-top: 0.5rem; /* Spacing between image and caption */
+            font-size: 14px; 
+            font-family: 'Century Gothic', sans-serif; 
         }
         .col-md-2 .col-text {
-            font-size: 41.8px; /* Font size for the text */
-            font-family: 'Glacial Indifference', sans-serif; /* Font family for the text */
-            color: black; /* Optional: Text color */
+            font-size: 41.8px; 
+            font-family: 'Glacial Indifference', sans-serif;
+            color: black; 
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100%; /* Full height of the column */
+            height: 100%; 
         }
         .scrollable-video-container {
             margin-top:40px;
             position: relative;
-            height: 80vh; /* Adjust the height as needed */
-            overflow-y: auto; /* Enable vertical scrolling */
-            background: transparent; /* Ensure no background color */
+            height: 80vh; 
+            overflow-y: auto; 
+            background: transparent; 
         }
         
         .video-background {
@@ -156,7 +153,7 @@
             justify-content: center;
             align-items: center;
             height: 100%;
-            border:none; /* Ensure card takes full height */
+            border:none;
         }
         .card-img-top {
             max-width: 100%;
@@ -201,47 +198,7 @@
 
 
 
-        .section6 {
-            margin-top: 20;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        
-        .card-section6 {
-            display: flex;
-            gap: 180px;
-        }
-        
-        .card6 {
-            position: relative;
-            width: 400px;
-            height: 550px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px;
-            
-            
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .card6:nth-child(1) {
-            background-image: url('/static/Building-1.jpeg'); /* Replace with your local image path */
-        }
-        
-        .card6:nth-child(2) {
-            background-image: url('/static/Building-2.jpeg'); /* Replace with your local image path */
-        }
-        
-        .card6:nth-child(3) {
-            background-image: url('/static/Building-3.jpeg'); /* Replace with your local image path */
-        }
+     
         
         .sub-card {
             padding: 15px;
@@ -264,87 +221,74 @@
     </style>
 </head>
 <body>
-    
-
-
-
-
-
-
-    
-
-
-
-
-
-
     <div class="container-fluid">
+
+      <!--SEction-1-->
         <div id="section1" class="section">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-                <div class="container-fluid">
-                    <a class="navbar-brand font-roboto" href="#">
-                        <img src="/static/logo.png" alt="Logo"> <!-- Replace the src with your logo URL -->
+           
+          <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <a class="navbar-brand font-roboto" href="#">
+              <img src="/static/logo.png" alt="Logo"> 
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="/home" style="color:white;">Home</a>
+                    </li>
+                
+                    <li class="nav-item dropdown">
+                      <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" style="color:white;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Industries
                       </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav  ms-auto">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                      </li>
-                      
-
-                      <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Industries
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="/manufacturing">Manufacturing Industry</a>
-                          <a class="dropdown-item" href="/construction">Construction Industry</a>
-                         
-                          <a class="dropdown-item" href="/retail">Retail Industry</a>
-                          <a class="dropdown-item" href="/logistics">Logistics  Industry</a>
-                          <a class="dropdown-item" href="/Industry">Warehouse Industry</a>
-                        </div>
-                      </li>  
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/manufacturing">Manufacturing Industry</a>
+                        <a class="dropdown-item" href="/construction">Construction Industry</a>
+                       
+                        <a class="dropdown-item" href="/retail">Retail Industry</a>
+                        <a class="dropdown-item" href="/logistics">Logistics  Industry</a>
+                        <a class="dropdown-item" href="/Industry">Warehouse Industry</a>
+                      </div>
+                    </li>  
 
 
-                      <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Use Case
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="/predictive">Predictive</a>
-                        <a class="dropdown-item" href="/automated">Automated</a>
-                        <a class="dropdown-item" href="/security">Security & Survelliance</a>
-                        <a class="dropdown-item" href="/enhanced">Enhanced Customer experience</a>
-                          
-                        </div>
-                      </li>  
-                      
-                      
-                      <li class="nav-item">
-                        <a class="nav-link active" href="/blog">Blogs</a>
-                      </li><li class="nav-item">
-                        <a class="nav-link active" href="/contact">Contact us</a>
-                      </li>
-                     
-                    </ul>
-                  </div>
-                </div>
-                </nav>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link active dropdown-toggle" href="#" style="color:white;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Use Case
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/predictive">Predictive</a>
+                      <a class="dropdown-item" href="/automated">Automated</a>
+                      <a class="dropdown-item" href="/security">Security & Survelliance</a>
+                      <a class="dropdown-item" href="/enhanced">Enhanced Customer experience</a>
+                        
+                      </div>
+                    </li>  
+
+                    <li class="nav-item">
+                      <a class="nav-link active" href="/blog" style="color:white;">Blogs</a>
+                    </li><li class="nav-item">
+                      <a class="nav-link active" href="/contact" style="color:white;">Contact us</a>
+                    </li>
+                
+                
+              </ul>
+            </div>
+          </nav>
+      
+            
 
                 <div id="main">
                     <div id="page1">
                       <h1 style="text-align:center;color:white;margin-top:220px;font-size:45px;font-family:'Glacial Indifference'">ARGUS</h1>
                       <h2 style="text-align:center;color:white;font-family:'Glacial Indifference';font-size: 23px;">A watchful guardian for your business</h2>
                     </div>
-                  </div> 
-
-
+                </div> 
         </div>
-
+<!--Section-2-->
         
 
 
@@ -398,7 +342,7 @@
 
 
 
-
+<!--SEction-3-->
 
        
         <div id="section3" class="section">
@@ -478,113 +422,15 @@
            
 
  <!--Location section of Industries-->
-
-            <!-- <div id="section8" class="section" style="height:910px;background-image: url('/static/location.jpg');background-size: cover;">
-                <h1 style="text-align:left;color:white;font-family:'Century Gothic';font-size: 38px;background-size: cover;margin-left:70px;">INDUSTRIES WE FOCUS ON</h1>
-                <div class="container-fluid image-container" style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
-                    <div class="row">
-                        <div class="col-6 col-md-3 position-relative">
-                            <a href="/Industry/">
-                                <img src="/static/location-1.png" class="random-image img-fluid position-absolute" style="top: 650px; left: 50%;">
-                                
-                            </a>
-                            <p class="text-center small position-absolute" style="color:white;top: 740px; left: 55%; transform: translateX(-55%);">Warehouse Industry</p>
-                        </div>
-                        <div class="col-6 col-md-3 position-relative">
-                            <a href="/logistics/">
-                                <img src="/static/location-2.png" class="random-image img-fluid position-absolute" style="top: 400px; left: 50%;">
-                            </a>
-                            <p class="text-center small position-absolute" style="color:white;top: 490px; left: 55%; transform: translateX(-55%);">Logistics Industry</p>
-                        </div>
-                        <div class="col-6 col-md-3 position-relative">
-                            <a href="/construction/">
-                                <img src="/static/location-3.png" class="random-image img-fluid position-absolute" style="top: 550px; left: 50%;">
-                            </a>
-                            <p class="text-center small position-absolute" style="color:white;top: 640px; left: 55%; transform: translateX(-55%);">Construction Industry</p>
-                        </div>
-                        <div class="col-6 col-md-3 position-relative">
-                            <a href="/manufacturing/">
-                                <img src="/static/location-4.png" class="random-image img-fluid position-absolute" style="top: 250px; left: 50%;">
-                            </a>
-                            <p class="text-center small position-absolute" style="color:white;top: 340px; left: 55%; transform: translateX(-55%);">Manufacturing Industry</p>
-                        </div>
-                        <div class="col-6 col-md-3 position-relative">
-                            <a href="/retail/">
-                                <img src="/static/location-1.png" class="random-image img-fluid position-absolute" style="top: 350px; left: 50%;">
-                            </a>
-                            <p class="text-center small position-absolute" style="color:white;top: 440px; left: 55%; transform: translateX(-55%);">Retail Industry</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            -->
-
-
-            <!-- <div id="section8" class="section mt-5" style="height:910px;background-image: url('/static/location.jpg');background-size: cover;">
-                <h1 style="text-align:left;color:white;font-family:'Century Gothic';font-size: 38px;background-size: cover;margin-left:70px;">INDUSTRIES WE FOCUS ON</h1>
-                <div class="container-fluid image-container" style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
-                  <div class="row">
-                    <div class="col-6 col-md-3 position-relative">
-                      <a href="/Industry/">
-                        <img src="/static/location-1.png" class="random-image img-fluid position-absolute" style="top: 650px; left: 50%;">
-                      </a>
-                      <p class="text-center small position-absolute" style="color:white;top: 740px; left: 55%; transform: translateX(-55%);">Warehouse Industry</p>
-                    </div>
-                    <div class="col-6 col-md-3 position-relative">
-                      <a href="/logistics/">
-                        <img src="/static/location-2.png" class="random-image img-fluid position-absolute" style="top: 400px; left: 50%;">
-                      </a>
-                      <p class="text-center small position-absolute" style="color:white;top: 490px; left: 55%; transform: translateX(-55%);">Logistics Industry</p>
-                    </div>
-                    <div class="col-6 col-md-3 position-relative">
-                      <a href="/construction/">
-                        <img src="/static/location-3.png" class="random-image img-fluid position-absolute" style="top: 550px; left: 50%;">
-                      </a>
-                      <p class="text-center small position-absolute" style="color:white;top: 640px; left: 55%; transform: translateX(-55%);">Construction Industry</p>
-                    </div>
-                    <div class="col-6 col-md-3 position-relative">
-                      <a href="/manufacturing/">
-                        <img src="/static/location-4.png" class="random-image img-fluid position-absolute" style="top: 250px; left: 50%;">
-                      </a>
-                      <p class="text-center small position-absolute" style="color:white;top: 340px; left: 55%; transform: translateX(-55%);">Manufacturing Industry</p>
-                    </div>
-                    <div class="col-6 col-md-3 position-relative">
-                      <a href="/retail/">
-                        <img src="/static/location-1.png" class="random-image img-fluid position-absolute" style="top: 350px; left: 50%;">
-                      </a>
-                      <p class="text-center small position-absolute" style="color:white;top: 440px; left: 55%; transform: translateX(-55%);">Retail Industry</p>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-              
-
-
-
-
- <!--vinn diagram-->
-
-
-            
-
-
-           
-            
- <!-- <div class="vinn_section" id="section" style="margin-top:50px;margin-bottom:20px;background-size: cover;">
-    <div class="d-flex justify-content-center" style="background-size: cover;">
-      <video class="d-none d-md-block" src="/static/Argus Vinn Diagram.mp4" autoplay loop muted></video>
-    </div> 
-  </div> -->
-
-  <div id="section8" class="section mt-5" style="height:910px;background-image: url('/static/location.jpg');background-size: cover;">
-    <h1 style="text-align:left;color:white;font-family:'Century Gothic';font-size: 38px;background-size: cover;margin-left:70px;">INDUSTRIES WE FOCUS ON</h1>
+ <div id="section8" class="section mt-5" style="height:900px;background-image: url('/static/location.jpg');background-size: cover;">
+    <h1 style="text-align:left;color:white;font-family:'Century Gothic';font-size: 38px;background-size: cover;margin-left:50px;">INDUSTRIES WE FOCUS ON</h1>
     <div class="container-fluid image-container" style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
       <div class="row">
         <div class="col-6 col-md-3 position-relative">
           <a href="/Industry/">
-            <img src="/static/location-1.png" class="random-image img-fluid position-absolute" style="top: 650px; left: 50%;">
+            <img src="/static/location-1.png" class="random-image img-fluid position-absolute" style="top: 200px; left: 50%;">
           </a>
-          <p class="text-center small position-absolute" style="color:white;top: 740px; left: 55%; transform: translateX(-55%);">Warehouse Industry</p>
+          <p class="text-center small position-absolute" style="color:white;top: 290px; left: 55%; transform: translateX(-55%);">Warehouse Industry</p>
         </div>
         <div class="col-6 col-md-3 position-relative">
           <a href="/logistics/">
@@ -594,9 +440,9 @@
         </div>
         <div class="col-6 col-md-3 position-relative">
           <a href="/construction/">
-            <img src="/static/location-3.png" class="random-image img-fluid position-absolute" style="top: 550px; left: 50%;">
+            <img src="/static/location-3.png" class="random-image img-fluid position-absolute" style="top: 500px; left: 50%;">
           </a>
-          <p class="text-center small position-absolute" style="color:white;top: 640px; left: 55%; transform: translateX(-55%);">Construction Industry</p>
+          <p class="text-center small position-absolute" style="color:white;top: 580px; left: 55%; transform: translateX(-55%);">Construction Industry</p>
         </div>
         <div class="col-6 col-md-3 position-relative">
           <a href="/manufacturing/">
@@ -614,6 +460,9 @@
     </div>
   </div>
   
+
+
+  <!--Vinn_Section-->
   <div class="vinn_section mt-5 mb-3" id="section" style="background-size: cover;">
     <div class="d-flex justify-content-center" style="background-size: cover;">
       <video class="d-none d-md-block" src="/static/Argus Vinn Diagram.mp4" autoplay loop muted></video>
@@ -628,7 +477,7 @@
 
         <!-- Fifth Page -->
         <div class="container-fluid" style="margin-top:40px">
-            <!-- First Row -->
+            
             <div class="row">
                 <div class="col-md-12 box">
                     <div class="heading">WHAT THEY SAY</div>
