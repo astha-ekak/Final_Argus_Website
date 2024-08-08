@@ -5,206 +5,252 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Page</title>
 
-
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
-
-
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/font-size/font-size.css">
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/padding/padding.css">
-     <style>
 
+    <style>
+      .navbar{
+        margin:0;
+        padding:0;
+        width:100%
+      }
+        .navbar {
+            transition: background-color 0.3s ease;
+        }
         .navbar-light .navbar-nav .nav-link {
             color: white;
-          }
-          .navbar-light .navbar-brand {
+        }
+        .navbar-light .navbar-brand {
             color: white;
-          }
-          .navbar-light {
+        }
+        .navbar-light {
             color: white !important;
-            
-          }
-          .navbar-light .nav-link.dropdown-toggle::after {
+        }
+        .navbar-light .nav-link.dropdown-toggle::after {
             color: white;
-          }
-          .navbar-nav .nav-item {
+        }
+        .navbar-nav .nav-item {
             margin-right: 100px; 
-          }
-          .font-roboto {
-              font-family: 'Roboto', sans-serif;
-            }
-            .font-montserrat {
-              font-family: 'Montserrat', sans-serif;
-            }
-            .font-pacifico {
-              font-family: 'Pacifico', cursive;
-            }
-            .navbar-brand img {
-              height: 180px; 
-              margin-right: 10px;
-            }
+        }
+        .font-roboto {
+            font-family: 'Roboto', sans-serif;
+        }
+        .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .font-pacifico {
+            font-family: 'Pacifico', cursive;
+        }
+        .navbar-brand img {
+            height: 90px; 
+            margin-right: 3px;
+        }
+       
+        .navbar-toggler {
+       background-color: #e9ecef;
+        border-width: 1px;
+        border-radius: 0.25rem;
+    }
 
-        </style>
+        @media (max-width: 576px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:8px;
+    }
+
+    .navbar-toggler:hover {
+        background-color: #e9ecef; 
+        border-color: #0056b3; 
+    }
+
+    .navbar-toggler-icon {
+        background-color: transparent;
+    }
+}
+        
+        .navbar.scrolled {
+            background-color: #17364a;
+        }
+        .navbar-dark-bg {
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+
+          
+    </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <div id="section1" class="section">
-          <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-            <a class="navbar-brand font-roboto" href="#">
-              <img src="/static/logo.png" alt="Logo"> 
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-      
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                      <a class="nav-link" href="/home" style="color:black;">Home</a>
-                    </li>
-                
-                    <li class="nav-item dropdown">
-                      <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black;">
+    <nav class="navbar navbar-expand-lg navbar-light transparent fixed-top" style="background-color: #17364a;">
+        <a class="navbar-brand font-roboto" href="#">
+            <img src="/static/logo.png" alt="Logo"> 
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link pl-4" href="/home" style="color:white">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link pl-4 active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">
                         Industries
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/manufacturing" style="color:black;">Manufacturing Industry</a>
-                        <a class="dropdown-item" href="/construction" style="color:black;">Construction Industry</a>
-                       
-                        <a class="dropdown-item" href="/retail" style="color:black;">Retail Industry</a>
-                        <a class="dropdown-item" href="/logistics" style="color:black;">Logistics  Industry</a>
-                        <a class="dropdown-item" href="/Industry" style="color:black;">Warehouse Industry</a>
-                      </div>
-                    </li>  
-
-
-                    <li class="nav-item dropdown">
-                      <a class="nav-link active dropdown-toggle" href="#" style="color:black;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/manufacturing" style="color:black">Manufacturing Industry</a>
+                        <a class="dropdown-item" href="/construction" style="color:black">Construction Industry</a>
+                        <a class="dropdown-item" href="/retail" style="color:black">Retail Industry</a>
+                        <a class="dropdown-item" href="/logistics" style="color:black">Logistics Industry</a>
+                        <a class="dropdown-item" href="/Industry" style="color:black">Warehouse Industry</a>
+                    </div>
+                </li>  
+                <li class="nav-item dropdown">
+                    <a class="nav-link pl-4 active dropdown-toggle" href="#" style="color:white" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Use Case
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/predictive" style="color:black;">Predictive</a>
-                      <a class="dropdown-item" href="/automated" style="color:black;">Automated</a>
-                      <a class="dropdown-item" href="/security" style="color:black;">Security & Survelliance</a>
-                      <a class="dropdown-item" href="/enhanced" style="color:black;">Enhanced Customer experience</a>
-                        
-                      </div>
-                    </li>  
-
-                    <li class="nav-item">
-                      <a class="nav-link active" href="/blog" style="color:black;">Blogs</a>
-                    </li><li class="nav-item">
-                      <a class="nav-link active" href="/contact" style="color:black;">Contact us</a>
-                    </li>
-                
-                
-              </ul>
-            </div>
-          </nav>
-          <div class="main text-center">
-            <h1>WHAT'S NEW, NEXT YEAR?</h1>
-            <hr>
-            <div class="my-4">
-              <img src="/static/blog1.jpg" class="img-fluid" style="background-size: cover;">
-            </div>
-          </div>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/predictive" style="color:black">Predictive Maintenance</a>
+                        <a class="dropdown-item" href="/automated" style="color:black">Automated Warehouse</a>
+                        <a class="dropdown-item" href="/security" style="color:black">Security & Surveillance</a>
+                        <a class="dropdown-item" href="/enhanced" style="color:black">Enhanced Customer Experience</a>
+                    </div>
+                </li>  
+                <li class="nav-item">
+                    <a class="nav-link pl-4 active" href="/blog" style="color:white">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pl-4 active" href="/contact" style="color:white">Contact us</a>
+                </li>
+            </ul>
         </div>
-
+    </nav>
+   
+        
+           
+            <div class="main text-center" style="margin-top:150px">
+                <h1>WHAT'S NEW, NEXT YEAR?</h1>
+                <hr>
+                <div class="my-4">
+                    <img src="/static/blog1.jpg" class="img-fluid" style="background-size: cover;">
+                </div>
+            </div>
+   
 
         <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat dui at suscipit fermentum. Sed hendrerit convallis tellus, nec tincidunt nulla interdum ut. Integer euismod arcu ac eros sagittis, sit amet vestibulum libero tristique. Mauris cursus venenatis orci, vitae ultricies ligula volutpat ut. Cras in justo at magna feugiat tincidunt. Phasellus viverra risus vel est interdum, ut gravida metus convallis. Vivamus et eros in libero ultricies tincidunt.</p>
-            <p>Curabitur euismod mi ac libero gravida, eget tincidunt dui lacinia. Suspendisse potenti. Sed tempor tortor eu tincidunt scelerisque. In hac habitasse platea dictumst. Donec vel leo sit amet lorem laoreet tincidunt. Cras efficitur luctus felis, sit amet accumsan orci pulvinar ac. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-          </div>
-          <div class="col-md-6">
-            <img src="/static/blog3.jpg" class="img-fluid" >
-          </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat dui at suscipit fermentum. Sed hendrerit convallis tellus, nec tincidunt nulla interdum ut. Integer euismod arcu ac eros sagittis, sit amet vestibulum libero tristique. Mauris cursus venenatis orci, vitae ultricies ligula volutpat ut. Cras in justo at magna feugiat tincidunt. Phasellus viverra risus vel est interdum, ut gravida metus convallis. Vivamus et eros in libero ultricies tincidunt.</p>
+                    <p>Curabitur euismod mi ac libero gravida, eget tincidunt dui lacinia. Suspendisse potenti. Sed tempor tortor eu tincidunt scelerisque. In hac habitasse platea dictumst. Donec vel leo sit amet lorem laoreet tincidunt. Cras efficitur luctus felis, sit amet accumsan orci pulvinar ac. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="/static/blog3.jpg" class="img-fluid">
+                </div>
+            </div>
         </div>
-        </div>
-
-
-
-
-    </div>
-
-    <!--Footer section-->
-
-
-    <footer class="footer-39201" style="margin-top:40px;background-color:black;margin-bottom:40px;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md mb-4 mb-md-0">
-          <h3 style="color:white;margin-top:40px">Argus</h3>
-          <ul class="list-unstyled nav-links" >
-            <li><a href="#"></a></li>
-            <li style="color:white;margin-top:30px;font-size:20px;margin-top:30px;">Get in Touch
-            <li style="font-size:12p;margin-top:30px;color:white">113/216-A Swaroop Nagar, Kanpur- 208002,
-                Uttar Pradesh, India</li>
-            <li style="font-size:12p;color:white">Landline- 0512-4028469
-
-            </li>
-            <li style="font-size:12p;color:white">Email-contact@ekak.in</li>
-            
-          </ul>
-        </div>
-        <div class="col-md mb-4 mb-md-0">
-          <p style="font-size:200px;width:2px;color:white"> |</p>
-          
-          
-        </div>
-        <div class="col-md mb-4 mb-md-0" style="margin-top:40px;">
-          <h3 style="color:aliceblue">Site-map</h3>
-          <ul class="list-unstyled nav-links" style="font-size:12p;margin-top:30px;">
-            <li style="color:white"><a href="#">About</a></li>
-            <li style="color:white"><a href="#">Industries</a></li>
-            <li style="color:white"><a href="#">Use Case</a></li>
-            <li style="color:white"><a href="#">Blogs</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 mb-4 mb-md-0" style="margin-top:40px;">
-          <h3 style="color:aliceblue">DON'T MISS OUT!</h3>
-          <p class="mb-4" style="color:white;margin-top:30px">Sign up to get latest updates promotions and many more.</p>
-          <form action="#" class="subscribe">
-              <input type="text" class="form-control" placeholder="Enter your e-mail">
-              <input type="submit" class="btn btn-submit" value="Send">
-            </form>
-        </div>
-      </div>
-
-      <div class="row align-items-center">
-        
-        <div class="col-md-6 text-md-righ " >
-          <ul class="social list-unstyled">
-            <li><a href="#"><span class="icon-facebook"></span></a></li>
-            <li><a href="#"><span class="icon-twitter"></span></a></li>
-            <li><a href="#"><span class="icon-pinterest"></span></a></li>
-            <li><a href="#"><span class="icon-instagram"></span></a></li>
-            <li><a href="#"><span class="icon-behance"></span></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-      
-
-
-
 
     
 
+    <!-- Footer section -->
+    <footer class="footer-39201" style="margin-top:40px;background-color:black;">
+  <div class="container">
+    <div class="row p-0">
+      <div class="col-xl-3 border-right">
+        <h3 style="color:white;margin-top:40px">ARGUS</h3>
+        <ul class="list-unstyled nav-links" >
+          <li><a href="#"></a></li>
+          <li style="color:white;margin-top:30px;font-size:20px;margin-top:30px;">GET IN TOUCH
+          <li style="font-size:12p;margin-top:30px;color:white">113/216-A Swaroop Nagar, Kanpur- 208002,
+              Uttar Pradesh, India</li>
+          <li style="font-size:12p;color:white">Landline- 0512-4028469
 
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+          </li>
+          <li style="font-size:12p;color:white">Email-contact@ekak.in</li>
+          
+        </ul>
+      </div>
+      <div class="col-xl-1 d-lg-block d-sm-none d-md-none rmSmallScreen">
+        <!-- <p style="font-size:200px;width:1px;color:white">|</p> -->
+      </div>
+      <div class="col-xl-4" style="margin-top:40px;">
+        <h3 class="text-white">Site-map</h3>
+        <ul class="list-unstyled nav-links " style="font-size:12p;margin-top:30px;">
+          <li ><a href="/home" class="text-decoration-none text-white">Home</a></li>
+          <li ><a href="/about" class="text-decoration-none text-white">About</a></li>
+          <li ><a href="/manufaturing"class="text-decoration-none text-white" >Industries</a></li>
+          <li ><a href="/predictive" class="text-decoration-none text-white">Use Case</a></li>
+          <li ><a href="/blog"class="text-decoration-none text-white" >Blogs</a></li>
+        </ul>
+      </div>
+      <div class="col-xl-4  " style="margin-top:40px;">
+        <h3 style="color:aliceblue">DON'T MISS OUT!</h3>
+        <p class="mb-4" style="color:white;margin-top:30px">Sign up to get latest updates promotions and many more.</p>
+        <form action="#" class="subscribe">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control rounded-0" placeholder="Enter Your Email Address" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-info rounded-0" type="button" id="button-addon2">SIGN UP</button>
+          </div>
+          </form>
+      </div>
+    </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="row align-items-center">
+      
+      <div class="col-md-6 text-md-right " >
+        <ul class="social list-unstyled">
+          <li><a href="#"><span class="icon-facebook"></span></a></li>
+          <li><a href="#"><span class="icon-twitter"></span></a></li>
+          <li><a href="#"><span class="icon-pinterest"></span></a></li>
+          <li><a href="#"><span class="icon-instagram"></span></a></li>
+          <li><a href="#"><span class="icon-behance"></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    @media only screen and (max-width: 600px) {
+      .rmSmallScreen {
+        display: none;
+      }
+    }
+  </style>
+</footer>
+
+
+
+
+
+
+
+
+    <!-- JavaScript files -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+<script>
+    $(document).ready(function() {
+        $('.navbar-toggler').click(function() {
+            $('.navbar').toggleClass('scrolled');
+        });
+  
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 50) {
+                $('.navbar').addClass('scrolled');
+            } else {
+                $('.navbar').removeClass('scrolled');
+            }
+        });
+    });
+  </script>
+  
 </body>
 </html>

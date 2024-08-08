@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact-us-Page</title>
-
+    <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -17,7 +17,12 @@
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/font-size/font-size.css">
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/padding/padding.css">
      <style>
-
+         .navbar{
+        margin:0;
+        padding:0;
+        width:100%
+      }
+         
         .navbar-light .navbar-nav .nav-link {
             color: white;
           }
@@ -32,7 +37,7 @@
             color: white;
           }
           .navbar-nav .nav-item {
-            margin-right: 100px; /* Adjust this value for more or less spacing */
+            margin-right: 100px; 
           }
           .font-roboto {
               font-family: 'Roboto', sans-serif;
@@ -44,14 +49,92 @@
               font-family: 'Pacifico', cursive;
             }
             .navbar-brand img {
-              height: 180px; /* Adjust this value for logo size */
-              margin-right: 10px; /* Space between logo and brand name */
-            }
+            height: 90px; 
+            margin-right: 3px;
+        }
+        .navbar-toggler {
+       background-color: #e9ecef;
+        border-width: 1px;
+        border-radius: 0.25rem;
+    }
 
+        @media (max-width: 576px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:8px;
+    }
+
+    .navbar-toggler:hover {
+        background-color: #e9ecef; 
+        border-color: #0056b3; 
+    }
+
+    .navbar-toggler-icon {
+        background-color: transparent;
+    }
+}
+        
+        .navbar.scrolled {
+            background-color: #17364a;
+        }
+        .navbar-dark-bg {
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+            
+          
         </style>
 </head>
 <body>
-    
+  <nav class="navbar navbar-expand-lg navbar-light transparent fixed-top" style="background-color: #173641;">
+    <a class="navbar-brand font-roboto" href="#">
+        <img src="/static/logo.png" alt="Logo"> 
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link pl-4" href="/home" style="color:white">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link active pl-4 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">
+                    Industries
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/manufacturing" style="color:black">Manufacturing Industry</a>
+                    <a class="dropdown-item" href="/construction" style="color:black">Construction Industry</a>
+                    <a class="dropdown-item" href="/retail" style="color:black">Retail Industry</a>
+                    <a class="dropdown-item" href="/logistics" style="color:black">Logistics Industry</a>
+                    <a class="dropdown-item" href="/Industry" style="color:black">Warehouse Industry</a>
+                </div>
+            </li>  
+            <li class="nav-item dropdown">
+                <a class="nav-link pl-4 active dropdown-toggle" href="#" style="color:white" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Use Case
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/predictive" style="color:black">Predictive Maintenance</a>
+                    <a class="dropdown-item" href="/automated" style="color:black">Automated Warehouse</a>
+                    <a class="dropdown-item" href="/security" style="color:black">Security & Surveillance</a>
+                    <a class="dropdown-item" href="/enhanced" style="color:black">Enhanced Customer Experience</a>
+                </div>
+            </li>  
+            <li class="nav-item">
+                <a class="nav-link pl-4 active" href="/blog" style="color:white">Blogs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link pl-4 active" href="/contact" style="color:white">Contact us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 
 
@@ -65,70 +148,18 @@
 
 
 
-    <div class="container-fluid">
-        <div id="section1" class="section">
-          <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-            <a class="navbar-brand font-roboto" href="#">
-              <img src="/static/logo.png" alt="Logo"> 
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-      
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                      <a class="nav-link" href="/home" style="color:black;">Home</a>
-                    </li>
-                
-                    <li class="nav-item dropdown">
-                      <a class="nav-link active dropdown-toggle" style="color:black;" href="#" id="navbarDropdown" style="color:white;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Industries
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/manufacturing" style="color:black;">Manufacturing Industry</a>
-                        <a class="dropdown-item" href="/construction" style="color:black;">Construction Industry</a>
-                       
-                        <a class="dropdown-item" href="/retail" style="color:black;">Retail Industry</a>
-                        <a class="dropdown-item" href="/logistics" style="color:black;">Logistics  Industry</a>
-                        <a class="dropdown-item" href="/Industry" style="color:black;">Warehouse Industry</a>
-                      </div>
-                    </li>  
-
-
-                    <li class="nav-item dropdown">
-                      <a class="nav-link active dropdown-toggle" style="color:black;" href="#" style="color:white;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Use Case
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/predictive" style="color:black;">Predictive</a>
-                      <a class="dropdown-item" href="/automated" style="color:black;">Automated</a>
-                      <a class="dropdown-item" href="/security" style="color:black;">Security & Survelliance</a>
-                      <a class="dropdown-item" href="/enhanced" style="color:black;">Enhanced Customer experience</a>
-                        
-                      </div>
-                    </li>  
-
-                    <li class="nav-item">
-                      <a class="nav-link active" href="/blog" style="color:black;">Blogs</a>
-                    </li><li class="nav-item">
-                      <a class="nav-link active" href="/contact" style="color:black;">Contact us</a>
-                    </li>
-                
-                
-              </ul>
-            </div>
-          </nav>
+    <div class="container-fluid" style="margin-top:150px">
+    
                 
 
 
-        </div>
+   
    
         <div id="section2" class="section">
           <div class="row">
             <div class="col-sm-6">
-                <h1 style="font-family: 'Glacial Indifference'; font-size:28px;margin-top:50px;text-align: left;margin-left:45px;font-style: italic;letter-spacing: 3px;word-spacing: 3px ;">
-                    Ready to collaborate with us or have any<br> query!
+                <h1 style="font-family: century-gothic,sans-serif; font-size:28px;margin-top:50px;text-align: left;margin-left:45px;font-style: italic;letter-spacing: 3px;word-spacing: 3px ;">
+                    Ready to collaborate with us or have any query!
                   </h1>
 
                   
@@ -167,7 +198,7 @@
 
 
             </div>
-            <div class="col-sm-6 bg-cover" style="background-image: url('/static/Untitled\ design78954522.png'); color: white; height: 650px; background-size: cover;margin-top:-30px;background-position: center;">
+            <div class="col-sm-6 mt-3 bg-cover" style="background-image: url('/static/Untitled\ design78954522.png'); color: white; height: 650px; background-size: cover;margin-top:-30px;background-position: center;">
 
             </div>
 
@@ -185,11 +216,6 @@
       
 
 
-
-
-</div>
-
-
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -197,5 +223,25 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<script>
+  $(document).ready(function() {
+      $('.navbar-toggler').click(function() {
+          $('.navbar').toggleClass('scrolled');
+      });
+
+      $(window).scroll(function() {
+          if ($(this).scrollTop() > 50) {
+              $('.navbar').addClass('scrolled');
+          } else {
+              $('.navbar').removeClass('scrolled');
+          }
+      });
+  });
+</script>
+
+
+
 </body>
 </html>

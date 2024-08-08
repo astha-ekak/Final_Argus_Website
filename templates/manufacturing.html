@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manufacturing-Industry</title>
+    <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
     <!--links for footer sections in which icons exists-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -11,6 +12,12 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
+    .navbar {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+
   
   .navbar-light .navbar-nav .nav-link {
             color: white;
@@ -37,37 +44,106 @@
               font-family: 'Pacifico', cursive;
             }
             .navbar-brand img {
-              height: 180px; 
-              margin-right: 10px; 
+              height: 90px; 
+              margin-right:5px; 
             }
+            .navbar-toggler {
+       background-color: #e9ecef;
+        border-width: 1px;
+        border-radius: 0.25rem;
+    }
+
+        @media (max-width: 576px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:8px;
+    }
+
+    .navbar-toggler:hover {
+        background-color: #e9ecef; 
+        border-color: #0056b3; 
+    }
+
+    .navbar-toggler-icon {
+        background-color: transparent;
+    }
+}
         
+        .navbar.scrolled {
+            background-color: #17364a;
+        }
+        .navbar-dark-bg {
+    background-color:#17364a;
+    transition: background-color 0.3s ease;
+}
+
             
-            #section1 {
-            position: relative;
-            height: 900px; 
-            overflow: hidden;
-            color: white; 
-            z-index: 0; 
-            background-size: cover;
-        }
-        #section1 .video-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1; 
-        }
-        #section1 .content {
-            position: relative;
-            z-index: 1;
-        }
+          
         
+        .video-background {
+            position: relative;
+            width: 100%;
+            height: 100vh; 
+            overflow: hidden;
+        }
 
         
-      
+        .gif-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.gif-background img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    z-index: 1000;
+    padding: 10px;
+    font-family:century-gothic,sans-serif;
+
+     
+}
+
+@media (max-width: 576px) {
+    .centered-text {
+        font-size: 2rem; 
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 768px) {
+    .centered-text {
+        font-size: 2rem; 
+        font-weight: 400;
+    }
+}
+
+        
+        .header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
         .sub-card {
             padding: 15px;
             margin-top: 15px;
@@ -89,44 +165,103 @@
     </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <div id="section1" class="section">
-            <video class="video-bg" autoplay loop muted>
-                <source src="/static/Argus Manufacturing Industry Hero Video (1).mp4" type="video/mp4">
-                
-            </video>
-       
-            {% include "base_header.html" %}
+        
+    
 
-
-
+    <div class="gif-background">
+        <img src="/static/manufacture-her0-gif.gif" >
+        <div class="centered-text">
+            Manufacturing: Encompassing the Creation
         </div>
     </div>
+    
+       
+        <div class="header">
+            {% include 'base_header.html' %}
+        </div>
+    
         <!--section2 -->
 
 
        
-        <div class="container-fluid">
-          <div id="section2" class="section" style="margin-bottom: 30px; height: auto; padding: 20px;">
-              <div class="row" style="margin-top: 120px;">
-                  <div class="col-12">
-                      <div class="sub-head" style="font-size: 3rem; text-align: left; font-family: 'Century Gothic'; background-size: cover; letter-spacing: 3px; margin-left: 15px;">
-                          Where Strategy, Design, and Engineering<br class="d-none d-md-block">Unite for Manufacturing Excellence
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-12">
-                      <h3 style="font-size: 19px; word-spacing: 2px; letter-spacing: 1px; border: none; margin-left: 15px; font-family: 'Century Gothic'; margin-top: 30px; margin-bottom: 30px;">
-                          In the vast realm of manufacturing, where creation, production, and assembly align in a
-                          <br class="d-none d-md-block">delicate waltz, challenges abound. We're talking about skyrocketing expenses, supply
-                          <br class="d-none d-md-block">chain chaos, machinery woes, and an uptick in workplace mishaps. But with our tech-
-                          <br class="d-none d-md-block">nology marvel is here to save the day.
-                      </h3>
-                  </div>
-              </div>
-          </div>
-      </div>
+        
+
+
+
+
+      <div id="section2" class="section" style="margin-top:80px;border:none">
+            
+        <header class="responsive-text pl-4" cstyle="border:none;background-color: transparent;font-size:50px;border:none; margin-left:30px;font-family:century-gothic, sans-serif;margin-top:45px;"> Where Strategy, Design, and Engineering<br>Unite for Manufacturing Excellence</header>
+       <footer   class="responsive1-text pl-4" style="font-size:19px;  border:none;font-family: century-gothic, sans-serif;margin-top:75px "> 
+
+ 
+        In the vast realm of manufacturing, where creation, production, and assembly align in a
+        <br>delicate waltz, challenges abound. We're talking about skyrocketing expenses, supply
+        <br>chain chaos, machinery woes, and an uptick in workplace mishaps. But with our tech-
+        <br>nology marvel is here to save the day.
+
+     </div> 
+
+     <style>
+    
+       
+         
+         @media (max-width: 1200px) {
+             .responsive-text {
+                 font-size: 30px;
+             }
+         }
+     
+         @media (max-width: 992px) {
+             .responsive-text {
+                 font-size: 25px;
+             }
+         }
+     
+         @media (max-width: 768px) {
+             .responsive-text {
+                 font-size: 30px;
+             }
+         }
+     
+         @media (max-width: 576px) {
+             .responsive-text {
+                 font-size: 24px;
+                 font-weight:600;
+                 font-family:century-gothic,sans-serif;
+             }
+         }
+
+
+
+
+
+
+         @media (max-width: 1200px) {
+             .responsive1-text {
+                 font-size: 8px;
+             }
+         }
+     
+         @media (max-width: 992px) {
+             .responsive1-text {
+                 font-size: 10px;
+             }
+         }
+     
+         @media (max-width: 768px) {
+             .responsive1-text {
+                 font-size: 12px;
+             }
+         }
+     
+         @media (max-width: 576px) {
+             .responsive1-text {
+                 font-size: 11px;
+                 font-family:century-gothic,sans-serif;
+             }
+         }
+     </style>
       
 
         <!--SEction 3-->
@@ -137,7 +272,7 @@
        
      
 
-      <div class="container-fluid">
+      <div class="container-fluid" style="margin-top:100px">
         <div class="section3">
             <div class="scroll-section" style="background-color: #17364a; padding: 50px 0;">
                 <div class="row">
@@ -213,41 +348,41 @@
 
                                             <!--section-4-->
 
-                                            <div class="section4" id="section" style="height:auto; margin-top:40px; margin-bottom:40px;">
+                                            <div class="section4" id="section" style="height:auto; margin-top:30px; margin-bottom:3">
                                                 <div class="row row-cols-1 row-cols-md-2 g-4">
                                                     <div class="col">
-                                                        <div class="card h-100" style="border:none;">
+                                                        <div class="card h-100 shadow-sm border" style="border:none;">
                                                             <img class="card-img-top mx-auto d-block" style="height: auto; width: 40%; margin-top: 20px;" src="/static/Manufacturing Industry Page 4 (1).gif" alt="GIF">
                                                             <div class="card-body text-center">
-                                                                <h5 class="card-title" style="font-size:1.5rem; font-family: 'Glacial Indifference', sans-serif;">Quality Assurance through<br> Automated System</h5>
-                                                                <p class="card-text" style="font-size:0.9375rem; font-family: 'Century Gothic', sans-serif;">Utilizing the system to identify defects and flag them within the product.</p>
+                                                                <h5 class="card-title" style="font-size:1.8rem; font-family: century-gothic, sans-serif;">Quality Assurance through<br> Automated System</h5>
+                                                                <p class="card-text" style="margin-bottom:70px;font-size:0.9375rem; font-family:century-gothic, sans-serif;margin-top:30px">Utilizing the system to identify defects and<br> flagging  within the product.</p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="card h-100" style="border:none;">
+                                                        <div class="card h-100 shadow-sm border" style="border:none;">
                                                             <img class="card-img-top mx-auto d-block" style="height: auto; width: 40%; margin-top: 20px;" src="/static/Manufacturing Industry Page(5).gif" alt="GIF">
                                                             <div class="card-body text-center">
-                                                                <h5 class="card-title" style="font-size:1.5rem; font-family: 'Glacial Indifference', sans-serif;">Real-time Insight into<br> production</h5>
-                                                                <p class="card-text" style="font-size:0.9375rem; font-family: 'Century Gothic', sans-serif;">Continuous production insights, prioritizing workforce safety, and optimizing efficiency.</p>
+                                                                <h5 class="card-title" style="font-size:1.8rem; font-family: century-gothic, sans-serif;">Real-time Insight into<br> production</h5>
+                                                                <p class="card-text" style="margin-bottom:70px;font-size:0.9375rem; font-family: century-gothic, sans-serif;margin-top:30px">Continuous production insights, prioritizing<br> workforce safety, and optimizing efficiency.</p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="card h-100" style="border:none;">
+                                                        <div class="card h-100 shadow-sm border" style="border:none;">
                                                             <img class="card-img-top mx-auto d-block" style="height: auto; width: 40%; margin-top: 20px;" src="/static/Manufacturing Industry Page6.gif" alt="GIF">
                                                             <div class="card-body text-center">
-                                                                <h5 class="card-title" style="font-size:1.5rem; font-family: 'Glacial Indifference', sans-serif;">Optimize workflow for<br> improvement</h5>
-                                                                <p class="card-text" style="font-size:0.9375rem; font-family: 'Century Gothic', sans-serif;">Identify bottlenecks, optimize workflows, and continuously improve processes to enhance productivity.</p>
+                                                                <h5 class="card-title" style="font-size:1.8rem; font-family: century-gothic, sans-serif;">Optimize workflow for<br> improvement</h5>
+                                                                <p class="card-text" style="margin-bottom:70px;font-size:0.9375rem; font-family:century-gothic, sans-serif;margin-bottom:20px;margin-top:30px">Identify bottlenecks, optimize workflows, and<br> continuous  processes improvement,consistently,<br> enhancing productivity.</p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="card h-100" style="border:none;">
+                                                        <div class="card h-100 shadow-sm border" style="border:none;">
                                                             <img class="card-img-top mx-auto d-block" style="height: auto; width: 40%; margin-top: 20px;" src="/static/Manufacturing Industry Page 7.gif" alt="GIF">
                                                             <div class="card-body text-center">
-                                                                <h5 class="card-title" style="font-size:1.5rem; font-family: 'Glacial Indifference', sans-serif;">Implementing Facial<br> Recognition</h5>
-                                                                <p class="card-text" style="font-size:0.9375rem; font-family: 'Century Gothic', sans-serif;">Facial recognition and access control within secure zones, automating packet tallying, and optimizing dock usage.</p>
+                                                                <h5 class="card-title" style="font-size:1.8rem; font-family: century-gothic, sans-serif;">Implementing Facial<br> Recognition</h5>
+                                                                <p class="card-text" style="margin-bottom:70px;font-size:0.9375rem; font-family:century-gothic, sans-serif;margin-top:30px">Facial recognition and access control within secure zones, automating<br> packet tallying, and optimizing dock usage.</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -258,11 +393,11 @@
                                             <!--section-5-->
 
 
-                                            <div class="row" id="section" style="height: 800px; margin-bottom: 40px;">
+                                            <div class="row" id="section" style="height: 800px; margin-bottom: 40px;margin-top:40px">
                                               <div class="page1 d-flex align-items-center justify-content-center text-center"
                                                    style="background-image: url('/static/tranforming.png'); background-size: cover; background-position: center; height: 100%; width: 100%;">
                                                   <h1 class="text-white responsive-text"
-                                                      style="font-family: 'Century Gothic', sans-serif;">
+                                                      style="font-family:century-gothic,sans-serif">
                                                       Crafted Strategy Meets Impeccable <br>design Meets Robust Engineering.
                                                   </h1>
                                                </div>
@@ -303,60 +438,69 @@
                                           
 
 
-                                            <!--section6 -->
 
-        
-
-
-                                            <div id="section7" class="section" style="padding: 50px 0;">
-                                                <div class="container-fluid">
-                                                    <h1 style="font-size: 22.9px; text-align:left;font-family: 'Glacial Indifference', sans-serif;margin: 0.5rem 0;margin-top:80px;border-bottom: 2px solid black; display: inline-block;">Explore More</h1>
-                                                    <div class="row" style="margin-top:60px">
-                                                    
-                                                        <div class="col-md-4 mb-4">
-                                                          <div class="card h-100" style="background-image: url('/static/building31.png');">
+          <!--Section 7-->
+         <div id="section7" class="section" >
+          <div class="container-fluid pt-6">
+              <!-- <h1 style="font-size: 22.9px; text-align:left;font-family: 'Glacial Indifference', sans-serif;margin: 0.5rem 0;margin-top:80px;border-bottom: 2px solid black; display: inline-block;">Explore More</h1> -->
+              <div class="row justify-content-center" style="margin-top:60px">
+                <h4 class="text-center " style="font-family: 'Glacial Indifference', sans-serif;
+                font-size: 29.3px;
+               
+                margin-top:40px">BLOGS</h4>
+                  <!-- Card 1 -->
+                  <div class="col-md-3 mb-4 ml-lg-3 mt-4">
+                      <div class="card h-100" style="background-image: url('/static/building31.png');">
+                        
+                          <div class="card-body" style="margin-top:255px;">
                             
-                                                            <div class="card-body" style="margin-top:255px;">
-                                                              
-                                                                <div class="sub-card">
-                                                                    <h6>Sub Card 1</h6>
-                                                                    <p>Sub card content for card 1.</p>
-                                                                </div>
-                                                            </div>
-                                                           
-                                                        </div>
-                                                        </div>
-                                                        
-                                                        <div class="col-md-4 mb-4">
-                                                          <div class="card h-100" style="background-image: url('/static/building31.png');">
+                              <div class="sub-card text-left">
+                                  <h3>Card</h3>
+                                  <h5>Sub Card 1</h5>
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                              </div>
+                          </div>
+                         
+                      </div>
+                  </div>
+                  <div class="col-sm-1 d-sm-block">
+                  </div>
+                  <!-- Card 2 -->
+                  <div class="col-md-3 mb-4 mt-4">
+                      <div class="card h-100" style="background-image: url('/static/building31.png');">
+                        
+                          <div class="card-body" style="margin-top:255px;">
                             
-                                                            <div class="card-body" style="margin-top:255px;">
-                                                              
-                                                                <div class="sub-card">
-                                                                    <h6>Sub Card 1</h6>
-                                                                    <p>Sub card content for card 1.</p>
-                                                                </div>
-                                                            </div>
-                                                           
-                                                        </div>
-                                                        </div>
+                              <div class="sub-card text-left">
+                                  <h3>Card</h3>
+                                  <h5>Sub Card 1</h5>
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                              </div>
+                          </div>
+                         
+                      </div>
+                  </div>
+                  <div class="col-sm-1 d-sm-block">
+                  </div>
+                  <!-- Card 3 -->
+                  <div class="col-md-3 mb-4 mt-4">
+                      <div class="card h-100" style="background-image: url('/static/building31.png');">
+                        
+                          <div class="card-body" style="margin-top:255px;">
+                            
+                              <div class="sub-card text-left">
+                                  <h3>Card</h3>
+                                  <h5>Sub Card 1</h5>
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                              </div>
+                          </div>
+                         
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
                                                       
-                                                        <div class="col-md-4 mb-4">
-                                                          <div class="card h-100" style="background-image: url('/static/building31.png');">
-                            
-                                                            <div class="card-body" style="margin-top:255px;">
-                                                              
-                                                                <div class="sub-card">
-                                                                    <h6>Sub Card 1</h6>
-                                                                    <p>Sub card content for card 1.</p>
-                                                                </div>
-                                                            </div>
-                                                           
-                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                     
 
 
@@ -381,5 +525,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-dark-bg');
+            } else {
+                navbar.classList.remove('navbar-dark-bg');
+            }
+        });
+    </script>
+    
 </body>
 </html>

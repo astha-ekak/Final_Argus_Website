@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retail-Industry</title>
+    <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
     <!--links for footer sections in which icons exists-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -11,6 +12,13 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
+  
+  .navbar {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+
   
   .navbar-light .navbar-nav .nav-link {
             color: white;
@@ -37,34 +45,91 @@
               font-family: 'Pacifico', cursive;
             }
             .navbar-brand img {
-              height: 180px; 
-              margin-right: 10px; 
+              height: 90px; 
+              margin-right:5px; 
             }
+            .navbar-toggler {
+       background-color: #e9ecef;
+        border-width: 1px;
+        border-radius: 0.25rem;
+    }
+
+        @media (max-width: 576px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:8px;
+    }
+
+    .navbar-toggler:hover {
+        background-color: #e9ecef; 
+        border-color: #0056b3; 
+    }
+
+    .navbar-toggler-icon {
+        background-color: transparent;
+    }
+}
         
-            
-            #section1 {
-            position: relative;
-            height: 900px; 
-            overflow: hidden;
-            color: white; 
-            z-index: 0; 
-            background-size: cover;
+        .navbar.scrolled {
+            background-color: #17364a;
         }
-        #section1 .video-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1; 
-        }
-        #section1 .content {
-            position: relative;
-            z-index: 1; 
-        }
-        
+        .navbar-dark-bg {
+            background-color:#17364a;
+    transition: background-color 0.3s ease;
+}
+      
+      
+      
+              
+.gif-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.gif-background img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    z-index: 1000;
+    padding: 10px;
+    font-family:century-gothic,sans-serif;
+
+     
+}
+
+@media (max-width: 576px) {
+    .centered-text {
+        font-size: 2rem; 
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 768px) {
+    .centered-text {
+        font-size: 2rem; 
+        font-weight: 400;
+    }
+}
+
 
         .scroll-section {
             margin-top: 10vh;
@@ -89,19 +154,25 @@
             background-color: #ffffff;
         }
 
-
+        
 
     </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <div id="section1" class="section">
-            <video class="video-bg" autoplay loop muted>
-                <source src="/static/ARGUS Retail page  - Hero video.mp4" type="video/mp4">
-                
-            </video>
-       
-            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+    
+
+
+   
+    <div class="gif-background">
+        <img src="/static/retail-hero-gif.gif" >
+        <div class="centered-text">
+            Retail Industry: Reshaping the Retail Terrain
+        </div>
+    </div>
+    
+        <div class="header">
+            
+<nav class="navbar navbar-expand-lg fixed-top navbar-light transparent" style="margin-top:0;padding-top:0;">
   <a class="navbar-brand font-roboto" href="#">
     <img src="/static/logo.png" alt="Logo"> 
   </a>
@@ -111,11 +182,11 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
+        <li class="nav-item pl-4">
             <a class="nav-link" href="/home" style="color:white;">Home</a>
           </li>
       
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown pl-4">
             <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" style="color:white;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Industries
             </a>
@@ -130,22 +201,22 @@
           </li>  
 
 
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown pl-4">
             <a class="nav-link active dropdown-toggle" href="#" style="color:white;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Use Case
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/predictive">Predictive</a>
-            <a class="dropdown-item" href="/automated">Automated</a>
+              <a class="dropdown-item" href="/predictive">Predictive Maintenance</a>
+            <a class="dropdown-item" href="/automated">Automated Warehouse</a>
             <a class="dropdown-item" href="/security">Security & Survelliance</a>
             <a class="dropdown-item" href="/enhanced">Enhanced Customer experience</a>
               
             </div>
           </li>  
 
-          <li class="nav-item">
+          <li class="nav-item pl-4">
             <a class="nav-link active" href="/blog" style="color:white;">Blogs</a>
-          </li><li class="nav-item">
+          </li><li class="nav-item pl-4">
             <a class="nav-link active" href="/contact" style="color:white;">Contact us</a>
           </li>
       
@@ -153,22 +224,81 @@
     </ul>
   </div>
 </nav>
-
-
-
         </div>
+    
         <!--section2 -->
 
 
         <div id="section2" class="section" style="margin-top:80px;border:none">
             
-           <header  style="border:none;background-color: transparent;font-size:50px;border:none; margin-left:30px;font-family: 'Century Gothic';margin-top:45px;word-spacing: 3px;letter-spacing: 2px;">Revolutionary Sophistication, Redefining<br> the retail landscape with its unparalleled<br> visual allure.</header>
-          <footer style="font-size:24px;  border:none;margin-left:30px;font-family: 'Century Gothic', sans-serif;margin-top:10px "> 
+           <header class="responsive-text pl-4" cstyle="border:none;background-color: transparent;font-size:50px;border:none; margin-left:30px;font-family:century-gothic, sans-serif;margin-top:45px;">Revolutionary Sophistication, Redefining<br> the retail landscape with its unparalleled<br> visual allure.</header>
+          <footer   class="responsive1-text pl-4" style="font-size:19px;  border:none;font-family: century-gothic, sans-serif;margin-top:75px "> 
 
     
-The retail landscape is swiftly evolving, presenting fresh hurdle for businesses. To thrive amidst increasing<br> competition, retailer must embrace innovative retail solutions. AI-powered video analytics in retail is an<br> area experiencing substantial growth. Leveraging computer vision for the retail sector allows for real-time<br> analysis of consumer behaviour, enabling the transformation of the customer journey and overall<br> experience.
+The retail landscape is swiftly evolving, presenting fresh hurdle for businesses. To thrive amidst increasing<br> competition, retailer must embrace innovative retail solutions. AI-powered video analytics in retail is an<br> area experiencing substantial growth. Leveraging computer vision for the retail sector allows for real-time<br> analysis of consumer behaviour, enabling the transformation of the customer journey and overall experience.
 
         </div> 
+
+        <style>
+       
+          
+            
+            @media (max-width: 1200px) {
+                .responsive-text {
+                    font-size: 30px;
+                }
+            }
+        
+            @media (max-width: 992px) {
+                .responsive-text {
+                    font-size: 25px;
+                }
+            }
+        
+            @media (max-width: 768px) {
+                .responsive-text {
+                    font-size: 30px;
+                }
+            }
+        
+            @media (max-width: 576px) {
+                .responsive-text {
+                    font-size: 24px;
+                    font-family:century-gothic,sans-serif;
+                    font-weight: 600;
+                }
+            }
+
+
+
+
+
+
+            @media (max-width: 1200px) {
+                .responsive1-text {
+                    font-size: 8px;
+                }
+            }
+        
+            @media (max-width: 992px) {
+                .responsive1-text {
+                    font-size: 10px;
+                }
+            }
+        
+            @media (max-width: 768px) {
+                .responsive1-text {
+                    font-size: 12px;
+                }
+            }
+        
+            @media (max-width: 576px) {
+                .responsive1-text {
+                    font-size: 11px;
+                    font-family:century-gothic,sans-serif;
+                }
+            }
+        </style>
     
                                                <!--SEction 3-->
 
@@ -241,46 +371,47 @@ The retail landscape is swiftly evolving, presenting fresh hurdle for businesses
        
 
 
-                                            <div class="section4" id="section" style="height: auto; margin-top: 80px;">
-                                              <div class="row row-cols-1 row-cols-md-2 g-4">
-                                                  <div class="col">
-                                                      <div class="card h-100" style="border:none;">
-                                                          <img class="card-img-top mx-auto d-block" style="height: auto; width: 40%; margin-top: 20px;" src="/static/Logistics Industry 78856.gif" alt="GIF">
-                                                          <div class="card-body text-center">
-                                                              <h5 class="card-title" style="font-size:1.5rem; font-family: 'Glacial Indifference', sans-serif;">Keeping Tabs on Items &<br> Individuals</h5>
-                                                              <p class="card-text" style="font-size:0.9375rem; font-family: 'Century Gothic', sans-serif;">Identify the busiest times for shopping by observing the daily influx of customers, helping to understand when foot traffic peaks during the day.</p>
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col">
-                                                      <div class="card h-100" style="border:none;">
-                                                          <img class="card-img-top mx-auto d-block" style="height: auto; width: 40%; margin-top: 20px;" src="/static/Logistics Industry 45645.gif" alt="GIF">
-                                                          <div class="card-body text-center">
-                                                              <h5 class="card-title" style="font-size:1.5rem; font-family: 'Glacial Indifference', sans-serif;">Enhanced Customer Experience</h5>
-                                                              <p class="card-text" style="font-size:0.9375rem; font-family: 'Century Gothic', sans-serif;">Tracking customer shopping behaviour, managing queues, and optimizing store layout.</p>
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col">
-                                                      <div class="card h-100" style="border:none;">
-                                                          <img class="card-img-top mx-auto d-block" style="height: auto; width: 40%; margin-top: 20px;" src="/static/Logistics Industry 4512.gif" alt="GIF">
-                                                          <div class="card-body text-center">
-                                                              <h5 class="card-title" style="font-size:1.5rem; font-family: 'Glacial Indifference', sans-serif;">Stock Control &<br> Oversight</h5>
-                                                              <p class="card-text" style="font-size:0.9375rem; font-family: 'Century Gothic', sans-serif;">Recognize inventory levels visually, monitor shelf conditions, and help restock to avoid shortages.</p>
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col">
-                                                      <div class="card h-100" style="border:none;">
-                                                          <img class="card-img-top mx-auto d-block" style="height: auto; width: 40%; margin-top: 20px;" src="/static/Logistics Industry 456.gif" alt="GIF">
-                                                          <div class="card-body text-center">
-                                                              <h5 class="card-title" style="font-size:1.5rem; font-family: 'Glacial Indifference', sans-serif;">Security & Loss<br> Prevention and Alert</h5>
-                                                              <p class="card-text" style="font-size:0.9375rem; font-family: 'Century Gothic', sans-serif;">Quick alert on shoplifting and theft. Detect suspicious behaviour and notify the authorities promptly.</p>
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
+                                            <div class="section4" id="section" style="height: auto; margin-top: 30px;">
+                                                <div class="row row-cols-1 row-cols-md-2 g-4">
+                                                    <div class="col">
+                                                        <div class="card h-100 shadow-sm border" style="border:none;">
+                                                            <img class="card-img-top mx-auto d-block" style="height: auto; width: 20%; margin-top: 20px;" src="/static/Logistics Industry 78856.gif" >
+                                                            <div class="card-body text-center">
+                                                                <h5 class="card-title" style="font-size:1.8rem; font-family: century-gothic, sans-serif">Keeping Tabs on Items &<br> Individuals</h5>
+                                                                <p class="card-text" style="margin-bottom:70px;font-size:0.9375rem;margin-top:20px; font-family:century-gothic, sans-serif;margin-top:30px">Identify the busiest times for shopping by observing<br> the daily influx of customers, helping to understand <br>when foot traffic peaks during the day.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="card h-100 shadow-sm border" style="border:none;">
+                                                            <img class="card-img-top mx-auto d-block" style="height: auto; width: 20%;; margin-top: 20px;" src="/static/Logistics Industry 45645.gif" >
+                                                            <div class="card-body text-center">
+                                                                <h5 class="card-title" style="font-size:1.8rem; font-family: century-gothic, sans-serif">Enhanced Customer Experience</h5>
+                                                                <p class="card-text" style="margin-bottom:70px;font-size:0.9375rem; margin-top:20px;font-family: century-gothic, sans-serif;margin-top:30px">Tracking customer shopping behaviour,<br> managing queues, andoptimizing store layout.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="card h-100 shadow-sm border " style="border:none;">
+                                                            <img class="card-img-top mx-auto d-block" style="height: auto; width: 20%;; margin-top: 20px;" src="/static/Logistics Industry 4512.gif" >
+                                                            <div class="card-body text-center">
+                                                                <h5 class="card-title" style="font-size:1.8rem; font-family: century-gothic, sans-serif">Stock Control &<br> Oversight</h5>
+                                                                <p class="card-text" style="margin-bottom:70px;font-size:0.9375rem;margin-top:20px; font-family:century-gothic, sans-serif;margin-top:30px">Recognize inventory levels visually, monitor shelf<br> conditions, and help restock to avoid shortages.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="card h-100 shadow-sm border" style="border:none;">
+                                                            <img class="card-img-top mx-auto d-block" style="height: auto; width: 20%; margin-top: 20px;" src="/static/Logistics Industry 456.gif" >
+                                                            <div class="card-body text-center">
+                                                                <h5 class="card-title" style="font-size:1.8rem; font-family:century-gothic, sans-serif">Security & Loss<br> Prevention and Alert</h5>
+                                                                <p class="card-text" style="margin-bottom:70px;font-size:0.9375rem; margin-top:20px;font-family:century-gothic, sans-serif;margin-top:30px">Quick alert on shoplifting and theft. Detect<br> suspicious behaviour,In addition to timely<br> notifying the authorities andnotify promptly.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
                                           
 
                                             <!--section-5-->
@@ -289,11 +420,11 @@ The retail landscape is swiftly evolving, presenting fresh hurdle for businesses
    
 
 
-        <div class="row" id="section" style="height: 800px; margin-bottom: 40px;">
+        <div class="row" id="section" style="height: 800px; margin-bottom: 40px;margin-top:40px">
           <div class="page1 d-flex align-items-center justify-content-center text-center"
                style="background-image: url('/static/tranforming.png'); background-size: cover; background-position: center; height: 100%; width: 100%;">
               <h1 class="text-white responsive-text"
-                  style="font-family: 'Century Gothic', sans-serif;">
+                  style="font-family: century-gothic, sans-serif">
                   Transforming the retail environment with<br> unmatched aesthetic refinement
               </h1>
            </div>
@@ -334,53 +465,62 @@ The retail landscape is swiftly evolving, presenting fresh hurdle for businesses
 
                                             <!--section6 -->
 
-        
-
-                                            <div id="section7" class="section" style="padding: 50px 0;">
-                                                <div class="container-fluid">
-                                                    <h1 style="font-size: 22.9px; text-align:left;font-family: 'Glacial Indifference', sans-serif;margin: 0.5rem 0;margin-top:80px;border-bottom: 2px solid black; display: inline-block;">Explore More</h1>
-                                                    <div class="row" style="margin-top:60px">
-                                                      
-                                                        <div class="col-md-4 mb-4">
-                                                          <div class="card h-100" style="background-image: url('/static/building31.png');">
-                            
-                                                            <div class="card-body" style="margin-top:255px;">
+                                            <div id="section7" class="section" >
+                                                <div class="container-fluid pt-6">
+                                                    <!-- <h1 style="font-size: 22.9px; text-align:left;font-family: 'Glacial Indifference', sans-serif;margin: 0.5rem 0;margin-top:80px;border-bottom: 2px solid black; display: inline-block;">Explore More</h1> -->
+                                                    <div class="row justify-content-center" style="margin-top:60px">
+                                                      <h4 class="text-center " style="font-family: 'Glacial Indifference', sans-serif;
+                                                      font-size: 29.3px;
+                                                     
+                                                      margin-top:40px">BLOGS</h4>
+                                                        <!-- Card 1 -->
+                                                        <div class="col-md-3 mb-4 ml-lg-3 mt-4">
+                                                            <div class="card h-100" style="background-image: url('/static/building31.png');">
                                                               
-                                                                <div class="sub-card">
-                                                                    <h6>Sub Card 1</h6>
-                                                                    <p>Sub card content for card 1.</p>
+                                                                <div class="card-body" style="margin-top:255px;">
+                                                                  
+                                                                    <div class="sub-card text-left">
+                                                                        <h3>Card</h3>
+                                                                        <h5>Sub Card 1</h5>
+                                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                                                    </div>
                                                                 </div>
+                                                               
                                                             </div>
-                                                           
                                                         </div>
+                                                        <div class="col-sm-1 d-sm-block">
                                                         </div>
-                                                       
-                                                        <div class="col-md-4 mb-4">
-                                                          <div class="card h-100" style="background-image: url('/static/building31.png');">
-                            
-                                                            <div class="card-body" style="margin-top:255px;">
+                                                        <!-- Card 2 -->
+                                                        <div class="col-md-3 mb-4 mt-4">
+                                                            <div class="card h-100" style="background-image: url('/static/building31.png');">
                                                               
-                                                                <div class="sub-card">
-                                                                    <h6>Sub Card 1</h6>
-                                                                    <p>Sub card content for card 1.</p>
+                                                                <div class="card-body" style="margin-top:255px;">
+                                                                  
+                                                                    <div class="sub-card text-left">
+                                                                        <h3>Card</h3>
+                                                                        <h5>Sub Card 1</h5>
+                                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                                                    </div>
                                                                 </div>
+                                                               
                                                             </div>
-                                                           
                                                         </div>
+                                                        <div class="col-sm-1 d-sm-block">
                                                         </div>
-                                                       
-                                                        <div class="col-md-4 mb-4">
-                                                          <div class="card h-100" style="background-image: url('/static/building31.png');">
-                            
-                                                            <div class="card-body" style="margin-top:255px;">
+                                                        <!-- Card 3 -->
+                                                        <div class="col-md-3 mb-4 mt-4">
+                                                            <div class="card h-100" style="background-image: url('/static/building31.png');">
                                                               
-                                                                <div class="sub-card">
-                                                                    <h6>Sub Card 1</h6>
-                                                                    <p>Sub card content for card 1.</p>
+                                                                <div class="card-body" style="margin-top:255px;">
+                                                                  
+                                                                    <div class="sub-card text-left">
+                                                                        <h3>Card</h3>
+                                                                        <h5>Sub Card 1</h5>
+                                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                                                    </div>
                                                                 </div>
+                                                               
                                                             </div>
-                                                           
-                                                        </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -388,64 +528,78 @@ The retail landscape is swiftly evolving, presenting fresh hurdle for businesses
 
 
 
-
         <!--Footer section-->
 
-        <footer class="footer-39201" style="margin-top:40px;background-color:black;margin-bottom:40px;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md mb-4 mb-md-0">
-          <h3 style="color:white;margin-top:40px">Argus</h3>
-          <ul class="list-unstyled nav-links" >
-            <li><a href="#"></a></li>
-            <li style="color:white;margin-top:30px;font-size:20px;margin-top:30px;">Get in Touch
-            <li style="font-size:12p;margin-top:30px;color:white">113/216-A Swaroop Nagar, Kanpur- 208002,
-                Uttar Pradesh, India</li>
-            <li style="font-size:12p;color:white">Landline- 0512-4028469
+        <footer class="footer-39201" style="margin-top:40px;background-color:black;">
+  <div class="container">
+    <div class="row p-0">
+      <div class="col-xl-3 border-right">
+        <h3 style="color:white;margin-top:40px">ARGUS</h3>
+        <ul class="list-unstyled nav-links" >
+          <li><a href="#"></a></li>
+          <li style="color:white;margin-top:30px;font-size:20px;margin-top:30px;">GET IN TOUCH
+          <li style="font-size:12p;margin-top:30px;color:white">113/216-A Swaroop Nagar, Kanpur- 208002,
+              Uttar Pradesh, India</li>
+          <li style="font-size:12p;color:white">Landline- 0512-4028469
 
-            </li>
-            <li style="font-size:12p;color:white">Email-contact@ekak.in</li>
-            
-          </ul>
-        </div>
-        <div class="col-md mb-4 mb-md-0">
-          <p style="font-size:200px;width:2px;color:white"> |</p>
+          </li>
+          <li style="font-size:12p;color:white">Email-contact@ekak.in</li>
           
-          
-        </div>
-        <div class="col-md mb-4 mb-md-0" style="margin-top:40px;">
-          <h3 style="color:aliceblue">Site-map</h3>
-          <ul class="list-unstyled nav-links" style="font-size:12p;margin-top:30px;">
-            <li style="color:white"><a href="#">About</a></li>
-            <li style="color:white"><a href="#">Industries</a></li>
-            <li style="color:white"><a href="#">Use Case</a></li>
-            <li style="color:white"><a href="#">Blogs</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 mb-4 mb-md-0" style="margin-top:40px;">
-          <h3 style="color:aliceblue">DON'T MISS OUT!</h3>
-          <p class="mb-4" style="color:white;margin-top:30px">Sign up to get latest updates promotions and many more.</p>
-          <form action="#" class="subscribe">
-              <input type="text" class="form-control" placeholder="Enter your e-mail">
-              <input type="submit" class="btn btn-submit" value="Send">
-            </form>
-        </div>
+        </ul>
       </div>
-
-      <div class="row align-items-center">
-        
-        <div class="col-md-6 text-md-righ " >
-          <ul class="social list-unstyled">
-            <li><a href="#"><span class="icon-facebook"></span></a></li>
-            <li><a href="#"><span class="icon-twitter"></span></a></li>
-            <li><a href="#"><span class="icon-pinterest"></span></a></li>
-            <li><a href="#"><span class="icon-instagram"></span></a></li>
-            <li><a href="#"><span class="icon-behance"></span></a></li>
-          </ul>
-        </div>
+      <div class="col-xl-1 d-lg-block d-sm-none d-md-none rmSmallScreen">
+        <!-- <p style="font-size:200px;width:1px;color:white">|</p> -->
+      </div>
+      <div class="col-xl-4" style="margin-top:40px;">
+        <h3 class="text-white">Site-map</h3>
+        <ul class="list-unstyled nav-links " style="font-size:12p;margin-top:30px;">
+          <li ><a href="/home" class="text-decoration-none text-white">Home</a></li>
+          <li ><a href="/about" class="text-decoration-none text-white">About</a></li>
+          <li ><a href="/manufaturing"class="text-decoration-none text-white" >Industries</a></li>
+          <li ><a href="/predictive" class="text-decoration-none text-white">Use Case</a></li>
+          <li ><a href="/blog"class="text-decoration-none text-white" >Blogs</a></li>
+        </ul>
+      </div>
+      <div class="col-xl-4  " style="margin-top:40px;">
+        <h3 style="color:aliceblue">DON'T MISS OUT!</h3>
+        <p class="mb-4" style="color:white;margin-top:30px">Sign up to get latest updates promotions and many more.</p>
+        <form action="#" class="subscribe">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control rounded-0" placeholder="Enter Your Email Address" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-info rounded-0" type="button" id="button-addon2">SIGN UP</button>
+          </div>
+          </form>
       </div>
     </div>
-  </footer>
+
+    <div class="row align-items-center">
+      
+      <div class="col-md-6 text-md-right " >
+        <ul class="social list-unstyled">
+          <li><a href="#"><span class="icon-facebook"></span></a></li>
+          <li><a href="#"><span class="icon-twitter"></span></a></li>
+          <li><a href="#"><span class="icon-pinterest"></span></a></li>
+          <li><a href="#"><span class="icon-instagram"></span></a></li>
+          <li><a href="#"><span class="icon-behance"></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    @media only screen and (max-width: 600px) {
+      .rmSmallScreen {
+        display: none;
+      }
+    }
+  </style>
+</footer>
+
+
+
+
+
+
+
 
         
 
@@ -466,5 +620,16 @@ The retail landscape is swiftly evolving, presenting fresh hurdle for businesses
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-dark-bg');
+            } else {
+                navbar.classList.remove('navbar-dark-bg');
+            }
+        });
+    </script>
 </body>
 </html>

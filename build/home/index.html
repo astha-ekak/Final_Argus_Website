@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Argus-Home-Page</title>
-
+     <!--lionk for font family-->
+    <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -17,6 +18,33 @@
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/font-size/font-size.css">
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/padding/padding.css">
      <style>
+    
+    .navbar {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      transition: background-color 0.5s;
+    }
+
+
+    #section1 {
+      background-image: url('/static/background.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
 
 .navbar-light .navbar-nav .nav-link {
     color: white;
@@ -43,20 +71,46 @@
     font-family: 'Pacifico', cursive;
   }
   .navbar-brand img {
-    height: 180px; 
-    margin-right: 10px; 
+    height: 90px; 
+    margin-right:5px; 
+    margin-left: 0%;
   }
+  .navbar-toggler {
+       background-color: #e9ecef;
+        border-width: 1px;
+        border-radius: 0.25rem;
+    }
+
+        @media (max-width: 576px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:8px;
+    }
+
+    .navbar-toggler:hover {
+        background-color: #e9ecef; 
+        border-color: #0056b3; 
+    }
+
+    .navbar-toggler-icon {
+        background-color: transparent;
+    }
+}
         
-
-
-        #section1 {
-            background-image: url('/static/background.png');
-            background-size: cover;
-            
-            color: white; 
-            height: 900px;
+        .navbar.scrolled {
+            background-color: #17364a;
         }
+        .navbar-dark-bg {
+    background-color:#17364a;
+    transition: background-color 0.3s ease;
+}
 
+            
+          
+     
         .section-symbol-text {
             display: flex;
             flex-direction: column;
@@ -71,21 +125,21 @@
 
         
         .section-symbol-text .text-main {
-            font-size: 22.9px; 
+            font-size: 23.5px; 
             font-family: 'Glacial Indifference', sans-serif;
             margin: 0.5rem 0; 
         }
 
         .section-symbol-text .text {
-            font-size: 13.3px; 
-            font-family: 'Century Gothic', sans-serif;
+            font-size: 14.9px; 
+            font-family: century-gothic, sans-serif;
             margin: 0.5rem 0;
             line-height: 1.5; 
             word-wrap: break-word;
             text-align: center; 
         }
-
         
+
         .section-content {
             display: flex;
             flex-direction: column; 
@@ -132,7 +186,7 @@
         .scrollable-video-container {
             margin-top:40px;
             position: relative;
-            height: 80vh; 
+            height: 100vh; 
             overflow-y: auto; 
             background: transparent; 
         }
@@ -146,6 +200,14 @@
             object-fit: cover; 
             z-index: -1; 
         }
+
+        @media (max-width: 576px) {
+    .scrollable-video-container {
+        height:210px; 
+    }
+}
+
+
 
         .card {
             display: flex;
@@ -163,9 +225,13 @@
         .card-body{
             text-align:center;
         }
+        .card-title{
+          font-family: century-gothic, sans-serif; 
+
+        }
         .card-text{
             font-size: 13.3px; 
-            font-family: 'Century Gothic', sans-serif; 
+            font-family: century-gothic, sans-serif; 
             margin: 0.5rem 0;
             line-height: 1.5; 
             word-wrap: break-word;
@@ -221,123 +287,94 @@
     </style>
 </head>
 <body>
-    <div class="container-fluid">
-
-      <!--SEction-1-->
-        <div id="section1" class="section">
-           
-          <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-            <a class="navbar-brand font-roboto" href="#">
-              <img src="/static/logo.png" alt="Logo"> 
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-      
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                      <a class="nav-link" href="/home" style="color:white;">Home</a>
-                    </li>
-                
-                    <li class="nav-item dropdown">
-                      <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" style="color:white;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Industries
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/manufacturing">Manufacturing Industry</a>
-                        <a class="dropdown-item" href="/construction">Construction Industry</a>
-                       
-                        <a class="dropdown-item" href="/retail">Retail Industry</a>
-                        <a class="dropdown-item" href="/logistics">Logistics  Industry</a>
-                        <a class="dropdown-item" href="/Industry">Warehouse Industry</a>
-                      </div>
-                    </li>  
+    <!--SEction-1-->
 
 
-                    <li class="nav-item dropdown">
-                      <a class="nav-link active dropdown-toggle" href="#" style="color:white;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Use Case
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/predictive">Predictive</a>
-                      <a class="dropdown-item" href="/automated">Automated</a>
-                      <a class="dropdown-item" href="/security">Security & Survelliance</a>
-                      <a class="dropdown-item" href="/enhanced">Enhanced Customer experience</a>
-                        
-                      </div>
-                    </li>  
-
-                    <li class="nav-item">
-                      <a class="nav-link active" href="/blog" style="color:white;">Blogs</a>
-                    </li><li class="nav-item">
-                      <a class="nav-link active" href="/contact" style="color:white;">Contact us</a>
-                    </li>
-                
-                
-              </ul>
-            </div>
-          </nav>
-      
-            
-
-                <div id="main">
-                    <div id="page1">
-                      <h1 style="text-align:center;color:white;margin-top:220px;font-size:45px;font-family:'Glacial Indifference'">ARGUS</h1>
-                      <h2 style="text-align:center;color:white;font-family:'Glacial Indifference';font-size: 23px;">A watchful guardian for your business</h2>
-                    </div>
-                </div> 
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light transparent " style="margin-top:0;padding-top:0;">
+      <a class="navbar-brand font-roboto" href="#">
+        <img src="/static/logo.png" alt="Logo"> 
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item pl-4">
+                <a class="nav-link" href="/home" style="color:white;">Home</a>
+              </li>
+          
+              <li class="nav-item dropdown pl-4">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" style="color:white;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Industries
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/manufacturing">Manufacturing Industry</a>
+                  <a class="dropdown-item" href="/construction">Construction Industry</a>
+                 
+                  <a class="dropdown-item" href="/retail">Retail Industry</a>
+                  <a class="dropdown-item" href="/logistics">Logistics  Industry</a>
+                  <a class="dropdown-item" href="/Industry">Warehouse Industry</a>
+                </div>
+              </li>  
+  
+  
+              <li class="nav-item dropdown pl-4">
+                <a class="nav-link active dropdown-toggle" href="#" style="color:white;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Use Case
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/predictive">Predictive Maintenance</a>
+                <a class="dropdown-item" href="/automated">Automated Warehouse</a>
+                <a class="dropdown-item" href="/security">Security & Survelliance</a>
+                <a class="dropdown-item" href="/enhanced">Enhanced Customer experience</a>
+                  
+                </div>
+              </li>  
+  
+              <li class="nav-item pl-4">
+                <a class="nav-link active" href="/blog" style="color:white;">Blogs</a>
+              </li><li class="nav-item pl-4">
+                <a class="nav-link active" href="/contact" style="color:white;">Contact us</a>
+              </li>
+          
+          
+        </ul>
+      </div>
+    </nav>
+  
+    <div id="section1" class="section">
+      <div id="main">
+        <div id="page1">
+          <h1 style="text-align:center;color:white;font-size:45px;font-family:'Glacial Indifference', sans-serif">ARGUS</h1>
+          <h2 style="text-align:center;color:white;font-family:'Glacial Indifference', sans-serif;font-size: 23px;">A watchful guardian for your business</h2>
         </div>
+      </div>
+    </div>
 <!--Section-2-->
         
 
 
         <div id="section2" class="section">
             <div class="section-symbol-text">
-                <div class="symbol">|</div>
-                <div class="text-main">REDEFINING THE INDUSTRIES WITH AI POWERED INNOVATION </div>
-                <div class="text">Your path to safer and efficient tomorrow</div>
-                <div class="text"> Argus, Ekak Innovations' flagship service, pioneers AI solutions across<br> industries. Through computer vision, machine learning, and AI, Argus<br> enhances quality, detects machine issues, and boosts team productivity <br>across all industries.</div>
-                <div class="symbol">|</div>
+                <div class="symbol p-3">|</div>
+                <div class="text-center p-3 fs-4 fw-bold">REDEFINING THE INDUSTRIES WITH AI POWERED INNOVATION </div>
+                <div class="text-center p-4 p-2 fs-6" ><i>Your path to safer and efficient tomorrow</i></div>
+                <div class=" text text-center pl-2 pr-2"> Argus, Ekak Innovations' flagship service, pioneers AI solutions across<br> industries.Through computer vision, machine learning, and AI, Argus<br>  enhances quality, detects machine issues, and boosts team productivity<br> across all industries.</div>
+                <div class="symbol p-3">|</div>
             </div>
-
-
-            <div class="container section-content">
-                <div class="row">
-                    <div class="col-md-2">
-                        <div class="col-text">
-                            WHAT DO WE DO
-                        </div>
-                        
-                        
-                    </div>
-    
-                    <div class="col-md-10">
-                        <div class="row">
-                           
-                            <div class="col-md-4 image-container">
-                                <img src="/static/predictive.png" > <!-- Replace with your image -->
-                                <div class="caption" style="font-family: 'Glacial Indifference', sans-serif;font-size:14;color:white" >Predictive Process<br> Optimization</div>
-                            </div>
-    
-                            
-                            <div class="col-md-4 image-container">
-                                <img src="/static/REduced_downtimw.png" > <!-- Replace with your image -->
-                                <div class="caption"  style="font-family: 'Glacial Indifference', sans-serif;font-size:14;color:white">Reduced Downtime <br>with Real-Time Monitoring</div>
-                            </div>
-    
-                        
-                            <div class="col-md-4 image-container">
-                                <img src="/static/enhanced.png" > <!-- Replace with your image -->
-                                <div class="caption"  style="font-family: 'Glacial Indifference', sans-serif;font-size:14;color:white">Enhanced Safety<br>Automation</div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="container-fluid">
+                <div class="card-group">
+                  <div class="card" style="border: none;">
+                    <img src="/static/whatdo.png" class="" style="max-width:100%">
+                   
+                  </div>
                 </div>
-            </div>
+            </div> 
+                    
+            
 
-
-
+             
         </div>
 
 
@@ -347,8 +384,8 @@
        
         <div id="section3" class="section">
             <div class="scrollable-video-container">
-                    <video class="video-background" autoplay muted loop>
-                        <source src="/static/Argus Overall Demo video (2) (1).mp4" type="video/mp4"> <!-- Replace with your video file -->
+                    <video class="video-background img-fluid" autoplay muted loop>
+                        <source src="/static/Argus Overall Demo video (2) (1).mp4" type="video/mp4"> 
                     </video>
             </div>
         </div>
@@ -359,18 +396,17 @@
 
           <!--  Fourth section -->
 
-
-        <div id="section4" class="section" style="margin-top:50px">
+          <div id="section4" class="section" style="margin-top:50px">
             
             <h1 style="font-size: 22.9px; text-align:center;
             font-family: 'Glacial Indifference', sans-serif;
-            margin: 0.5rem 0; ">MAKE YOUR INDUSTRIES EFFICIENT WITH <i>Argus</i></h1>
+            margin: 0.5rem 0; ">MAKE YOUR INDUSTRIES EFFICIENT WITH <i>ARGUS</i></h1>
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="card-deck">
                             <div class="card">
-                                <img class="card-img-top" src="/static/Real_Time_Monitoring.png" style="height:400px;width:400px"> <!-- Replace with your image -->
+                                <img class="card-img-top" src="/static/Real_Time_Monitoring.png" style="height:400px;width:400px"> 
                                 <div class="card-body">
                                     <h5 class="card-title">Real Time Monitoring</h5>
                                     <p class="card-text">
@@ -378,7 +414,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <img class="card-img-top" src="/static/Facial.png" style="height:400px;width:400px"> <!-- Replace with your image -->
+                                <img class="card-img-top" src="/static/Facial.png" style="height:400px;width:400px"> 
                                 <div class="card-body">
                                     <h5 class="card-title">Facial Recognition</h5>
                                     <p class="card-text">Our AI-powered facial recognition improves identification,<br> authentication, and anti-spoofing for access control, security, and<br> attendance tracking..</p>
@@ -389,7 +425,7 @@
                     <div class="carousel-item">
                         <div class="card-deck">
                             <div class="card">
-                                <img class="card-img-top" src="/static/maintenance.png" style="height:400px;width:400px"> <!-- Replace with your image -->
+                                <img class="card-img-top" src="/static/maintenance.png" style="height:400px;width:400px"> 
                                 <div class="card-body">
                                     <h5 class="card-title">Predictive Maintenance</h5>
                                     <p class="card-text">Predictive Maintenance reduces downtime by proactively addressing<br> issues. Fixing machinery defects promptly.
@@ -397,7 +433,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <img class="card-img-top" src="/static/realtime.png" style="height:400px;width:400px"> <!-- Replace with your image -->
+                                <img class="card-img-top" src="/static/realtime.png" style="height:400px;width:400px"> 
                                 <div class="card-body">
                                     <h5 class="card-title">Automated Safety Check</h5>
                                     <p class="card-text">Our advanced algorithms monitor safety protocols in real-time,<br> issuing alerts to prevent hazards and ensure compliance<br> with standards..</p>
@@ -422,52 +458,87 @@
            
 
  <!--Location section of Industries-->
- <div id="section8" class="section mt-5" style="height:900px;background-image: url('/static/location.jpg');background-size: cover;">
-    <h1 style="text-align:left;color:white;font-family:'Century Gothic';font-size: 38px;background-size: cover;margin-left:50px;">INDUSTRIES WE FOCUS ON</h1>
-    <div class="container-fluid image-container" style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
-      <div class="row">
-        <div class="col-6 col-md-3 position-relative">
-          <a href="/Industry/">
-            <img src="/static/location-1.png" class="random-image img-fluid position-absolute" style="top: 200px; left: 50%;">
-          </a>
-          <p class="text-center small position-absolute" style="color:white;top: 290px; left: 55%; transform: translateX(-55%);">Warehouse Industry</p>
-        </div>
-        <div class="col-6 col-md-3 position-relative">
-          <a href="/logistics/">
-            <img src="/static/location-2.png" class="random-image img-fluid position-absolute" style="top: 400px; left: 50%;">
-          </a>
-          <p class="text-center small position-absolute" style="color:white;top: 490px; left: 55%; transform: translateX(-55%);">Logistics Industry</p>
-        </div>
-        <div class="col-6 col-md-3 position-relative">
-          <a href="/construction/">
-            <img src="/static/location-3.png" class="random-image img-fluid position-absolute" style="top: 500px; left: 50%;">
-          </a>
-          <p class="text-center small position-absolute" style="color:white;top: 580px; left: 55%; transform: translateX(-55%);">Construction Industry</p>
-        </div>
-        <div class="col-6 col-md-3 position-relative">
-          <a href="/manufacturing/">
-            <img src="/static/location-4.png" class="random-image img-fluid position-absolute" style="top: 250px; left: 50%;">
-          </a>
-          <p class="text-center small position-absolute" style="color:white;top: 340px; left: 55%; transform: translateX(-55%);">Manufacturing Industry</p>
-        </div>
-        <div class="col-6 col-md-3 position-relative">
-          <a href="/retail/">
-            <img src="/static/location-1.png" class="random-image img-fluid position-absolute" style="top: 350px; left: 50%;">
-          </a>
-          <p class="text-center small position-absolute" style="color:white;top: 440px; left: 55%; transform: translateX(-55%);">Retail Industry</p>
-        </div>
+ <div id="section8" class="section mt-5" style="height: 900px; background-image: url('/static/location.jpg'); background-size: cover; background-position: center top; ">
+  <h1 class="pt-4" style="text-align: left; color: white; font-family: 'Century Gothic', sans-serif; font-size: 28px; margin-left: 30px;">INDUSTRIES WE FOCUS ON</h1>
+  <div class="container-fluid image-container" style="position: relative; width: 100%; height: 100%; overflow: hidden; margin-top: 50px;">
+    <div class="row">
+      <div class="col-6 col-md-3 position-relative">
+        <a href="/Industry/">
+          <img src="/static/location-1.png" class="random-image img-fluid position-absolute" style="top: 200px; left: 50%;"></a>
+        </a>
+        <a href="/Industry/">
+          <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 270px; left: 55%; max-width: 60px; max-height: 60px;">
+      </a>
+        <p class="text-center small position-absolute" style="color: white; top: 310px; left: 60%; transform: translateX(-55%);">Warehouse Industry</p>
+      </div>
+
+      <div class="col-6 col-md-3 position-relative">
+        <a href="/logistics/">
+          <img src="/static/location-2.png" class="random-image img-fluid position-absolute" style="top: 470px; left: 50%;">
+        </a>
+        <a href="/logistics/">
+          <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 540px; left: 55%; max-width: 60px; max-height: 60px;">
+      </a>
+        
+        <p class="text-center small position-absolute" style="color: white; top: 585px; left: 55%; transform: translateX(-55%);">Logistics Industry</p>
+      </div>
+
+      <div class="col-6 col-md-3 position-relative">
+        <a href="/construction/">
+          <img src="/static/location(construction).png" class="random-image img-fluid position-absolute" style="top: 500px; left: 50%;">
+        </a>
+        <a href="/construction/">
+          <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 570px; left: 55%; max-width: 60px; max-height: 60px;">
+      </a>
+        
+        <p class="text-center small position-absolute" style="color: white; top: 610px; left: 55%; transform: translateX(-55%);">Construction Industry</p>
+      </div>
+
+      <div class="col-6 col-md-3 position-relative">
+        <a href="/manufacturing/">
+          <img src="/static/location-4.png" class="random-image img-fluid position-absolute" style="top: 250px; left: 45%;">
+        </a>
+        <a href="/manufacturing/">
+          <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 320px; left: 50%; max-width: 60px; max-height: 60px;">
+      </a>
+        <p class="text-center small position-absolute" style="color: white; top: 360px; left: 50%; transform: translateX(-55%);">Manufacturing Industry</p>
+      </div>
+
+      <div class="col-6 col-md-3 position-relative">
+        <a href="/retail/">
+          <img src="/static/location(retail).png" class="random-image img-fluid position-absolute" style="top: 350px; left: 50%;">
+        </a>
+        <a href="/retail/">
+          <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 420px; left: 55%; max-width: 60px; max-height: 60px;">
+      </a>
+        <p class="text-center small position-absolute" style="color: white; top: 470px; left: 55%; transform: translateX(-55%);">Retail Industry</p>
       </div>
     </div>
   </div>
+</div>
+
   
 
 
   <!--Vinn_Section-->
+  
+
   <div class="vinn_section mt-5 mb-3" id="section" style="background-size: cover;">
-    <div class="d-flex justify-content-center" style="background-size: cover;">
-      <video class="d-none d-md-block" src="/static/Argus Vinn Diagram.mp4" autoplay loop muted></video>
+    <h4 class="text-center mb-2" style="font-family: 'Glacial Indifference', sans-serif;
+    font-size: 29.3px;
+    margin-bottom: 10px;">ARGUS LEVERAGE ON</h4>
+    <div class="d-flex pt-4 justify-content-center" style="background-size: cover;">
+      <video class="video-fluid" src="/static/Argus Vinn Diagram.mp4" autoplay loop muted playsinline style="width:auto; max-width:100%"></video>
     </div>
   </div>
+  
+  <style>
+  .video-fluid {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  </style>
   
   
   
@@ -490,19 +561,22 @@
             <!-- Second Row -->
             <div class="row" style="margin-top: 40px;">
                 <div class="col-md-4 box" style="text-align: center;">
-                   <img src="/static/truboard.png" style="height: auto;
+                   <img src="/static/34.png" style="height: auto;
                     display: block;
                     margin: 0 auto;max-width: 60%;">
+                     <p class="text-center" style="font-family: century-gothic, sans-serif;font-style:italic">Trubord Partners</p>
                 </div>
                 <div class="col-md-4 box">
                    <img src="/static/ounce.png"  style="height: auto;
                    display: block;
                    margin: 0 auto;max-width: 60%;" >
+                   <p class="text-center" style="font-family: century-gothic, sans-serif;font-style:italic">Ounce</p>
                 </div>
                 <div class="col-md-4 box">
                     <img src="/static/gesl.png"  style="height: auto;
                     display: block;
                     margin: 0 auto;max-width: 60%;" >
+                    <p class="text-center" style="font-family: century-gothic, sans-serif;font-style:italic">Ganesha Ecosphere</p>
                    
                 </div>
             </div>
@@ -511,47 +585,57 @@
 
         <!-- Sixth Page-->
 
-        <div id="section7" class="section" style="padding: 50px 0;">
+        <div id="section7" class="section" >
             <div class="container-fluid">
-                <h1 style="font-size: 22.9px; text-align:left;font-family: 'Glacial Indifference', sans-serif;margin: 0.5rem 0;margin-top:80px;border-bottom: 2px solid black; display: inline-block;">Explore More</h1>
-                <div class="row" style="margin-top:60px">
+                <!-- <h1 style="font-size: 22.9px; text-align:left;font-family: 'Glacial Indifference', sans-serif;margin: 0.5rem 0;margin-top:80px;border-bottom: 2px solid black; display: inline-block;">Explore More</h1> -->
+                <div class="row justify-content-center" style="margin-top:60px">
+                  <h4 class="text-center pb-4" style="font-family: 'Glacial Indifference', sans-serif;
+                  font-size: 29.3px;
+                  margin-bottom: 10px;">BLOGS</h4>
                     <!-- Card 1 -->
-                    <div class="col-md-4 mb-4">
+                    <div class="col-md-3 mb-4 ml-lg-3">
                         <div class="card h-100" style="background-image: url('/static/building31.png');">
                           
                             <div class="card-body" style="margin-top:255px;">
                               
-                                <div class="sub-card">
-                                    <h6>Sub Card 1</h6>
-                                    <p>Sub card content for card 1.</p>
+                                <div class="sub-card text-left">
+                                    <h3>Card</h3>
+                                    <h5>Sub Card 1</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                                 </div>
                             </div>
                            
                         </div>
+                    </div>
+                    <div class="col-sm-1 d-sm-block">
                     </div>
                     <!-- Card 2 -->
-                    <div class="col-md-4 mb-4">
+                    <div class="col-md-3 mb-4">
                         <div class="card h-100" style="background-image: url('/static/building31.png');">
                           
                             <div class="card-body" style="margin-top:255px;">
                               
-                                <div class="sub-card">
-                                    <h6>Sub Card 1</h6>
-                                    <p>Sub card content for card 1.</p>
+                                <div class="sub-card text-left">
+                                    <h3>Card</h3>
+                                    <h5>Sub Card 1</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                                 </div>
                             </div>
                            
                         </div>
                     </div>
+                    <div class="col-sm-1 d-sm-block">
+                    </div>
                     <!-- Card 3 -->
-                    <div class="col-md-4 mb-4">
+                    <div class="col-md-3 mb-4">
                         <div class="card h-100" style="background-image: url('/static/building31.png');">
                           
                             <div class="card-body" style="margin-top:255px;">
                               
-                                <div class="sub-card">
-                                    <h6>Sub Card 1</h6>
-                                    <p>Sub card content for card 1.</p>
+                                <div class="sub-card text-left">
+                                    <h3>Card</h3>
+                                    <h5>Sub Card 1</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                                 </div>
                             </div>
                            
@@ -578,61 +662,76 @@
 
 
 
-           <footer class="footer-39201" style="margin-top:40px;background-color:black;margin-bottom:40px;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md mb-4 mb-md-0">
-          <h3 style="color:white;margin-top:40px">Argus</h3>
-          <ul class="list-unstyled nav-links" >
-            <li><a href="#"></a></li>
-            <li style="color:white;margin-top:30px;font-size:20px;margin-top:30px;">Get in Touch
-            <li style="font-size:12p;margin-top:30px;color:white">113/216-A Swaroop Nagar, Kanpur- 208002,
-                Uttar Pradesh, India</li>
-            <li style="font-size:12p;color:white">Landline- 0512-4028469
+           <footer class="footer-39201" style="margin-top:40px;background-color:black;">
+  <div class="container">
+    <div class="row p-0">
+      <div class="col-xl-3 border-right">
+        <h3 style="color:white;margin-top:40px">ARGUS</h3>
+        <ul class="list-unstyled nav-links" >
+          <li><a href="#"></a></li>
+          <li style="color:white;margin-top:30px;font-size:20px;margin-top:30px;">GET IN TOUCH
+          <li style="font-size:12p;margin-top:30px;color:white">113/216-A Swaroop Nagar, Kanpur- 208002,
+              Uttar Pradesh, India</li>
+          <li style="font-size:12p;color:white">Landline- 0512-4028469
 
-            </li>
-            <li style="font-size:12p;color:white">Email-contact@ekak.in</li>
-            
-          </ul>
-        </div>
-        <div class="col-md mb-4 mb-md-0">
-          <p style="font-size:200px;width:2px;color:white"> |</p>
+          </li>
+          <li style="font-size:12p;color:white">Email-contact@ekak.in</li>
           
-          
-        </div>
-        <div class="col-md mb-4 mb-md-0" style="margin-top:40px;">
-          <h3 style="color:aliceblue">Site-map</h3>
-          <ul class="list-unstyled nav-links" style="font-size:12p;margin-top:30px;">
-            <li style="color:white"><a href="#">About</a></li>
-            <li style="color:white"><a href="#">Industries</a></li>
-            <li style="color:white"><a href="#">Use Case</a></li>
-            <li style="color:white"><a href="#">Blogs</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 mb-4 mb-md-0" style="margin-top:40px;">
-          <h3 style="color:aliceblue">DON'T MISS OUT!</h3>
-          <p class="mb-4" style="color:white;margin-top:30px">Sign up to get latest updates promotions and many more.</p>
-          <form action="#" class="subscribe">
-              <input type="text" class="form-control" placeholder="Enter your e-mail">
-              <input type="submit" class="btn btn-submit" value="Send">
-            </form>
-        </div>
+        </ul>
       </div>
-
-      <div class="row align-items-center">
-        
-        <div class="col-md-6 text-md-righ " >
-          <ul class="social list-unstyled">
-            <li><a href="#"><span class="icon-facebook"></span></a></li>
-            <li><a href="#"><span class="icon-twitter"></span></a></li>
-            <li><a href="#"><span class="icon-pinterest"></span></a></li>
-            <li><a href="#"><span class="icon-instagram"></span></a></li>
-            <li><a href="#"><span class="icon-behance"></span></a></li>
-          </ul>
-        </div>
+      <div class="col-xl-1 d-lg-block d-sm-none d-md-none rmSmallScreen">
+        <!-- <p style="font-size:200px;width:1px;color:white">|</p> -->
+      </div>
+      <div class="col-xl-4" style="margin-top:40px;">
+        <h3 class="text-white">Site-map</h3>
+        <ul class="list-unstyled nav-links " style="font-size:12p;margin-top:30px;">
+          <li ><a href="/home" class="text-decoration-none text-white">Home</a></li>
+          <li ><a href="/about" class="text-decoration-none text-white">About</a></li>
+          <li ><a href="/manufaturing"class="text-decoration-none text-white" >Industries</a></li>
+          <li ><a href="/predictive" class="text-decoration-none text-white">Use Case</a></li>
+          <li ><a href="/blog"class="text-decoration-none text-white" >Blogs</a></li>
+        </ul>
+      </div>
+      <div class="col-xl-4  " style="margin-top:40px;">
+        <h3 style="color:aliceblue">DON'T MISS OUT!</h3>
+        <p class="mb-4" style="color:white;margin-top:30px">Sign up to get latest updates promotions and many more.</p>
+        <form action="#" class="subscribe">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control rounded-0" placeholder="Enter Your Email Address" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-info rounded-0" type="button" id="button-addon2">SIGN UP</button>
+          </div>
+          </form>
       </div>
     </div>
-  </footer>
+
+    <div class="row align-items-center">
+      
+      <div class="col-md-6 text-md-right " >
+        <ul class="social list-unstyled">
+          <li><a href="#"><span class="icon-facebook"></span></a></li>
+          <li><a href="#"><span class="icon-twitter"></span></a></li>
+          <li><a href="#"><span class="icon-pinterest"></span></a></li>
+          <li><a href="#"><span class="icon-instagram"></span></a></li>
+          <li><a href="#"><span class="icon-behance"></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    @media only screen and (max-width: 600px) {
+      .rmSmallScreen {
+        display: none;
+      }
+    }
+  </style>
+</footer>
+
+
+
+
+
+
+
     
               
 
@@ -645,9 +744,30 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+
+
+   
+
+
+
+
+
   
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script>
+      window.addEventListener('scroll', function() {
+          const navbar = document.querySelector('.navbar');
+          if (window.scrollY > 50) {
+              navbar.classList.add('navbar-dark-bg');
+          } else {
+              navbar.classList.remove('navbar-dark-bg');
+          }
+      });
+  </script>
   </body>
   </html>
