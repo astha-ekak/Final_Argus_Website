@@ -80,7 +80,24 @@
         border-width: 1px;
         border-radius: 0.25rem;
     }
-
+    @media (max-width: 1200px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:14px;
+    }
+    } 
+    @media (max-width: 800px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:10px;
+    }
+    }
         @media (max-width: 576px) {
     .navbar-toggler {
         border-color: #007bff;
@@ -186,7 +203,7 @@
         .scrollable-video-container {
             margin-top:40px;
             position: relative;
-            height: 100vh; 
+            height: 110vh; 
             overflow-y: auto; 
             background: transparent; 
         }
@@ -199,7 +216,18 @@
             height: 100%;
             object-fit: cover; 
             z-index: -1; 
+            margin:15px;
         }
+        @media (max-width: 1200px) {
+    .scrollable-video-container {
+        height:610px; 
+    }
+}
+        @media (max-width: 800px) {
+    .scrollable-video-container {
+        height:410px; 
+    }
+}
 
         @media (max-width: 576px) {
     .scrollable-video-container {
@@ -309,12 +337,12 @@
                   Industries
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="/manufacturing">Manufacturing Industry</a>
-                  <a class="dropdown-item" href="/construction">Construction Industry</a>
+                  <a class="dropdown-item" href="/manufacturing">Manufacturing </a>
+                  <a class="dropdown-item" href="/construction">Construction </a>
                  
-                  <a class="dropdown-item" href="/retail">Retail Industry</a>
-                  <a class="dropdown-item" href="/logistics">Logistics  Industry</a>
-                  <a class="dropdown-item" href="/Industry">Warehouse Industry</a>
+                  <a class="dropdown-item" href="/retail">Retail </a>
+                  <a class="dropdown-item" href="/logistics">Logistics </a>
+                  <a class="dropdown-item" href="/Industry">Warehouse </a>
                 </div>
               </li>  
   
@@ -346,7 +374,7 @@
     <div id="section1" class="section">
       <div id="main">
         <div id="page1">
-          <h1 style="text-align:center;color:white;font-size:45px;font-family:'Glacial Indifference', sans-serif">ARGUS</h1>
+          <h1 style="text-align:center;color:white;font-size:55px;font-family:'Glacial Indifference', sans-serif">ARGUS</h1>
           <h2 style="text-align:center;color:white;font-family:'Glacial Indifference', sans-serif;font-size: 23px;">A watchful guardian for your business</h2>
         </div>
       </div>
@@ -366,7 +394,7 @@
             <div class="container-fluid">
                 <div class="card-group">
                   <div class="card" style="border: none;">
-                    <img src="/static/whatdo.png" class="" style="max-width:100%">
+                    <img src="/static/whatdo.png" class="" style="max-width:100%;max-height:100%">
                    
                   </div>
                 </div>
@@ -398,9 +426,9 @@
 
           <div id="section4" class="section" style="margin-top:50px">
             
-            <h1 style="font-size: 22.9px; text-align:center;
+            <h1 style="font-size: 26px; text-align:center;
             font-family: 'Glacial Indifference', sans-serif;
-            margin: 0.5rem 0; ">MAKE YOUR INDUSTRIES EFFICIENT WITH <i>ARGUS</i></h1>
+            margin: 0.5rem 0;font-weight:bold ">MAKE YOUR INDUSTRIES EFFICIENT WITH <i>ARGUS</i></h1>
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -410,14 +438,14 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Real Time Monitoring</h5>
                                     <p class="card-text">
-                                        Fast decisions with data, algorithms, and analytics.<br> Real-time insights on processes, workers, and machines. </p>
+                                        Fast decisions with data, algorithms, and<br> analytics.Real-time insights on processes,<br> workers, and machines. </p>
                                 </div>
                             </div>
                             <div class="card">
                                 <img class="card-img-top" src="/static/Facial.png" style="height:400px;width:400px"> 
                                 <div class="card-body">
                                     <h5 class="card-title">Facial Recognition</h5>
-                                    <p class="card-text">Our AI-powered facial recognition improves identification,<br> authentication, and anti-spoofing for access control, security, and<br> attendance tracking..</p>
+                                    <p class="card-text">Our AI-powered facial recognition improves<br> identification, authentication, and anti-spoofing for<br> access control, security, andattendance tracking.</p>
                                 </div>
                             </div>
                         </div>
@@ -428,7 +456,7 @@
                                 <img class="card-img-top" src="/static/maintenance.png" style="height:400px;width:400px"> 
                                 <div class="card-body">
                                     <h5 class="card-title">Predictive Maintenance</h5>
-                                    <p class="card-text">Predictive Maintenance reduces downtime by proactively addressing<br> issues. Fixing machinery defects promptly.
+                                    <p class="card-text">Predictive Maintenance reduces downtime by<br> proactively addressing issues. Fixing machinery<br> defects promptly.
                                     </p>
                                 </div>
                             </div>
@@ -436,7 +464,7 @@
                                 <img class="card-img-top" src="/static/realtime.png" style="height:400px;width:400px"> 
                                 <div class="card-body">
                                     <h5 class="card-title">Automated Safety Check</h5>
-                                    <p class="card-text">Our advanced algorithms monitor safety protocols in real-time,<br> issuing alerts to prevent hazards and ensure compliance<br> with standards..</p>
+                                    <p class="card-text">Our advanced algorithms monitor safety protocols in<br> real-time, issuing alerts to prevent hazards and ensure<br> compliance with standards.</p>
                                 </div>
                             </div>
                         </div>
@@ -454,13 +482,29 @@
 
         </div>
 
-
+       
+        <style>
+          .carousel-control-prev-icon,
+          .carousel-control-next-icon {
+              background-image: none;
+              font-size: 2rem;
+              color: black;
+          }
+  
+          .carousel-control-prev-icon::before {
+              content: "<";
+          }
+  
+          .carousel-control-next-icon::before {
+              content: ">";
+          }
+      </style>
            
 
  <!--Location section of Industries-->
  <div id="section8" class="section mt-5" style="height: 900px; background-image: url('/static/location.jpg'); background-size: cover; background-position: center top; ">
-  <h1 class="pt-4" style="text-align: left; color: white; font-family: 'Century Gothic', sans-serif; font-size: 28px; margin-left: 30px;">INDUSTRIES WE FOCUS ON</h1>
-  <div class="container-fluid image-container" style="position: relative; width: 100%; height: 100%; overflow: hidden; margin-top: 50px;">
+  <h1 class="pt-5 pl-5" style="text-align: left; color: white; font-family: 'Century Gothic', sans-serif; font-size: 2.5rem; margin-left: 30px;">INDUSTRIES WE FOCUS ON</h1>
+  <div class="container image-container" style="position: relative; width: 100%; height: 100%; overflow: hidden; margin-top: 50px;">
     <div class="row">
       <div class="col-6 col-md-3 position-relative">
         <a href="/Industry/">
@@ -469,7 +513,7 @@
         <a href="/Industry/">
           <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 270px; left: 55%; max-width: 60px; max-height: 60px;">
       </a>
-        <p class="text-center small position-absolute" style="color: white; top: 310px; left: 60%; transform: translateX(-55%);">Warehouse Industry</p>
+        <p class="text-center small position-absolute" style="color: white; top: 310px; left: 65%; transform: translateX(-55%);">Warehouse </p>
       </div>
 
       <div class="col-6 col-md-3 position-relative">
@@ -480,7 +524,7 @@
           <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 540px; left: 55%; max-width: 60px; max-height: 60px;">
       </a>
         
-        <p class="text-center small position-absolute" style="color: white; top: 585px; left: 55%; transform: translateX(-55%);">Logistics Industry</p>
+        <p class="text-center small position-absolute" style="color: white; top: 585px; left: 65%; transform: translateX(-55%);">Logistics </p>
       </div>
 
       <div class="col-6 col-md-3 position-relative">
@@ -491,7 +535,7 @@
           <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 570px; left: 55%; max-width: 60px; max-height: 60px;">
       </a>
         
-        <p class="text-center small position-absolute" style="color: white; top: 610px; left: 55%; transform: translateX(-55%);">Construction Industry</p>
+        <p class="text-center small position-absolute" style="color: white; top: 610px; left: 65%; transform: translateX(-55%);">Construction </p>
       </div>
 
       <div class="col-6 col-md-3 position-relative">
@@ -501,7 +545,7 @@
         <a href="/manufacturing/">
           <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 320px; left: 50%; max-width: 60px; max-height: 60px;">
       </a>
-        <p class="text-center small position-absolute" style="color: white; top: 360px; left: 50%; transform: translateX(-55%);">Manufacturing Industry</p>
+        <p class="text-center small position-absolute" style="color: white; top: 360px; left: 60%; transform: translateX(-55%);">Manufacturing </p>
       </div>
 
       <div class="col-6 col-md-3 position-relative">
@@ -511,7 +555,7 @@
         <a href="/retail/">
           <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 420px; left: 55%; max-width: 60px; max-height: 60px;">
       </a>
-        <p class="text-center small position-absolute" style="color: white; top: 470px; left: 55%; transform: translateX(-55%);">Retail Industry</p>
+        <p class="text-center small position-absolute" style="color: white; top: 470px; left: 65%; transform: translateX(-55%);">Retail </p>
       </div>
     </div>
   </div>
@@ -526,8 +570,8 @@
   <div class="vinn_section mt-5 mb-3" id="section" style="background-size: cover;">
     <h4 class="text-center mb-2" style="font-family: 'Glacial Indifference', sans-serif;
     font-size: 29.3px;
-    margin-bottom: 10px;">ARGUS LEVERAGE ON</h4>
-    <div class="d-flex pt-4 justify-content-center" style="background-size: cover;">
+    margin-bottom: 10px;">YOUR INDUSTRY TRANSFORMATION HUB</h4>
+    <div class="d-flex pt-5 justify-content-center" style="background-size: cover;">
       <video class="video-fluid" src="/static/Argus Vinn Diagram.mp4" autoplay loop muted playsinline style="width:auto; max-width:100%"></video>
     </div>
   </div>
@@ -543,15 +587,19 @@
   
   
 
+<hr style="margin-left:200px;margin-right:200px;margin-top:50px">
+<style>
+ 
 
-
+  
+</style>
 
         <!-- Fifth Page -->
-        <div class="container-fluid" style="margin-top:40px">
+        <div class="container-fluid" style="margin-top:60px">
             
             <div class="row">
                 <div class="col-md-12 box">
-                    <div class="heading">WHAT THEY SAY</div>
+                    <div class="heading">SUSTAINING IMPACT TOGETHER</div>
                     <div class="subheading">“From our early days, we've been providing reliable service to our clientele.<br>
                         We've had the honour of being the firm of choice of the following corporations.”</div>
                 </div>

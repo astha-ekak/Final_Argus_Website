@@ -55,14 +55,31 @@
         border-width: 1px;
         border-radius: 0.25rem;
     }
-
+    @media (max-width: 1200px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:25px;
+    }
+    } 
+    @media (max-width: 800px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:22px;
+    }
+    }
         @media (max-width: 576px) {
     .navbar-toggler {
         border-color: #007bff;
         border-width: 1px;
         border-radius: 0.25rem;
         padding:1px;
-        margin-right:8px;
+        margin-right:25px;
     }
 
     .navbar-toggler:hover {
@@ -106,11 +123,11 @@
                         Industries
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/manufacturing" style="color:black">Manufacturing Industry</a>
-                        <a class="dropdown-item" href="/construction" style="color:black">Construction Industry</a>
-                        <a class="dropdown-item" href="/retail" style="color:black">Retail Industry</a>
-                        <a class="dropdown-item" href="/logistics" style="color:black">Logistics Industry</a>
-                        <a class="dropdown-item" href="/Industry" style="color:black">Warehouse Industry</a>
+                        <a class="dropdown-item" href="/manufacturing" style="color:black">Manufacturing </a>
+                        <a class="dropdown-item" href="/construction" style="color:black">Construction </a>
+                        <a class="dropdown-item" href="/retail" style="color:black">Retail </a>
+                        <a class="dropdown-item" href="/logistics" style="color:black">Logistics</a>
+                        <a class="dropdown-item" href="/Industry" style="color:black">Warehouse </a>
                     </div>
                 </li>  
                 <li class="nav-item dropdown">
@@ -164,7 +181,11 @@
   <div class="container">
     <div class="row p-0">
       <div class="col-xl-3 border-right">
-        <h3 style="color:white;margin-top:40px">ARGUS</h3>
+        <h3 style="color:white; margin-top:40px; color:#345a74; font-weight:500; font-size:2.4rem; border-color: aliceblue; transition: color 0.3s ease-in-out;" 
+        onmouseover="this.style.color='#648499'" onmouseout="this.style.color='#345a74'">
+        ARGUS
+    </h3>
+    
         <ul class="list-unstyled nav-links" >
           <li><a href="#"></a></li>
           <li style="color:white;margin-top:30px;font-size:20px;margin-top:30px;">GET IN TOUCH

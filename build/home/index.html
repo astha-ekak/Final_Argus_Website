@@ -80,7 +80,24 @@
         border-width: 1px;
         border-radius: 0.25rem;
     }
-
+    @media (max-width: 1200px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:14px;
+    }
+    } 
+    @media (max-width: 800px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:10px;
+    }
+    }
         @media (max-width: 576px) {
     .navbar-toggler {
         border-color: #007bff;
@@ -186,7 +203,7 @@
         .scrollable-video-container {
             margin-top:40px;
             position: relative;
-            height: 100vh; 
+            height: 110vh; 
             overflow-y: auto; 
             background: transparent; 
         }
@@ -200,6 +217,16 @@
             object-fit: cover; 
             z-index: -1; 
         }
+        @media (max-width: 1200px) {
+    .scrollable-video-container {
+        height:610px; 
+    }
+}
+        @media (max-width: 800px) {
+    .scrollable-video-container {
+        height:410px; 
+    }
+}
 
         @media (max-width: 576px) {
     .scrollable-video-container {
@@ -309,12 +336,12 @@
                   Industries
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="/manufacturing">Manufacturing Industry</a>
-                  <a class="dropdown-item" href="/construction">Construction Industry</a>
+                  <a class="dropdown-item" href="/manufacturing">Manufacturing </a>
+                  <a class="dropdown-item" href="/construction">Construction </a>
                  
-                  <a class="dropdown-item" href="/retail">Retail Industry</a>
-                  <a class="dropdown-item" href="/logistics">Logistics  Industry</a>
-                  <a class="dropdown-item" href="/Industry">Warehouse Industry</a>
+                  <a class="dropdown-item" href="/retail">Retail </a>
+                  <a class="dropdown-item" href="/logistics">Logistics </a>
+                  <a class="dropdown-item" href="/Industry">Warehouse </a>
                 </div>
               </li>  
   
@@ -346,7 +373,7 @@
     <div id="section1" class="section">
       <div id="main">
         <div id="page1">
-          <h1 style="text-align:center;color:white;font-size:45px;font-family:'Glacial Indifference', sans-serif">ARGUS</h1>
+          <h1 style="text-align:center;color:white;font-size:55px;font-family:'Glacial Indifference', sans-serif">ARGUS</h1>
           <h2 style="text-align:center;color:white;font-family:'Glacial Indifference', sans-serif;font-size: 23px;">A watchful guardian for your business</h2>
         </div>
       </div>
@@ -526,7 +553,7 @@
   <div class="vinn_section mt-5 mb-3" id="section" style="background-size: cover;">
     <h4 class="text-center mb-2" style="font-family: 'Glacial Indifference', sans-serif;
     font-size: 29.3px;
-    margin-bottom: 10px;">ARGUS LEVERAGE ON</h4>
+    margin-bottom: 10px;">YOUR INDUSTRY TRANSFORMATION HUB</h4>
     <div class="d-flex pt-4 justify-content-center" style="background-size: cover;">
       <video class="video-fluid" src="/static/Argus Vinn Diagram.mp4" autoplay loop muted playsinline style="width:auto; max-width:100%"></video>
     </div>
@@ -543,15 +570,19 @@
   
   
 
+<hr style="margin-left:200px;margin-right:200px;margin-top:50px">
+<style>
+ 
 
-
+  
+</style>
 
         <!-- Fifth Page -->
-        <div class="container-fluid" style="margin-top:40px">
+        <div class="container-fluid" style="margin-top:60px">
             
             <div class="row">
                 <div class="col-md-12 box">
-                    <div class="heading">WHAT THEY SAY</div>
+                    <div class="heading">SUSTAINING IMPACT TOGETHER</div>
                     <div class="subheading">“From our early days, we've been providing reliable service to our clientele.<br>
                         We've had the honour of being the firm of choice of the following corporations.”</div>
                 </div>
@@ -666,7 +697,11 @@
   <div class="container">
     <div class="row p-0">
       <div class="col-xl-3 border-right">
-        <h3 style="color:white;margin-top:40px">ARGUS</h3>
+        <h3 style="color:white; margin-top:40px; color:#345a74; font-weight:500; font-size:2.4rem; border-color: aliceblue; transition: color 0.3s ease-in-out;" 
+        onmouseover="this.style.color='#648499'" onmouseout="this.style.color='#345a74'">
+        ARGUS
+    </h3>
+    
         <ul class="list-unstyled nav-links" >
           <li><a href="#"></a></li>
           <li style="color:white;margin-top:30px;font-size:20px;margin-top:30px;">GET IN TOUCH

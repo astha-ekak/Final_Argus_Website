@@ -62,6 +62,24 @@
         border-width: 1px;
         border-radius: 0.25rem;
     }
+    @media (max-width: 1200px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:25px;
+    }
+    } 
+     @media (max-width: 800px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:22px;
+    }
+    }
 
         @media (max-width: 576px) {
     .navbar-toggler {
@@ -69,7 +87,7 @@
         border-width: 1px;
         border-radius: 0.25rem;
         padding:1px;
-        margin-right:8px;
+        margin-right:25px;
     }
 
     .navbar-toggler:hover {
@@ -275,32 +293,54 @@
 }
 @media (max-width: 1200px) {
     .head-text {
-        font-size: 40px;
+        font-size: 37px;
+        margin-left:9px;
+        text-align:center;
+         margin-top:310px;
+        padding:10px;
     }
 }
 
 @media (max-width: 992px) {
     .head-text {
-        font-size: 35px;
+        
+        font-size: 31px;
+        margin-left:7px;
+        text-align:center;
+         margin-top:310px;
+        padding:9px;
     }
 }
 
 @media (max-width: 768px) {
     .head-text {
-        font-size: 30px;
+        font-size: 27px;
+        margin-left:6px;
+        text-align:center;
+         margin-top:300px;
+        padding:10px;
     }
 }
 
-
 @media (max-width: 576px) {
     .head-text {
-        font-size: 25px;
+        font-size: 24px;
         margin-left:4px;
         text-align:center;
          margin-top:120px;
         padding:8px;
     }
 }
+@media (max-width: 344px) {
+    .head-text {
+        font-size: 20px;
+        margin-left:4px;
+        text-align:center;
+         margin-top:120px;
+        padding:8px;
+    }
+}
+
 
 
 
@@ -420,10 +460,10 @@
           <div class="row">
                 <div class="col-sm-6 order-2 order-md-1">
                     <h1 class="heading-main">Real-time review of<br>those  </h1>
-                    <h3 class="subheading">not wearing gear or helmets..</h3>
+                    <h3 class="subheading">not wearing gear or helmets.</h3>
                 </div>
                 <div class="col-sm-6 mt-5 text-center order-1 order-md-2">
-                    <img src="/static/Untitled design 16.png" class="img-fluid" alt="Facial Recognition">
+                    <img src="/static/Untitled design 16.png" class="img-fluid" style="max-width:80%; height:auto;">
                 </div>
           </div>
         </div>
@@ -434,10 +474,10 @@
         <div id="section3" class="section mt-3">
           <div class="row">
             <div class="col-sm-6 mt-5 text-center">
-              <img src="/static//8.png" class="img-fluid" alt="Facial Recognition">
+              <img src="/static//8.png" class="img-fluid" style="max-width:80%; height:auto;">
             </div>
             <div class="col-sm-6">
-              <h1 class="heading1-main" >Spotting intruder and<br> unsafe activities, </h1>
+              <h1 class="heading1-main" >Spotting intruder and<br> unsafe activities </h1>
               <h3 class="subheading1" >enhancing site security.</h3>
             </div>
           </div>
@@ -455,7 +495,7 @@
                 <h3 class="subheading"> of men and material.</h3>
             </div>
             <div class="col-sm-6 mt-5 text-center order-1 order-md-2">
-                <img src="/static/Untitled design 18.png" class="img-fluid" alt="Facial Recognition">
+                <img src="/static/Untitled design 18.png" class="img-fluid" style="max-width:80%; height:auto;">
             </div>
           </div>
         </div> 
@@ -467,7 +507,7 @@
         <div id="section5" class="section mt-3">
           <div class="row">
             <div class="col-sm-6 mt-5 text-center">
-              <img src="/static/Untitled design 19.png" class="img-fluid" alt="Facial Recognition">
+              <img src="/static/Untitled design 19.png" class="img-fluid" style="max-width:80%; height:auto;">
             </div>
             <div class="col-sm-6">
               <h1 class="heading1-main" >Utilizes operational<br> insights to compare .</h1>
@@ -496,31 +536,31 @@
         <style>
        
           .responsive-text {
-              font-size: 3.5rem;
+              font-size: 2.5rem;
           }
       
           
           @media (max-width: 1200px) {
               .responsive-text {
-                  font-size: 3rem;
+                  font-size: 1.7rem;
               }
           }
       
           @media (max-width: 992px) {
               .responsive-text {
-                  font-size: 2.5rem;
+                  font-size: 1.4rem;
               }
           }
       
           @media (max-width: 768px) {
               .responsive-text {
-                  font-size: 2rem;
+                  font-size: 1.3rem;
               }
           }
       
           @media (max-width: 576px) {
               .responsive-text {
-                  font-size: 1rem;
+                  font-size: 0.8rem;
               }
           }
           .btn-hover:hover {
@@ -607,7 +647,11 @@
   <div class="container">
     <div class="row p-0">
       <div class="col-xl-3 border-right">
-        <h3 style="color:white;margin-top:40px">ARGUS</h3>
+        <h3 style="color:white; margin-top:40px; color:#345a74; font-weight:500; font-size:2.4rem; border-color: aliceblue; transition: color 0.3s ease-in-out;" 
+        onmouseover="this.style.color='#648499'" onmouseout="this.style.color='#345a74'">
+        ARGUS
+    </h3>
+    
         <ul class="list-unstyled nav-links" >
           <li><a href="#"></a></li>
           <li style="color:white;margin-top:30px;font-size:20px;margin-top:30px;">GET IN TOUCH

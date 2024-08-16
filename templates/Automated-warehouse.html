@@ -66,14 +66,31 @@
         border-width: 1px;
         border-radius: 0.25rem;
     }
-
+    @media (max-width: 1200px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:25px;
+    }
+    } 
+    @media (max-width: 800px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:22px;
+    }
+    }
         @media (max-width: 576px) {
     .navbar-toggler {
         border-color: #007bff;
         border-width: 1px;
         border-radius: 0.25rem;
         padding:1px;
-        margin-right:8px;
+        margin-right:25px;
     }
 
     .navbar-toggler:hover {
@@ -280,30 +297,53 @@
       white-space: nowrap;
   }
   @media (max-width: 1200px) {
-      .head-text {
-          font-size: 40px;
-      }
-  }
-  
-  @media (max-width: 992px) {
-      .head-text {
-          font-size: 35px;
-      }
-  }
-  
-  @media (max-width: 768px) {
-      .head-text {
-          font-size: 30px;
-      }
-  }
-     
-@media (max-width: 576px) {
+    .head-text {
+        font-size: 37px;
+        margin-left:9px;
+        text-align:center;
+         margin-top:310px;
+        padding:10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .head-text {
+        
+        font-size: 31px;
+        margin-left:7px;
+        text-align:center;
+         margin-top:310px;
+        padding:9px;
+    }
+}
+
+@media (max-width: 768px) {
     .head-text {
         font-size: 25px;
+        margin-left:6px;
+        text-align:center;
+         margin-top:300px;
+        padding:10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .head-text {
+        font-size: 24px;
+        margin-left:4px;
+        text-align:center;
+         margin-top:100px;
+        padding:8px;
+    }
+}
+
+@media (max-width: 344px) {
+    .head-text {
+        font-size: 20px;
         margin-left:4px;
         text-align:center;
          margin-top:120px;
-        padding:10px;
+        padding:8px;
     }
 }
 
@@ -422,7 +462,7 @@
                     <h3 class="subheading">of goods and vehicles inside the warehouse.</h3>
                 </div>
                 <div class="col-sm-6 mt-5 text-center order-1 order-md-2">
-                    <img src="/static/Untitled design 1.png" class="img-fluid" alt="Facial Recognition">
+                    <img src="/static/Untitled design 1.png" class="img-fluid" style="max-width:80%; height:auto;">
                 </div>
           </div>
         </div>
@@ -430,10 +470,10 @@
 
 
         <!--Section 3 started-->
-        <div id="section3" class="section mt-3">
+        <div id="section3" class="section">
           <div class="row">
-            <div class="col-sm-6 mt-5 text-center">
-              <img src="/static/Untitled design 2.png" class="img-fluid" alt="Facial Recognition">
+            <div class="col-sm-6 text-center">
+              <img src="/static/Untitled design 2.png" class="img-fluid" style="max-width:80%; height:auto;">
             </div>
             <div class="col-sm-6">
               <h1 class="heading1-main">Detecting and<br> reporting  </h1>
@@ -453,8 +493,8 @@
                 <h1 class="heading-main">Inspect default and<br> damages </h1>
                 <h3 class="subheading"> in picking and packing.</h3>
             </div>
-            <div class="col-sm-6 mt-5 text-center order-1 order-md-2">
-                <img src="/static/Untitled design 3.png" class="img-fluid" alt="Facial Recognition">
+            <div class="col-sm-6  text-center order-1 order-md-2">
+                <img src="/static/Untitled design 3.png" class="img-fluid" style="max-width:80%; height:auto;">
             </div>
           </div>
         </div> 
@@ -465,8 +505,8 @@
 
         <div id="section5" class="section mt-3">
           <div class="row">
-            <div class="col-sm-6 mt-5 text-center">
-              <img src="/static/examine.png" class="img-fluid" alt="Facial Recognition">
+            <div class="col-sm-6 text-center">
+              <img src="/static/examine.png" class="img-fluid" style="max-width:80%; height:auto;">
             </div>
             <div class="col-sm-6">
               <h1 class="heading1-main" >Examine the stock to<br> see if it needs to be </h1>
@@ -494,31 +534,31 @@
         <style>
        
           .responsive-text {
-              font-size: 3.5rem;
+              font-size: 2.5rem;
           }
       
           
           @media (max-width: 1200px) {
               .responsive-text {
-                  font-size: 3rem;
+                  font-size: 1.7rem;
               }
           }
       
           @media (max-width: 992px) {
               .responsive-text {
-                  font-size: 2.5rem;
+                  font-size: 1.4rem;
               }
           }
       
           @media (max-width: 768px) {
               .responsive-text {
-                  font-size: 2rem;
+                  font-size: 1.4rem;
               }
           }
       
           @media (max-width: 576px) {
               .responsive-text {
-                  font-size: 1rem;
+                  font-size: 0.8rem;
               }
           }
           .btn-hover:hover {
