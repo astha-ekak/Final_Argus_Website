@@ -10,13 +10,13 @@ logger.add("send_html_email.log", level="INFO", rotation="100 MB")
 
 def send_mail(body,subject_text:str,email_data,customer_email='info@ekak.in'):
     
-
+    # print(customer_email,"Customer Email")
     try:
         message = MIMEMultipart()
         logger.info("Sending Email Start__")
         message['Subject'] = subject_text
         message['From'] = 'tools@ekak.in'
-        message['To'] = customer_email
+        message['To'] = 'richa@ekak.in'
         message['Bcc'] = 'info@ekak.in'
         # message['Bcc'] = ''
         logger.info(f"_Sender Email : {str(message['From'] ) }")

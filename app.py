@@ -1,10 +1,13 @@
-from flask import Flask, render_template,request
+from flask import Flask, render_template,request,redirect
 from flask_wtf import CSRFProtect
 from flask_wtf.csrf import CSRFError
+from flask import *
 
 
 # Local Modules
 from forms import ContactForm
+from build_table_email import table_email
+from send_telegram_msg import sending_Telegram_Message as telegram_bot
 
 app = Flask(__name__)
 app.secret_key='bf6cc269e9594e9caef019ecdc2f4ea1'
@@ -82,7 +85,7 @@ def blog_page():
     return render_template("blog.html")
 #contact-us page
 
-@app.route('/contact/',methods=['GET','POST'])
+@app.route('/contact',methods=['GET','POST'])
 def contact_page():
     form=ContactForm()
     if request.method=='GET':
@@ -97,11 +100,36 @@ def contact_page():
             individual=form.individual.data
             company_name=form.company_name.data
             help=form.help.data
-            
-            # Email Alert 
-            # Telegram Bot & Send Alert
-            return render_template("contact_us.html",form=form,form_submit=True)
 
+            """
+            Sending Email Start
+            """
+            user_data = {
+                "Platform":[F"Argus Website"],
+                'Name': [F"{name}"],
+                "Email": [F"{email}"],
+                'Mobile': [F"{mobile}"],
+                "Individual": [F"{individual}"],
+                'Company Name': [F"{company_name}"],
+                "Message": [F"{help}"]
+            }
+
+            table_email(user_data=user_data)
+            """
+            Sending Email Start
+            """
+            msg=F'''Platform : Argus Website\nName: {name}\nEmail : {email}\nMobile : {mobile}\nIndividual : {individual}\nCompany Name : {company_name}\nMessage : {help}'''
+            # Email Alert 
+            status=telegram_bot(msg)
+            print(status)
+            # Telegram Bot & Send Alert
+           
+
+
+
+
+            flash("You were successfully submitted the form!")
+            return redirect('/contact')
         print("PPOST Request")
         print(form.errors)
         # return F'Your Contact Failed'

@@ -4,8 +4,10 @@ import requests
 
 ############## Bot Creditials ###############
 # bot_id='6581965254:AAGc5AKyq_lL61sHtG8qOzWBcLyde2_RlJo'
-bot_id='7164367063:AAGKfhLQrpd5YzbjcIeB1s71HPgAC5op3Mk'
-group_chat_id='argusGanecos'
+# bot_id='7164367063:AAGKfhLQrpd5YzbjcIeB1s71HPgAC5op3Mk'
+# group_chat_id='argusGanecos'
+bot_id='7524185326:AAE_zqF34NDWb1Ll4GRvWCnfCwbZFYOkFLU'
+group_chat_id='ekakArgus'
 
 
 ######################  #######################
@@ -28,5 +30,5 @@ def sending_Telegram_Message(message:str,bot_id:str=bot_id,group_chat_id:str=gro
 
 if __name__ == '__main__':
 
-    status=sending_Telegram_Message('`{Count_person} person found in front of feeder_machine`',bot_id=bot_id,group_chat_id=group_chat_id)
+    status=sending_Telegram_Message('One Form Submited',bot_id=bot_id,group_chat_id=group_chat_id)
     print("its Status",status)

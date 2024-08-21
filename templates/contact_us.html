@@ -182,6 +182,12 @@
 
                   
 
+              
+
+
+
+
+
 
                   <form action="/contact" method="POST" style="margin-left: 50px;margin-right:120px;margin-top:30px;">
                     {{form.hidden_tag()}}
@@ -258,6 +264,7 @@
                     </div>
                     <div class="mb-3">
                       {{ form.submit(class='submit btn btn-outline-primary rounded-1')}}
+                     
                     </div>
                     <div class="mb-3">
 
@@ -269,7 +276,19 @@
                     </div>
                   </form>
 
+
+
+
+
+                    {% with messages = get_flashed_messages() %}  
+                            {% if messages %}  
+                                  {% for message in messages %}  
+                                        <p style="font-weight:bold;font-style:italic" margin-left:10px;>{{ message }}</p>  
+                                  {% endfor %}  
+                            {% endif %}  
+                    {% endwith %}  
             </div>
+            
             <div class="col-sm-6 mt-3 bg-cover" style="background-image: url('/static/Untitled\ design78954522.png'); color: white; height: 650px; background-size: cover;margin-top:-30px;background-position: center;">
 
             </div>

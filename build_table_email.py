@@ -32,12 +32,8 @@ def get_pretty_table(userDate):
 
 
 
-def table_email(user_data: dict[list]):
-    user_data = {
-        'Name': ["John"],
-        "Age": ["Age"]
-
-    }
+def table_email(user_data):
+    
     get_pretty_table(user_data)
 
     email_data = get_pretty_table(userDate=user_data)
@@ -45,17 +41,20 @@ def table_email(user_data: dict[list]):
     output = build_table(email_data, 'blue_dark')
     print(output)
 
-
-    # print("EmailData \n",email_data)
     output = build_table(email_data, 'blue_dark')
     # #print(output)
     img = '''<img src="https://user-images.githubusercontent.com/100748027/218997643-45cb0b1b-d6cf-439f-a558-32e4b74df9d0.png" alt="img" />'''
 
-    # email_subject=customer[each_argus]
-
-    # email_subject=all_customer[each_argus]['subject']
-    # customer_email=all_customer[each_argus]['email_id']
-
     send_html_email.send_mail(img+output, "New Form Submited",
                             str(email_data), customer_email='astha@ekak.in')
+    
     # send_mail('Your Context',"argus_device:str","email_data",'astha@ekak.in')
+
+
+if __name__ =='__main__':
+    user_data = {
+        'Name': ["Kevin"],
+        "Age": ["Age"]
+
+    }
+    table_email(user_data=user_data)
