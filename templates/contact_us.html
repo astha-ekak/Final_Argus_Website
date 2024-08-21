@@ -183,37 +183,91 @@
                   
 
 
-                  <form style="margin-left: 50px;margin-right:120px;margin-top:30px;">
-                    <div class="mb-3">
-                      <label for="exampleInputText1" class="form-label">NAME</label>
-                      <input type="text" class="form-control" id="exampleInputText1" >
-                     
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">EMAIL ADDRESS</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" >
-                       
-                    </div>
-                      <div class="mb-3">
-                        <label for="exampleInputText3" class="form-label">INDIVIDUAL / COMPANY</label>
-                        <input type="text" class="form-control" id="exampleInputText3" >
-                       
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleInputText4" class="form-label">COMPANY NAME IF COMPANY</label>
-                        <input type="text" class="form-control" id="exampleInputText4" >
-                       
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleFormControlTextarea2" class="form-label">HOW CAN WE HELP YOU</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
-                      </div>
+                  <form action="/contact" method="POST" style="margin-left: 50px;margin-right:120px;margin-top:30px;">
+                    {{form.hidden_tag()}}
                     
+                    <div class="mb-3">
+                      {{ form.name.label(for="name", class="form-label")}}
+                        {{ form.name(id="name",class="form-control",onkeypress='return blockSpecialChar(event)')}}
+                        {% if form.errors.name %}
+                        <ul>
+                          {% for error in form.errors.name %}
+                          <li class="text-danger">{{error}}</li>
+                          {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3">
+                      {{ form.email.label(for="email", class="form-label")}}
+                        {{ form.email(id="email",class="form-control")}}
+                        {% if form.errors.email %}
+                        <ul>
+                          {% for error in form.errors.email %}
+                          <li class="text-danger">{{error}}</li>
+                          {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                    <div class="mb-3">
+                      {{ form.mobile.label(for="mobile", class="form-label")}}
+                        {{ form.mobile(id="mobile",class="form-control",onkeypress='return numberValidation(event)')}}
+                        {% if form.errors.mobile %}
+                        <ul>
+                          {% for error in form.errors.mobile %}
+                          <li class="text-danger">{{error}}</li>
+                          {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-3">
+                      {{ form.individual.label(for="individual", class="form-label")}}
+                        {{ form.individual(id="individual",class="form-control")}}
+                        {% if form.errors.individual %}
+                        <ul>
+                          {% for error in form.errors.individual %}
+                          <li class="text-danger">{{error}}</li>
+                          {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-3">
+                      {{ form.company_name.label(for="company_name", class="form-label")}}
+                        {{ form.company_name(id="company_name",class="form-control")}}
+                        {% if form.errors.company_name %}
+                        <ul>
+                          {% for error in form.errors.company_name %}
+                          <li class="text-danger">{{error}}</li>
+                          {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-3">
+                      {{ form.help.label(for="help", class="form-label")}}
+                        {{ form.help(id="help",class="form-control")}}
+                        {% if form.errors.help %}
+                        <ul>
+                          {% for error in form.errors.help %}
+                          <li class="text-danger" >{{error}}</li>
+                          {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                    <div class="mb-3">
+                      {{ form.submit(class='submit btn btn-outline-primary rounded-1')}}
+                    </div>
+                    <div class="mb-3">
+
+                        {% if form_submit %}
+                        <ul>
+                          <li class="text-success" >Your Form Submit! We Will get You</li>
+                        </ul>
+                        {% endif %}
+                    </div>
                   </form>
-
-
-
-
 
             </div>
             <div class="col-sm-6 mt-3 bg-cover" style="background-image: url('/static/Untitled\ design78954522.png'); color: white; height: 650px; background-size: cover;margin-top:-30px;background-position: center;">
@@ -224,8 +278,7 @@
         </div>
 
 
-
-
+        
 
 
 
@@ -258,7 +311,29 @@
       });
   });
 </script>
+<script>
+  function blockSpecialChar(e) {
+		let k;
+		document.all ? k = e.keyCode : k = e.which;
+		// k > 64 && k< 91 Checking ASCII Code 65-90  UpperCASE ABCD..XYZ
+		// k > 96 && k<123 Checking ASCII Code 96-123 Lower CASE abcd...xyz
+		// k==8 Checking BackSpace
+		// k==32 Checking SpaceBar
+		// k>=48 && k<=57 Checking numerical Field
+		return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32);
+	}
+  function numberValidation(e) {
+		let k;
+		document.all ? k = e.keyCode : k = e.which;
+		// k > 64 && k< 91 Checking ASCII Code 65-90  UpperCASE ABCD..XYZ
+		// k > 96 && k<123 Checking ASCII Code 96-123 Lower CASE abcd...xyz
+		// k==8 Checking BackSpace
+		// k==32 Checking SpaceBar
+		// k>=48 && k<=57 Checking numerical Field
+		return (k>=48 && k<=57 || k==8);
+	}
 
+</script>
 
 
 </body>

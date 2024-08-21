@@ -1,6 +1,14 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request
+from flask_wtf import CSRFProtect
+from flask_wtf.csrf import CSRFError
+
+
+# Local Modules
+from forms import ContactForm
 
 app = Flask(__name__)
+app.secret_key='bf6cc269e9594e9caef019ecdc2f4ea1'
+
 
 @app.route('/')
 @app.route('/home/')
@@ -74,9 +82,30 @@ def blog_page():
     return render_template("blog.html")
 #contact-us page
 
-@app.route('/contact/')
+@app.route('/contact/',methods=['GET','POST'])
 def contact_page():
-    return render_template("contact_us.html")
+    form=ContactForm()
+    if request.method=='GET':
+        return render_template("contact_us.html",form=form)
+    elif request.method=='POST':
+        if form.validate_on_submit():
+            name=form.name.data
+            email=form.email.data
+            # print(name,email)
+            mobile=form.mobile.data
+            # print(mobile)
+            individual=form.individual.data
+            company_name=form.company_name.data
+            help=form.help.data
+            
+            # Email Alert 
+            # Telegram Bot & Send Alert
+            return render_template("contact_us.html",form=form,form_submit=True)
+
+        print("PPOST Request")
+        print(form.errors)
+        # return F'Your Contact Failed'
+        return render_template("contact_us.html",form=form)
 
 if __name__ == "__main__":
     app.run(debug=True,host='0.0.0.0')
