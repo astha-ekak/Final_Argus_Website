@@ -216,6 +216,7 @@
             height: 100%;
             object-fit: cover; 
             z-index: -1; 
+            margin:15px;
         }
         @media (max-width: 1200px) {
     .scrollable-video-container {
@@ -355,6 +356,7 @@
                 <a class="dropdown-item" href="/automated">Automated Warehouse</a>
                 <a class="dropdown-item" href="/security">Security & Survelliance</a>
                 <a class="dropdown-item" href="/enhanced">Enhanced Customer experience</a>
+                <a class="dropdown-item" href="/supply">Supply Chain Optimization</a>
                   
                 </div>
               </li>  
@@ -393,7 +395,7 @@
             <div class="container-fluid">
                 <div class="card-group">
                   <div class="card" style="border: none;">
-                    <img src="/static/whatdo.png" class="" style="max-width:100%">
+                    <img src="/static/whatdo.png" class="" style="max-width:100%;max-height:100%">
                    
                   </div>
                 </div>
@@ -425,26 +427,26 @@
 
           <div id="section4" class="section" style="margin-top:50px">
             
-            <h1 style="font-size: 22.9px; text-align:center;
+            <h1 style="font-size: 26px; text-align:center;
             font-family: 'Glacial Indifference', sans-serif;
-            margin: 0.5rem 0; ">MAKE YOUR INDUSTRIES EFFICIENT WITH <i>ARGUS</i></h1>
+            margin: 0.5rem 0;font-weight:bold ">MAKE YOUR INDUSTRIES EFFICIENT WITH <i>ARGUS</i></h1>
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="card-deck">
                             <div class="card">
-                                <img class="card-img-top" src="/static/Real_Time_Monitoring.png" style="height:400px;width:400px"> 
+                                <img class="card-img-top" src="/static/Home_carosel_2.png" style="height:400px;width:400px"> 
                                 <div class="card-body">
                                     <h5 class="card-title">Real Time Monitoring</h5>
                                     <p class="card-text">
-                                        Fast decisions with data, algorithms, and analytics.<br> Real-time insights on processes, workers, and machines. </p>
+                                        Fast decisions with data, algorithms, and<br> analytics.Real-time insights on processes,<br> workers, and machines. </p>
                                 </div>
                             </div>
                             <div class="card">
-                                <img class="card-img-top" src="/static/Facial.png" style="height:400px;width:400px"> 
+                                <img class="card-img-top" src="/static/home_carosel_!.png" style="height:400px;width:400px"> 
                                 <div class="card-body">
                                     <h5 class="card-title">Facial Recognition</h5>
-                                    <p class="card-text">Our AI-powered facial recognition improves identification,<br> authentication, and anti-spoofing for access control, security, and<br> attendance tracking..</p>
+                                    <p class="card-text">Our AI facial recognition enhances identification,<br>authentication, and anti-spoofing for access<br>and security.</p>
                                 </div>
                             </div>
                         </div>
@@ -452,18 +454,18 @@
                     <div class="carousel-item">
                         <div class="card-deck">
                             <div class="card">
-                                <img class="card-img-top" src="/static/maintenance.png" style="height:400px;width:400px"> 
+                                <img class="card-img-top" src="/static/home_carosel_4.png" style="height:400px;width:400px"> 
                                 <div class="card-body">
                                     <h5 class="card-title">Predictive Maintenance</h5>
-                                    <p class="card-text">Predictive Maintenance reduces downtime by proactively addressing<br> issues. Fixing machinery defects promptly.
+                                    <p class="card-text">Predictive Maintenance reduces downtime by<br> proactively addressing issues. Fixing machinery<br> defects promptly.
                                     </p>
                                 </div>
                             </div>
                             <div class="card">
-                                <img class="card-img-top" src="/static/realtime.png" style="height:400px;width:400px"> 
+                                <img class="card-img-top" src="/static/Home_carosel_3.png" style="height:400px;width:400px"> 
                                 <div class="card-body">
                                     <h5 class="card-title">Automated Safety Check</h5>
-                                    <p class="card-text">Our advanced algorithms monitor safety protocols in real-time,<br> issuing alerts to prevent hazards and ensure compliance<br> with standards..</p>
+                                    <p class="card-text">Our advanced algorithms monitor safety<br>protocols in real-time, issuing alerts to <br>prevent hazards</p>
                                 </div>
                             </div>
                         </div>
@@ -481,22 +483,38 @@
 
         </div>
 
-
+       
+        <style>
+          .carousel-control-prev-icon,
+          .carousel-control-next-icon {
+              background-image: none;
+              font-size: 2rem;
+              color: black;
+          }
+  
+          .carousel-control-prev-icon::before {
+              content: "<";
+          }
+  
+          .carousel-control-next-icon::before {
+              content: ">";
+          }
+      </style>
            
 
  <!--Location section of Industries-->
  <div id="section8" class="section mt-5" style="height: 900px; background-image: url('/static/location.jpg'); background-size: cover; background-position: center top; ">
-  <h1 class="pt-4" style="text-align: left; color: white; font-family: 'Century Gothic', sans-serif; font-size: 28px; margin-left: 30px;">INDUSTRIES WE FOCUS ON</h1>
-  <div class="container-fluid image-container" style="position: relative; width: 100%; height: 100%; overflow: hidden; margin-top: 50px;">
+  <h1 class="pt-5 pl-5" style="text-align: left; color: white; font-family: 'Century Gothic', sans-serif; font-size: 2.5rem; margin-left: 30px;">INDUSTRIES WE FOCUS ON</h1>
+  <div class="container image-container" style="position: relative; width: 100%; height: 100%; overflow: hidden; margin-top: 50px;">
     <div class="row">
       <div class="col-6 col-md-3 position-relative">
         <a href="/Industry/">
-          <img src="/static/location-1.png" class="random-image img-fluid position-absolute" style="top: 200px; left: 50%;"></a>
+          <img src="/static/location-1.png" class="random-image img-fluid position-absolute" style="top: 95px; left: 50%;"></a>
         </a>
         <a href="/Industry/">
-          <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 270px; left: 55%; max-width: 60px; max-height: 60px;">
+          <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 165px; left: 57%; max-width: 60px; max-height: 60px;">
       </a>
-        <p class="text-center small position-absolute" style="color: white; top: 310px; left: 60%; transform: translateX(-55%);">Warehouse Industry</p>
+        <p class="text-center small position-absolute " style="color: white;font-weight:600; top: 215px; left: 68%; transform: translateX(-55%);">Warehouse </p>
       </div>
 
       <div class="col-6 col-md-3 position-relative">
@@ -507,44 +525,44 @@
           <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 540px; left: 55%; max-width: 60px; max-height: 60px;">
       </a>
         
-        <p class="text-center small position-absolute" style="color: white; top: 585px; left: 55%; transform: translateX(-55%);">Logistics Industry</p>
+        <p class="text-center small position-absolute" style="color: white;font-weight:600;  top: 585px; left: 68%; transform: translateX(-55%);">Logistics </p>
       </div>
 
       <div class="col-6 col-md-3 position-relative">
         <a href="/construction/">
-          <img src="/static/location(construction).png" class="random-image img-fluid position-absolute" style="top: 500px; left: 50%;">
+          <img src="/static/location(construction).png" class="random-image img-fluid position-absolute" style="top: 500px; left: 48%;">
         </a>
         <a href="/construction/">
           <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 570px; left: 55%; max-width: 60px; max-height: 60px;">
       </a>
         
-        <p class="text-center small position-absolute" style="color: white; top: 610px; left: 55%; transform: translateX(-55%);">Construction Industry</p>
+        <p class="text-center small position-absolute" style="color: white; font-weight:600; top: 610px; left: 67%; transform: translateX(-55%);">Construction </p>
       </div>
 
       <div class="col-6 col-md-3 position-relative">
         <a href="/manufacturing/">
-          <img src="/static/location-4.png" class="random-image img-fluid position-absolute" style="top: 250px; left: 45%;">
+          <img src="/static/location-4.png" class="random-image img-fluid position-absolute" style="top: 200px; left: 40%;">
         </a>
         <a href="/manufacturing/">
-          <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 320px; left: 50%; max-width: 60px; max-height: 60px;">
+          <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 275px; left: 47%; max-width: 60px; max-height: 60px;">
       </a>
-        <p class="text-center small position-absolute" style="color: white; top: 360px; left: 50%; transform: translateX(-55%);">Manufacturing Industry</p>
+        <p class="text-center small position-absolute" style="color: white; font-weight:600; top: 320px; left: 60%; transform: translateX(-55%);">Manufacturing </p>
       </div>
 
       <div class="col-6 col-md-3 position-relative">
         <a href="/retail/">
-          <img src="/static/location(retail).png" class="random-image img-fluid position-absolute" style="top: 350px; left: 50%;">
+          <img src="/static/location(retail).png" class="random-image img-fluid position-absolute" style="top: 350px; left: 22%;">
         </a>
         <a href="/retail/">
-          <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 420px; left: 55%; max-width: 60px; max-height: 60px;">
+          <img src="/static/33.png" class="random-image img-fluid position-absolute" style="top: 420px; left: 28%; max-width: 60px; max-height: 60px;">
       </a>
-        <p class="text-center small position-absolute" style="color: white; top: 470px; left: 55%; transform: translateX(-55%);">Retail Industry</p>
+        <p class="text-center  small position-absolute" style="color: white; font-weight:600; top: 470px; left: 38%; transform: translateX(-55%);">Retail Trade</p>
       </div>
     </div>
   </div>
 </div>
 
-  
+
 
 
   <!--Vinn_Section-->
@@ -554,7 +572,7 @@
     <h4 class="text-center mb-2" style="font-family: 'Glacial Indifference', sans-serif;
     font-size: 29.3px;
     margin-bottom: 10px;">YOUR INDUSTRY TRANSFORMATION HUB</h4>
-    <div class="d-flex pt-4 justify-content-center" style="background-size: cover;">
+    <div class="d-flex pt-5 justify-content-center" style="background-size: cover;">
       <video class="video-fluid" src="/static/Argus Vinn Diagram.mp4" autoplay loop muted playsinline style="width:auto; max-width:100%"></video>
     </div>
   </div>
@@ -614,67 +632,7 @@
         </div>
 
 
-        <!-- Sixth Page-->
-
-        <div id="section7" class="section" >
-            <div class="container-fluid">
-                <!-- <h1 style="font-size: 22.9px; text-align:left;font-family: 'Glacial Indifference', sans-serif;margin: 0.5rem 0;margin-top:80px;border-bottom: 2px solid black; display: inline-block;">Explore More</h1> -->
-                <div class="row justify-content-center" style="margin-top:60px">
-                  <h4 class="text-center pb-4" style="font-family: 'Glacial Indifference', sans-serif;
-                  font-size: 29.3px;
-                  margin-bottom: 10px;">BLOGS</h4>
-                    <!-- Card 1 -->
-                    <div class="col-md-3 mb-4 ml-lg-3">
-                        <div class="card h-100" style="background-image: url('/static/building31.png');">
-                          
-                            <div class="card-body" style="margin-top:255px;">
-                              
-                                <div class="sub-card text-left">
-                                    <h3>Card</h3>
-                                    <h5>Sub Card 1</h5>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </div>
-                    <div class="col-sm-1 d-sm-block">
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="col-md-3 mb-4">
-                        <div class="card h-100" style="background-image: url('/static/building31.png');">
-                          
-                            <div class="card-body" style="margin-top:255px;">
-                              
-                                <div class="sub-card text-left">
-                                    <h3>Card</h3>
-                                    <h5>Sub Card 1</h5>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </div>
-                    <div class="col-sm-1 d-sm-block">
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="col-md-3 mb-4">
-                        <div class="card h-100" style="background-image: url('/static/building31.png');">
-                          
-                            <div class="card-body" style="margin-top:255px;">
-                              
-                                <div class="sub-card text-left">
-                                    <h3>Card</h3>
-                                    <h5>Sub Card 1</h5>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+     
              
   
 

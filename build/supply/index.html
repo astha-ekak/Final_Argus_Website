@@ -1,0 +1,862 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supply Chain</title>
+    <!--lionk for font family-->
+    <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/font-size/font-size.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/padding/padding.css">
+
+    <style>
+     
+     .navbar{
+        margin:0;
+        padding:0;
+        width:100%
+      }
+        .navbar {
+            transition: background-color 0.3s ease;
+        }
+        .navbar-light .navbar-nav .nav-link {
+            color: white;
+        }
+        .navbar-light .navbar-brand {
+            color: white;
+        }
+        .navbar-light {
+            color: white !important;
+        }
+        .navbar-light .nav-link.dropdown-toggle::after {
+            color: white;
+        }
+        .navbar-nav .nav-item {
+            margin-right: 100px; 
+        }
+        .font-roboto {
+            font-family: 'Roboto', sans-serif;
+        }
+        .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .font-pacifico {
+            font-family: 'Pacifico', cursive;
+        }
+        .navbar-brand img {
+            height: 90px; 
+            margin-right: 3px;
+        }
+     
+        .navbar-toggler {
+       background-color: #e9ecef;
+        border-width: 1px;
+        border-radius: 0.25rem;
+    }
+    @media (max-width: 1200px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:25px;
+    }
+    } 
+    @media (max-width: 800px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:22px;
+    }
+    }
+        @media (max-width: 576px) {
+    .navbar-toggler {
+        border-color: #007bff;
+        border-width: 1px;
+        border-radius: 0.25rem;
+        padding:1px;
+        margin-right:25px;
+    }
+
+    .navbar-toggler:hover {
+        background-color: #e9ecef; 
+        border-color: #0056b3; 
+    }
+
+    .navbar-toggler-icon {
+        background-color: transparent;
+    }
+}
+        
+        .navbar.scrolled {
+            background-color: #17364a;
+        }
+        .navbar-dark-bg {
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+
+            
+            .section-symbol-text {
+            display: flex;
+            background-color: #17364a;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .symbol {
+            font-size: 2rem;
+            margin: 0.1rem 0;
+        }
+        .text-main {
+            font-size: 21.5px;
+            font-family: 'Glacial Indifference', sans-serif;
+            margin: 0.1rem 0;
+            font-style: italic;
+        }
+        @media (max-width: 576px) {
+            .text-main {
+                width:250px;
+           
+            }}
+
+
+
+            .heading-main {
+    font-family:century-gothic, sans-serif;
+    font-size: 49px;
+    margin-top: 150px;
+    text-align: left;
+    
+}
+
+.subheading {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 18px;
+    text-align: left;
+    
+    margin-top:40px;
+}
+@media (max-width: 1400px) {
+    .heading-main {
+        font-size: 27px;
+        margin-top:30px;
+        
+    }
+    .subheading {
+        font-size: 22px;
+      
+    }
+}
+@media (max-width: 1200px) {
+    .heading-main {
+        font-size: 25px;
+        margin-top:30px;
+        
+    }
+    .subheading {
+        font-size: 22px;
+      
+    }
+}
+
+@media (max-width: 992px) {
+    .heading-main {
+        font-size: 24px;
+        margin-top: 120px;
+        margin-right: 30px;
+        margin-top:30px;
+        text-align: center;
+    }
+    .subheading{
+        font-size: 20px;
+        margin-right: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading-main {
+        font-size: 24px;
+        margin-top: 100px;
+        margin-right: 20px;
+        margin-top:30px;
+        text-align: center;
+    }
+    .subheading {
+        font-size: 18px;
+        margin-right: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .heading-main {
+        font-size: 23px;
+        text-align: center;
+        padding:4px;
+      margin:30px;
+      margin-left:45px;
+      
+    }
+    .subheading {
+        font-size: 13px;
+        text-align: center;
+        margin-top:20px;
+        padding:4px;
+      margin:4px;
+    margin-left:28px;
+      
+    }
+}
+
+
+
+
+
+
+
+
+
+      
+      
+  .heading1-main {
+    font-family: century-gothic, sans-serif;
+    font-size: 49px;
+    margin-top: 200px;
+    text-align: right;
+    margin-right: 85px;
+    
+}
+
+.subheading1 {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 18px;
+    text-align: right;
+    margin-right: 85px;
+    margin-top:40px;
+}
+.text2{
+    text-align: right;
+    margin-right: 85px;
+
+}
+@media (max-width: 1400px) {
+    .heading1-main {
+        font-size: 27px;
+        margin-top:22px;
+        
+    }
+    .subheading1 {
+        font-size: 15px;
+      
+    }
+}
+@media (max-width: 1200px) {
+    .heading1-main {
+        font-size: 25px;
+        margin-top: 150px;
+        margin-right: 50px;
+    }
+    .subheading1 {
+        font-size: 20px;
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .heading1-main {
+        font-size: 24px;
+        margin-top: 120px;
+        margin-right: 30px;
+        text-align: center;
+    }
+    .subheading1 {
+        font-size: 17px;
+        margin-right: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading1-main {
+        font-size: 22px;
+        margin-top: 100px;
+        margin-right: 20px;
+        text-align: center;
+    }
+    .subheading1 {
+        font-size: 15px;
+        margin-right: 20px;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .heading1-main {
+        font-size: 21px;
+        text-align: center;
+        padding:4px;
+      margin:30px;
+      
+    }
+    .subheading1 {
+        font-size: 13px;
+        text-align: center;
+        margin-top:20px;
+        padding:4px;
+      margin:4px;
+    
+      
+    }
+}
+
+        .head-text {
+    font-family: century-gothic, sans-serif;
+    font-size: 49px;
+    margin-top: 280px;
+    text-align: left;
+    margin-left: 150px;
+    white-space: nowrap;
+}
+@media (max-width: 1200px) {
+    .head-text {
+        font-size: 37px;
+        margin-left:9px;
+        text-align:center;
+         margin-top:310px;
+        padding:10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .head-text {
+        
+        font-size: 31px;
+        margin-left:7px;
+        text-align:center;
+         margin-top:310px;
+        padding:9px;
+    }
+}
+
+
+    
+    @media (max-width: 768px) {
+    .head-text {
+        font-size: 27px;
+        margin-left:6px;
+        text-align:center;
+         margin-top:300px;
+        padding:10px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .head-text {
+        font-size: 24px;
+        margin-left:4px;
+        text-align:center;
+         margin-top:80px;
+        padding:8px;
+    }
+}
+
+
+
+
+
+        .btn-custom {
+            background-color: rgba(0, 0, 0, 0.575);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn-custom:hover {
+            background-color: darkgray;
+            color: rgba(0, 0, 0, 0.603);
+        }
+
+
+        .sub-card {
+            padding: 15px;
+            margin-top: 15px;
+            border: 1px solid #ddd;
+            background-color: #ffffff;
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light transparent fixed-top" style="background-color: #17364a;">
+    <a class="navbar-brand font-roboto" href="#">
+        <img src="/static/logo.png" alt="Logo"> 
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link pl-4" href="/home" style="color:white">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link active pl-4 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">
+                    Industries
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/manufacturing" style="color:black">Manufacturing</a>
+                    <a class="dropdown-item" href="/construction" style="color:black">Construction</a>
+                    <a class="dropdown-item" href="/retail" style="color:black">Retail</a>
+                    <a class="dropdown-item" href="/logistics" style="color:black">Logistics </a>
+                    <a class="dropdown-item" href="/Industry" style="color:black">Warehouse</a>
+                </div>
+            </li>  
+            <li class="nav-item dropdown">
+                <a class="nav-link active pl-4 dropdown-toggle" href="#" style="color:white" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Use Case
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/predictive" style="color:black">Predictive Maintenance</a>
+                    <a class="dropdown-item" href="/automated" style="color:black">Automated Warehouse</a>
+                    <a class="dropdown-item" href="/security" style="color:black">Security & Surveillance</a>
+                    <a class="dropdown-item" href="/enhanced" style="color:black">Enhanced Customer Experience</a>
+                    <a class="dropdown-item" href="/supply" style="color:black">Supply Chain Optimization</a>
+                </div>
+            </li>  
+            <li class="nav-item">
+                <a class="nav-link active pl-4" href="/blog" style="color:white">Blogs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active pl-4" href="/contact" style="color:white">Contact us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <div id="section1" class="section mt-5" >
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="row">
+                    <h1 class="head-text">
+                        Automated<br> Incident<br> Response &<br> Supply chain<br> Optimization
+                    </h1>
+                </div>
+            </div>
+
+          
+
+
+            <div class="col-sm-12 col-md-6 bg-cover" style="background-image: url('/static/Use\ Case\ Supply\ Chain\ hero.png'); color: white; height: 730px; background-size: cover;
+            background-position: center;">
+            
+                
+            </div>
+        </div>
+    </div>
+
+
+        <!--section 2-->
+
+        <div id="section2" class="section">
+            <div class="row">
+                <div class="col-12 section-symbol-text">
+                    <div class="symbol">|</div>
+                    <div class="text-main">Minimise downtime and enhanced Supply chain Resilience</div>
+                    <div class="symbol">|</div>
+                </div>
+            </div>
+            <div class="container">
+            <div class="row justify-content-center">
+               
+                <div class="col-md-6 d-flex flex-column align-items-start text-left order-2 order-md-1">
+                    <h1 class="heading-main">Cut Emergency<br> Downtime by 70% with<br> Automated Response</h1>
+                    <h3 class="subheading mt-3">Ensure rapid recovery during crises with automated<br> incident response system</h3>
+                    <div class="row row1 mt-5">
+                        <div class="col-6 d-flex align-items-start mb-3">
+                            <img src="/static/tick.jpeg" class="img-fluid" style="max-width:8%; height:auto; margin-right:5px;">
+                            <p class="text1" style="font-size:14px; font-family: 'Glacial Indifference', sans-serif;">Track real-time<br>Safety compliance </p>
+                        </div>
+                        <div class="col-6 d-flex align-items-start">
+                            <img src="/static/tick.jpeg" class="img-fluid" style="max-width:8%; height:auto; margin-right:5px;">
+                            <p class="text1" style="font-size:14px; font-family: 'Glacial Indifference', sans-serif;">Reduce the risk of<br>accidents and fines</p>
+                        </div>
+                    </div>
+                </div>
+        
+               
+                <div class="col-md-6  d-flex justify-content-center align-items-center text-center order-1 order-md-2">
+                    <img src="/static/Untitled design a.png" class="img-fluid" style="max-width:100%; height:auto;">
+                </div>
+            </div>
+            </div>
+        
+        
+        </div>
+        <style>
+@media (max-width:576px){
+    .row1{
+        margin-left:0px;
+    }
+
+}</style>
+        <!--Section 3 started-->
+     
+
+
+
+        <div id="section3" class="section p-0 m-0">
+            <div class="container">
+                <div class="row justify-content-center">
+                   
+                    <div class="col-md-6 d-flex justify-content-center align-items-center ">
+                        <img src="/static/Supply chain.png" class="img-fluid" style="max-width:100%; height:auto;">
+                    </div>
+                    
+                    
+                    <div class="col-md-6 d-flex flex-column justify-content-center align-items-end mt-5">
+                        <div class="text-end">
+                            <h1 class="heading1-main">Decrease Lead Times<br> by 20% with AI Driven<br> Route Optimization</h1>
+                            <h3 class="subheading1 mt-3">Lower transportation costs and improve efficiency<br> through smart & supply chain</h3>
+                            <div class="row mt-5">
+                                <div class="col-6 d-flex align-items-start mb-3">
+                                    <img src="/static/tick.jpeg" class="img-fluid" style="max-width:8%; height:auto; margin-right:5px;">
+                                    <p class="text1 text-left" style="font-size:14px; font-family: 'Glacial Indifference', sans-serif;">Vigilant eyes to prevent theft or <br>unusual activities</p>
+                                </div>
+                                <div class="col-6 d-flex align-items-start">
+                                    <img src="/static/tick.jpeg" class="img-fluid" style="max-width:8%; height:auto; margin-right:5px;">
+                                    <p class="text1 text-left" style="font-size:14px; font-family: 'Glacial Indifference', sans-serif;">Ensure that workers<br>& equipment are secure </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            
+            </div>
+        </div>
+        
+
+        
+
+
+
+
+
+        <!--Section 4 -->
+       
+        <div class="container">
+            <div class="row justify-content-center">
+
+
+                <div class="col-md-6 d-flex flex-column align-items-start text-left order-2 order-md-1">
+                    <h1 class="heading-main">Boost Continuity with Enhanced Supply Visibility</h1>
+                    <h3 class="subheading mt-3">Manage risk effectively  and enhance robust<br> operational with enhanced supply chain insight</h3>
+                    <div class="row mt-5 row1">
+                        <div class="col-6 d-flex align-items-start mb-3">
+                            <img src="/static/tick.jpeg" class="img-fluid" style="max-width:8%; height:auto; margin-right:5px;">
+                            <p class="text1" style="font-size:14px; font-family: 'Glacial Indifference', sans-serif;">Continuously track environmental<br>factors</p>
+                        </div>
+                        <div class="col-6 d-flex align-items-start">
+                            <img src="/static/tick.jpeg" class="img-fluid" style="max-width:8%; height:auto; margin-right:5px;">
+                            <p class="text1" style="font-size:14px; font-family: 'Glacial Indifference', sans-serif;">Ensuring that your site is compliant<br> and safe</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-6 mt-5 pt-5 d-flex justify-content-center align-items-center text-center order-1 order-md-2">
+                    <img src="/static/Supply 3.png" class="img-fluid" style="max-width:100%; height:auto;">
+                </div>
+            </div>
+        </div>
+
+        <style>
+            @media (max-width:576px){
+                .row1{
+                    margin-left:0px;
+                }
+            
+            }</style>
+
+
+
+
+         <!--Section 5-->
+
+        
+          <div class="row  pt-5 mt-5">
+            <h1 class="text-black responsive-text" style=" text-align:center;
+            font-family: 'Glacial Indifference', sans-serif;
+           ">JOIN US AND MAKE YOUR WORK MORE EFFICIENT WITH <br>ARGUS</h1>
+          </div>
+          <div class="row">
+            <div class="row justify-content-center mt-5">
+                <div class="col-auto">
+                    <button class="btn ml-3 btn-hover justify-content-center custom-btn">
+                        <a href="/contact" class="no-underline custom-link">Contact us</a>
+                    </button>
+                </div>
+                
+            </div>
+          </div>
+        
+        
+        <style>
+       
+          .responsive-text {
+              font-size: 2.5rem;
+          }
+      
+          
+          @media (max-width: 1200px) {
+              .responsive-text {
+                  font-size: 2rem;
+              }
+          }
+      
+          @media (max-width: 992px) {
+              .responsive-text {
+                  font-size: 1.4rem;
+                  margin-top:30px;
+
+              }
+          }
+      
+          @media (max-width: 768px) {
+              .responsive-text {
+                  font-size: 1.4rem;
+                  margin-top:30px;
+
+
+                  
+
+              }
+          }
+      
+          @media (max-width: 576px) {
+              .responsive-text {
+                  font-size: 0.8rem;
+                  margin-top:30px;
+                  margin-top:0;
+
+                  
+              }
+          }
+          .custom-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #050101ad; 
+}
+
+.custom-link {
+    text-decoration: none;
+    color: white;
+}
+
+.custom-link:hover {
+    color: #ddd; }
+
+      </style>
+
+         <!--Section 7-->
+         <div id="section7" class="section" >
+          <div class="container-fluid pt-6">
+              <!-- <h1 style="font-size: 22.9px; text-align:left;font-family: 'Glacial Indifference', sans-serif;margin: 0.5rem 0;margin-top:80px;border-bottom: 2px solid black; display: inline-block;">Explore More</h1> -->
+              <div class="row justify-content-center" style="margin-top:60px">
+                <h4 class="text-center pb-4" style="font-family: 'Glacial Indifference', sans-serif;
+                font-size: 29.3px;
+                margin-bottom: 10px;">BLOGS</h4>
+                  <!-- Card 1 -->
+                  <div class="col-md-3 mb-4 ml-lg-3">
+                      <div class="card h-100" style="background-image: url('/static/building31.png');">
+                        
+                          <div class="card-body" style="margin-top:255px;">
+                            
+                              <div class="sub-card text-left">
+                                  <h3>Card</h3>
+                                  <h5>Sub Card 1</h5>
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                              </div>
+                          </div>
+                         
+                      </div>
+                  </div>
+                  <div class="col-sm-1 d-sm-block">
+                  </div>
+                  <!-- Card 2 -->
+                  <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="background-image: url('/static/building31.png');">
+                        
+                          <div class="card-body" style="margin-top:255px;">
+                            
+                              <div class="sub-card text-left">
+                                  <h3>Card</h3>
+                                  <h5>Sub Card 1</h5>
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                              </div>
+                          </div>
+                         
+                      </div>
+                  </div>
+                  <div class="col-sm-1 d-sm-block">
+                  </div>
+                  <!-- Card 3 -->
+                  <div class="col-md-3 mb-4">
+                      <div class="card h-100" style="background-image: url('/static/building31.png');">
+                        
+                          <div class="card-body" style="margin-top:255px;">
+                            
+                              <div class="sub-card text-left">
+                                  <h3>Card</h3>
+                                  <h5>Sub Card 1</h5>
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                              </div>
+                          </div>
+                         
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+           
+
+           
+
+         <!-- Section 8 "|Footer "-->
+         <footer class="footer-39201" style="margin-top:40px;background-color:black;">
+  <div class="container">
+    <div class="row p-0">
+      <div class="col-xl-3 border-right">
+        <h3 style="color:white; margin-top:40px; color:#345a74; font-weight:500; font-size:2.4rem; border-color: aliceblue; transition: color 0.3s ease-in-out;" 
+        onmouseover="this.style.color='#648499'" onmouseout="this.style.color='#345a74'">
+        ARGUS
+    </h3>
+    
+        <ul class="list-unstyled nav-links" >
+          <li><a href="#"></a></li>
+          <li style="color:white;margin-top:30px;font-size:20px;margin-top:30px;">GET IN TOUCH
+          <li style="font-size:12p;margin-top:30px;color:white">113/216-A Swaroop Nagar, Kanpur- 208002,
+              Uttar Pradesh, India</li>
+          <li style="font-size:12p;color:white">Landline- 0512-4028469
+
+          </li>
+          <li style="font-size:12p;color:white">Email-contact@ekak.in</li>
+          
+        </ul>
+      </div>
+      <div class="col-xl-1 d-lg-block d-sm-none d-md-none rmSmallScreen">
+        <!-- <p style="font-size:200px;width:1px;color:white">|</p> -->
+      </div>
+      <div class="col-xl-4" style="margin-top:40px;">
+        <h3 class="text-white">Site-map</h3>
+        <ul class="list-unstyled nav-links " style="font-size:12p;margin-top:30px;">
+          <li ><a href="/home" class="text-decoration-none text-white">Home</a></li>
+          <li ><a href="/about" class="text-decoration-none text-white">About</a></li>
+          <li ><a href="/manufaturing"class="text-decoration-none text-white" >Industries</a></li>
+          <li ><a href="/predictive" class="text-decoration-none text-white">Use Case</a></li>
+          <li ><a href="/blog"class="text-decoration-none text-white" >Blogs</a></li>
+        </ul>
+      </div>
+      <div class="col-xl-4  " style="margin-top:40px;">
+        <h3 style="color:aliceblue">DON'T MISS OUT!</h3>
+        <p class="mb-4" style="color:white;margin-top:30px">Sign up to get latest updates promotions and many more.</p>
+        <form action="#" class="subscribe">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control rounded-0" placeholder="Enter Your Email Address" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-info rounded-0" type="button" id="button-addon2">SIGN UP</button>
+          </div>
+          </form>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      
+      <div class="col-md-6 text-md-right " >
+        <ul class="social list-unstyled">
+          <li><a href="#"><span class="icon-facebook"></span></a></li>
+          <li><a href="#"><span class="icon-twitter"></span></a></li>
+          <li><a href="#"><span class="icon-pinterest"></span></a></li>
+          <li><a href="#"><span class="icon-instagram"></span></a></li>
+          <li><a href="#"><span class="icon-behance"></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    @media only screen and (max-width: 600px) {
+      .rmSmallScreen {
+        display: none;
+      }
+    }
+  </style>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+          $('.navbar-toggler').click(function() {
+              $('.navbar').toggleClass('scrolled');
+          });
+    
+          $(window).scroll(function() {
+              if ($(this).scrollTop() > 50) {
+                  $('.navbar').addClass('scrolled');
+              } else {
+                  $('.navbar').removeClass('scrolled');
+              }
+          });
+      });
+    </script>
+
+
+</body>
+</html>

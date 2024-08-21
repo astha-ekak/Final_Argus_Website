@@ -30,7 +30,9 @@ def use1page():
 @app.route('/automated/')
 def Automatedpage():
     return render_template("Automated-warehouse.html")
-
+@app.route('/supply/')
+def Supply_page():
+    return render_template("Supply_chain.html")
 
 
 @app.route('/security/')
