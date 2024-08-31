@@ -1,54 +1,60 @@
-
 <nav class="navbar navbar-expand-lg fixed-top navbar-light transparent" style="margin-top:0;padding-top:0;">
   <a class="navbar-brand font-roboto" href="#">
     <img src="/static/logo.png" alt="Logo"> 
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
-        <li class="nav-item pl-4">
-            <a class="nav-link" href="/home" style="color:white;">Home</a>
-          </li>
-      
-          <li class="nav-item dropdown pl-4">
-            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" style="color:white;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Industries
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/manufacturing">Manufacturing</a>
-              <a class="dropdown-item" href="/construction">Construction </a>
-             
-              <a class="dropdown-item" href="/retail">Retail </a>
-              <a class="dropdown-item" href="/logistics">Logistics </a>
-              <a class="dropdown-item" href="/Industry">Warehouse </a>
-            </div>
-          </li>  
-
-
-          <li class="nav-item dropdown pl-4">
-            <a class="nav-link active dropdown-toggle" href="#" style="color:white;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Use Case
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/predictive">Predictive Maintenance</a>
-            <a class="dropdown-item" href="/automated">Automated Warehouse</a>
-            <a class="dropdown-item" href="/security">Security & Survelliance</a>
-            <a class="dropdown-item" href="/enhanced">Enhanced Customer experience</a>
-            <a class="dropdown-item" href="/supply" >Supply Chain Optimization</a>
-              
-            </div>
-          </li>  
-
-          <li class="nav-item pl-4">
-            <a class="nav-link active" href="/blog" style="color:white;">Blogs</a>
-          </li><li class="nav-item pl-4">
-            <a class="nav-link active" href="/contact" style="color:white;">Contact us</a>
-          </li>
-      
-      
+      <li class="nav-item pl-4">
+        <a class="nav-link" href="/home" style="color:white;">Home</a>
+      </li>
+      <li class="nav-item dropdown pl-4">
+        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" style="color:white;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Industries
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/manufacturing">Manufacturing</a>
+          <a class="dropdown-item" href="/construction">Construction</a>
+          <a class="dropdown-item" href="/retail">Retail</a>
+          <a class="dropdown-item" href="/logistics">Logistics</a>
+          <a class="dropdown-item" href="/Industry">Warehouse</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown pl-4">
+        <a class="nav-link active dropdown-toggle" href="#" style="color:white;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Use Case
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/predictive">Predictive Maintenance</a>
+          <a class="dropdown-item" href="/automated">Automated Warehouse</a>
+          <a class="dropdown-item" href="/security">Security & Survelliance</a>
+          <a class="dropdown-item" href="/enhanced">Enhanced Customer experience</a>
+          <a class="dropdown-item" href="/supply">Supply Chain Optimization</a>
+        </div>
+      </li>
+      <li class="nav-item pl-4">
+        <a class="nav-link active" href="https://medium.com/@EkakInn" style="color:white;">Blogs</a>
+      </li>
+      <li class="nav-item pl-4">
+        <a class="nav-link active" href="/contact" style="color:white;">Contact us</a>
+      </li>
     </ul>
   </div>
 </nav>
+
+<!-- CSS for customizing the navbar-toggler -->
+<style>
+  @media (max-width: 992px) {
+    .custom-toggler {
+      background-color: transparent; 
+      border: none; 
+    }
+
+    .custom-toggler .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+  }
+</style>

@@ -57,47 +57,25 @@
             margin-right: 3px;
         }
      
-        .navbar-toggler {
-       background-color: #e9ecef;
-        border-width: 1px;
-        border-radius: 0.25rem;
-    }
-    @media (max-width: 1200px) {
-    .navbar-toggler {
-        border-color: #007bff;
-        border-width: 1px;
-        border-radius: 0.25rem;
-        padding:1px;
-        margin-right:25px;
-    }
-    } 
-    @media (max-width: 800px) {
-    .navbar-toggler {
-        border-color: #007bff;
-        border-width: 1px;
-        border-radius: 0.25rem;
-        padding:1px;
-        margin-right:22px;
-    }
-    }
-        @media (max-width: 576px) {
-    .navbar-toggler {
-        border-color: #007bff;
-        border-width: 1px;
-        border-radius: 0.25rem;
-        padding:1px;
-        margin-right:25px;
-    }
-
-    .navbar-toggler:hover {
-        background-color: #e9ecef; 
-        border-color: #0056b3; 
-    }
-
-    .navbar-toggler-icon {
-        background-color: transparent;
-    }
+        @media (max-width: 992px) {
+            .custom-toggler {
+              background-color: transparent; 
+              border: none; 
+            }
+        
+            .custom-toggler .navbar-toggler-icon {
+              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+          }
+        
+        .navbar.scrolled {
+            background-color: #17364a;
+        }
+        .navbar-dark-bg {
+    background-color: white;
+    transition: background-color 0.3s ease;
 }
+
         
         .navbar.scrolled {
             background-color: #17364a;
@@ -410,52 +388,53 @@
     </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light transparent fixed-top" style="background-color: #17364a;">
-    <a class="navbar-brand font-roboto" href="#">
-        <img src="/static/logo.png" alt="Logo"> 
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link pl-4" href="/home" style="color:white">Home</a>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light transparent" style="background-color: #17364a;">
+        
+        <a class="navbar-brand font-roboto" href="#">
+          <img src="/static/logo.png" alt="Logo"> 
+        </a>
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item pl-4">
+              <a class="nav-link" href="/home" style="color:white;">Home</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link active pl-4 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">
-                    Industries
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/manufacturing" style="color:black">Manufacturing </a>
-                    <a class="dropdown-item" href="/construction" style="color:black">Construction </a>
-                    <a class="dropdown-item" href="/retail" style="color:black">Retail </a>
-                    <a class="dropdown-item" href="/logistics" style="color:black">Logistics </a>
-                    <a class="dropdown-item" href="/Industry" style="color:black">Warehouse </a>
-                </div>
-            </li>  
-            <li class="nav-item dropdown">
-                <a class="nav-link active pl-4 dropdown-toggle" href="#" style="color:white" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Use Case
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/predictive" style="color:black">Predictive Maintenance</a>
-                    <a class="dropdown-item" href="/automated" style="color:black">Automated Warehouse</a>
-                    <a class="dropdown-item" href="/security" style="color:black">Security & Surveillance</a>
-                    <a class="dropdown-item" href="/enhanced" style="color:black">Enhanced Customer Experience</a>
-                    <a class="dropdown-item" href="/supply" style="color:black">Supply Chain Optimization</a>
-                </div>
-            </li>  
-            <li class="nav-item">
-                <a class="nav-link active pl-4" href="/blog" style="color:white">Blogs</a>
+            <li class="nav-item dropdown pl-4">
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" style="color:white;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Industries
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/manufacturing">Manufacturing</a>
+                <a class="dropdown-item" href="/construction">Construction</a>
+                <a class="dropdown-item" href="/retail">Retail</a>
+                <a class="dropdown-item" href="/logistics">Logistics</a>
+                <a class="dropdown-item" href="/Industry">Warehouse</a>
+              </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link active pl-4" href="/contact" style="color:white">Contact us</a>
+            <li class="nav-item dropdown pl-4">
+              <a class="nav-link active dropdown-toggle" href="#" style="color:white;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Use Case
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/predictive">Predictive Maintenance</a>
+                <a class="dropdown-item" href="/automated">Automated Warehouse</a>
+                <a class="dropdown-item" href="/security">Security & Survelliance</a>
+                <a class="dropdown-item" href="/enhanced">Enhanced Customer experience</a>
+                <a class="dropdown-item" href="/supply">Supply Chain Optimization</a>
+              </div>
             </li>
-        </ul>
-    </div>
-</nav>
+            <li class="nav-item pl-4">
+              <a class="nav-link active" href="https://medium.com/@EkakInn" style="color:white;">Blogs</a>
+            </li>
+            <li class="nav-item pl-4">
+              <a class="nav-link active" href="/contact" style="color:white;">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     <div id="section1" class="section mt-5" >
         <div class="row">
             <div class="col-sm-12 col-md-6">
@@ -607,7 +586,7 @@
           <div class="row  pt-5 mt-5">
             <h1 class="text-black responsive-text" style=" text-align:center;
             font-family: 'Glacial Indifference', sans-serif;
-           ">JOIN US AND MAKE YOUR WORK MORE EFFICIENT WITH <br>ARGUS</h1>
+           ">SECURE EVERY CORNER AND SPACE WITH ARGUS</h1>
           </div>
           <div class="row">
             <div class="row justify-content-center mt-5">
@@ -655,7 +634,7 @@
       
           @media (max-width: 576px) {
               .responsive-text {
-                  font-size: 0.8rem;
+                  font-size: 1.2rem;
                   margin-top:30px;
                   margin-top:0;
 
@@ -686,67 +665,6 @@
 
       </style>
 
-         <!--Section 7-->
-         <div id="section7" class="section" >
-          <div class="container-fluid pt-6">
-              <!-- <h1 style="font-size: 22.9px; text-align:left;font-family: 'Glacial Indifference', sans-serif;margin: 0.5rem 0;margin-top:80px;border-bottom: 2px solid black; display: inline-block;">Explore More</h1> -->
-              <div class="row justify-content-center" style="margin-top:60px">
-                <h4 class="text-center pb-4" style="font-family: 'Glacial Indifference', sans-serif;
-                font-size: 29.3px;
-                margin-bottom: 10px;">BLOGS</h4>
-                  <!-- Card 1 -->
-                  <div class="col-md-3 mb-4 ml-lg-3">
-                      <div class="card h-100" style="background-image: url('/static/building31.png');">
-                        
-                          <div class="card-body" style="margin-top:255px;">
-                            
-                              <div class="sub-card text-left">
-                                  <h3>Card</h3>
-                                  <h5>Sub Card 1</h5>
-                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                              </div>
-                          </div>
-                         
-                      </div>
-                  </div>
-                  <div class="col-sm-1 d-sm-block">
-                  </div>
-                  <!-- Card 2 -->
-                  <div class="col-md-3 mb-4">
-                      <div class="card h-100" style="background-image: url('/static/building31.png');">
-                        
-                          <div class="card-body" style="margin-top:255px;">
-                            
-                              <div class="sub-card text-left">
-                                  <h3>Card</h3>
-                                  <h5>Sub Card 1</h5>
-                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                              </div>
-                          </div>
-                         
-                      </div>
-                  </div>
-                  <div class="col-sm-1 d-sm-block">
-                  </div>
-                  <!-- Card 3 -->
-                  <div class="col-md-3 mb-4">
-                      <div class="card h-100" style="background-image: url('/static/building31.png');">
-                        
-                          <div class="card-body" style="margin-top:255px;">
-                            
-                              <div class="sub-card text-left">
-                                  <h3>Card</h3>
-                                  <h5>Sub Card 1</h5>
-                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                              </div>
-                          </div>
-                         
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-           
 
            
 
