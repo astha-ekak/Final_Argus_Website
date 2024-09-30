@@ -3,15 +3,27 @@ from flask_wtf import CSRFProtect
 from flask_wtf.csrf import CSRFError
 from flask import *
 
-
+from flask_compress import Compress
 # Local Modules
 from forms import ContactForm
 from build_table_email import table_email
 from send_telegram_msg import sending_Telegram_Message as telegram_bot
 
+from flask_caching import Cache
 app = Flask(__name__)
 app.secret_key='bf6cc269e9594e9caef019ecdc2f4ea1'
+Compress(app)
 
+
+
+
+
+cache = Cache(app, config={'CACHE_TYPE': 'simple'})  # or 'redis' for larger apps
+
+@app.route('/')
+@cache.cached(timeout=60)
+def index():
+    return render_template('home.html')
 
 @app.route('/')
 @app.route('/home/')
@@ -136,4 +148,4 @@ def contact_page():
         return render_template("contact_us.html",form=form)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8000,debug=True)
